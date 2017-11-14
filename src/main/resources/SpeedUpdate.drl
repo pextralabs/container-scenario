@@ -1,0 +1,24 @@
+package co.pextra.scenarios.SensitiveProductStorage;
+
+import java.util.List;
+import java.util.Date;
+import co.pextra.model.*;
+
+rule SpeedUpdate
+    when
+        speed: Speed(bearer: bearer)
+        readings: List() from accumulate(
+                gpsReading: GPSReading(bearer == bearer) over window:time( 10m ),
+                collectList(gpsReading)
+        )
+    then
+        if (readings.size() < 2) speed.setValue(new Double(0));
+        else {
+            Date first = ((GPSReading) readings.get(0)).getExecutionTime();
+            Date last = ((GPSReading) readings.get(readings.size() - 1)).getExecutionTime();
+            long diff = last.getTime() - first.getTime();
+            
+        }
+
+        readings.size();
+    end

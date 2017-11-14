@@ -1,0 +1,12 @@
+package co.pextra.scenarios.SensitiveProductStorage;
+import co.pextra.model.*;
+
+rule PrimitiveContextUpdate
+    no-loop
+    when
+        context: Context(bearer: bearer)
+        reading: Reading(bearerID == bearer.ID, contextID == context.ID)
+    then
+        context.setValue(reading);
+        update(context);
+    end
