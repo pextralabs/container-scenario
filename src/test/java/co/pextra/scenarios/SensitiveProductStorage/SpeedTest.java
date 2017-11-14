@@ -57,10 +57,14 @@ public class SpeedTest {
         LOG.info("Now running data");
 
         Person john = new Person("John Doe", -20.2976178, 40.2957768);
-        clock.advanceTime(1, TimeUnit.MINUTES);
         session.insert(john);
         john.getContexts().forEach(session::insert);
-        session.insert(Person.walk(john, 10000,0));
-        session.fireAllRules();
+        clock.advanceTime(1, TimeUnit.HOURS);
+        for (int i = 0; i < 10; i++) {
+            clock.advanceTime(1, TimeUnit.SECONDS);
+            session.insert(Person.walk(john, 2.5,0, clock));
+            session.fireAllRules();
+        }
+        LOG.info(john.getLocation().toString());
     }
 }

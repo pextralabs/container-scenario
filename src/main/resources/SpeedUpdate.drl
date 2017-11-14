@@ -2,23 +2,29 @@ package co.pextra.scenarios.SensitiveProductStorage;
 
 import java.util.List;
 import java.util.Date;
-import co.pextra.model.*;
+import co.pextra.model.*
+import java.util.ArrayList
+import java.lang.Double;
 
 rule SpeedUpdate
     when
         speed: Speed(bearer: bearer)
         readings: List() from accumulate(
-                gpsReading: GPSReading(bearer == bearer) over window:time( 10m ),
+                gpsReading: GPSReading(bearer == bearer) over window:time( 2m ),
                 collectList(gpsReading)
         )
     then
+    System.out.println("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooi");
         if (readings.size() < 2) speed.setValue(new Double(0));
         else {
-            Date first = ((GPSReading) readings.get(0)).getExecutionTime();
-            Date last = ((GPSReading) readings.get(readings.size() - 1)).getExecutionTime();
-            long diff = last.getTime() - first.getTime();
-            
+            ArrayList<Double> speeds = new ArrayList<>();
+            for(int i = 0; i < readings.size() - 1; i++) {
+                GPSReading curr = (GPSReading) readings.get(i);
+                GPSReading next = (GPSReading) readings.get(i + 1);
+                double ds = Location.distance(next, curr);
+                long dt = (next.getExecutionTime().getTime() - curr.getExecutionTime().getTime()) * 1000;
+                speeds.add(ds/dt);
+            }
+            Double avg = speeds.stream().reduce(0.0, (a, b) -> a + b) / speeds.size();
         }
-
-        readings.size();
     end

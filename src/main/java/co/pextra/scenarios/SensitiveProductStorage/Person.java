@@ -2,6 +2,7 @@ package co.pextra.scenarios.SensitiveProductStorage;
 
 import co.pextra.model.Context;
 import co.pextra.model.Entity;
+import org.kie.api.time.SessionClock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +41,14 @@ public class Person implements Entity {
         double nextLatitude = cur.getLatitude() + (y / earthRadius) * (180 / Math.PI);
         double nextLongitude = cur.getLongitude() + (x / earthRadius) * (180 / Math.PI) / Math.cos(cur.getLatitude() * Math.PI / 180);
         return new GPSReading(person, person.location, nextLatitude, nextLongitude);
+    }
+
+    static public GPSReading walk(Person person, double x, double y, SessionClock clock) {
+        double earthRadius = (6.37814) * Math.pow(10, 6); //earth radius in meters
+        GPSReading cur = person.location.getValue();
+        double nextLatitude = cur.getLatitude() + (y / earthRadius) * (180 / Math.PI);
+        double nextLongitude = cur.getLongitude() + (x / earthRadius) * (180 / Math.PI) / Math.cos(cur.getLatitude() * Math.PI / 180);
+        return new GPSReading(person, person.location, nextLatitude, nextLongitude, clock);
     }
 
     public String getName() {
@@ -81,8 +90,9 @@ public class Person implements Entity {
 
     @Override
     public List<Context> getContexts() {
-        ArrayList<Context> contexts = new ArrayList<Context>();
+        ArrayList<Context> contexts = new ArrayList<>();
         contexts.add(location);
+        contexts.add(speed);
         return contexts;
     }
 }

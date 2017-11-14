@@ -6,6 +6,8 @@ import co.pextra.model.Reading;
 import org.kie.api.definition.type.Expires;
 import org.kie.api.definition.type.Role;
 import org.kie.api.definition.type.Timestamp;
+import org.kie.api.time.SessionClock;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -22,6 +24,13 @@ public class GPSReading implements Serializable, Reading {
     public GPSReading(Entity bearer, Context context, double latitude, double longitude) {
         value = new LatLng(latitude, longitude);
         this.executionTime = new Date();
+        this.bearer = bearer;
+        this.context= context;
+    }
+
+    public GPSReading(Entity bearer, Context context, double latitude, double longitude, SessionClock clock) {
+        value = new LatLng(latitude, longitude);
+        this.executionTime = new Date(clock.getCurrentTime());
         this.bearer = bearer;
         this.context= context;
     }
@@ -65,5 +74,10 @@ public class GPSReading implements Serializable, Reading {
 
     public String getBearerID() {
         return bearer.getID();
+    }
+
+    @Override
+    public String toString() {
+        return "Latitude: " + value.getLatitude() + "\nLongitude: " + value.getLongitude();
     }
 }
