@@ -1,9 +1,6 @@
 package co.pextra.scenarios.SensitiveProductStorage;
 
-import co.pextra.model.Context;
-import co.pextra.model.Entity;
 import co.pextra.model.Reading;
-import org.drools.core.time.SessionPseudoClock;
 import org.kie.api.definition.type.Expires;
 import org.kie.api.definition.type.Role;
 import org.kie.api.definition.type.Timestamp;

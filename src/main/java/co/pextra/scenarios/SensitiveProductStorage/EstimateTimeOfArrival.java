@@ -1,43 +1,50 @@
 package co.pextra.scenarios.SensitiveProductStorage;
 
-import co.pextra.model.Context;
-import co.pextra.model.Entity;
-
 import java.util.Date;
 
-public class EstimateTimeOfArrival implements Context<Date>{
+public class EstimateTimeOfArrival {
     private Date value;
-    private Person bearer;
     private String id;
+    private Person watcher;
+    private  Container target;
 
-    public EstimateTimeOfArrival(Person person, String id) {
-        this.bearer = person;
+    public EstimateTimeOfArrival(String id, Person watcher, Container target) {
         this.id = id;
         this.value = new Date(Long.MAX_VALUE);
-    }
-
-    @Override
-    public String getID() {
-        return id;
-    }
-
-    @Override
-    public Entity getBearer() {
-        return bearer;
-    }
-
-    @Override
-    public Date getValue() {
-        return value;
-    }
-
-    @Override
-    public void setValue(Date value) {
-        this.value = value;
+        this.watcher = watcher;
+        this.target = target;
     }
 
     @Override
     public String toString() {
-        return bearer + " ETA: " + value + "s";
+        return " ETA: " + value + "s";
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public Date getValue() {
+        return value;
+    }
+
+    public void setValue(Date value) {
+        this.value = value;
+    }
+
+    public Person getWatcher() {
+        return watcher;
+    }
+
+    public void setWatcher(Person watcher) {
+        this.watcher = watcher;
+    }
+
+    public Container getTarget() {
+        return target;
+    }
+
+    public void setTarget(Container target) {
+        this.target = target;
     }
 }

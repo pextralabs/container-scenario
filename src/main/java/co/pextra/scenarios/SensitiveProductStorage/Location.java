@@ -2,7 +2,6 @@ package co.pextra.scenarios.SensitiveProductStorage;
 
 import co.pextra.model.Context;
 import co.pextra.model.Entity;
-import co.pextra.model.Reading;
 import org.kie.api.time.SessionClock;
 
 public class Location implements Context<GPSReading> {

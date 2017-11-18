@@ -6,7 +6,7 @@ import co.pextra.model.Entity;
 import java.util.Arrays;
 import java.util.List;
 
-public class Container implements Entity{
+public class Container implements Entity {
     private Location location;
     private Temperature temperature;
     private Batch batch;

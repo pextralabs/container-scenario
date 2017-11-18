@@ -1,6 +1,7 @@
 package co.pextra.scenarios.SensitiveProductStorage;
 
 import co.pextra.model.Context;
+
 import java.util.Date;
 
 public class TimeToThreshold implements Context<Date> {

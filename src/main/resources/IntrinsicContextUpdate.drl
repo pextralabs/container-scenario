@@ -1,0 +1,24 @@
+package co.pextra.scenarios.SensitiveProductStorage;
+import co.pextra.model.*;
+
+rule IntrinsicContextUpdate
+    no-loop
+    when
+        context: Context(bearer: bearer)
+        reading: Reading(bearerID == bearer.ID, contextID == context.ID)
+    then
+        context.setValue(reading);
+        update(context);
+    end
+
+
+rule IntrinsicContextWithReadingUpdate
+    no-loop
+    when
+        entity: co.pextra.model2.Entity()
+        intrinsicContext: co.pextra.model2.IntrinsicContext(bearer == entity)
+        reading: co.pextra.model2.Reading(entityID == entity.id, contextID == intrinsicContext.id)
+    then
+        intrinsicContext.setValue(reading);
+        update(intrinsicContext);
+    end

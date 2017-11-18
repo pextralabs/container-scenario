@@ -9,14 +9,16 @@ import java.lang.Double
 rule EstimateTimeOfArrivalUpdate
     no-loop
     when
-        eta: EstimateTimeOfArrival(bearer: bearer)
-        Person(this == bearer)
-        speed: Speed(bearer == bearer)
-        personLocation: Location(bearer == bearer)
-        container: Container(owner == bearer)
-        containerLocation: Location(bearer == container)
+        person: Person()
+        container: Container(owner == person)
+        eta: EstimateTimeOfArrival(watcher == person, target == container)
+        Location(bearer == person, pl: value)
+        Location(bearer == container, cl: value)
+        Speed(bearer == person, ps: value)
     then
-        double distance = Location.distance(personLocation.getValue(), containerLocation.getValue());
-        eta.setValue(new Date((long) (distance / speed.getValue())));
-        update(eta);
+        double distance = Location.distance(pl, cl);
+        eta.setValue(new Date((long) (distance / ps)));
+        // TODO: gambiarra
+        delete(eta);
+        insert(eta);
     end

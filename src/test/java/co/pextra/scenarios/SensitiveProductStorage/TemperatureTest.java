@@ -54,8 +54,7 @@ public class TemperatureTest {
 
         new SceneApplication(ClassPool.getDefault(), session, "sensitive-product-storage-scenario");
 
-        //session.addEventListener(new SCENESessionListener());
-        //session.addEventListener(new DebugRuleRuntimeEventListener());
+        session.addEventListener(new SCENESessionListener());
         LOG.info("Now running data");
         ProductType marijuana = new ProductType("marijuana", 10.0, -7.0);
         Person john = new Person("John Doe", -20.2976178, 40.2957768);

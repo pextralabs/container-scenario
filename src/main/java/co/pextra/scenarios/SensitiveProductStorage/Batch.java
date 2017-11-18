@@ -3,7 +3,6 @@ package co.pextra.scenarios.SensitiveProductStorage;
 import co.pextra.model.Context;
 import co.pextra.model.Entity;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

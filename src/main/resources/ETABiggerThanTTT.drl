@@ -8,22 +8,18 @@ import br.ufes.inf.lprm.situation.model.Participation;
 import br.ufes.inf.lprm.situation.model.SituationType
 import br.ufes.inf.lprm.scene.util.SituationHelper;
 
-/*declare ETABiggerThanTTT extends Situation
+declare ETABiggerThanTTT extends Situation
   eta: EstimateTimeOfArrival @part @key
-  //ttt: TimeToThreshold @part @key
-end*/
-
+  ttt: TimeToThreshold @part @key
+end
 rule ETABiggerThanTTT
- //@role(situation) @type(ETABiggerThanTTT)
+ @role(situation) @type(ETABiggerThanTTT)
   when
-    //person: Person()
-    //batch: Batch(owner == person)
-    //ttt: TimeToThreshold(bearer == batch)
-    ttt: TimeToThreshold()
-    //eta: EstimateTimeOfArrival(bearer == person)
-    //eta: EstimateTimeOfArrival()
+    person: Person()
+    batch: Batch(owner == person)
+    ttt: TimeToThreshold(bearer == batch)
+    eta: EstimateTimeOfArrival(watcher == person, target == batch.container, value.time > ttt.value.time)
   then
-    System.out.println("-------------------------------------------- ETABiggerThanTTT");
-    //SituationHelper.situationDetected(drools);
+    SituationHelper.situationDetected(drools);
 end
 

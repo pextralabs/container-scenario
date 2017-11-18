@@ -12,7 +12,6 @@ public class Person implements Entity {
     private String name;
     private Location location;
     private Speed speed;
-    private EstimateTimeOfArrival eta;
     private List<Container> containers;
     private List<Batch> batches;
 
@@ -21,7 +20,6 @@ public class Person implements Entity {
         this.location = new Location(this.name + "-location", this);
         location.setBearer(this);
         this.speed = new Speed(this, this.name + "-speed");
-        this.eta = new EstimateTimeOfArrival(this, this.name + "-eta");
         this.containers = new ArrayList<>();
         this.batches = new ArrayList<>();
     }
@@ -30,7 +28,6 @@ public class Person implements Entity {
         this.name = name;
         this.location = new Location(this.name + "-location", this, latitude, longitude);
         this.speed = new Speed(this, this.name + "-speed");
-        this.eta = new EstimateTimeOfArrival(this, this.name + "-eta");
         this.containers = new ArrayList<>();
         this.batches = new ArrayList<>();
     }
@@ -98,7 +95,7 @@ public class Person implements Entity {
 
     @Override
     public List<Context> getContexts() {
-        return Arrays.asList(location, speed, eta);
+        return Arrays.asList(location, speed);
     }
 
 }

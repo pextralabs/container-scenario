@@ -15,6 +15,8 @@ import org.kie.api.builder.Results;
 import org.kie.api.conf.EventProcessingOption;
 import org.kie.api.definition.KiePackage;
 import org.kie.api.definition.rule.Rule;
+import org.kie.api.event.rule.DebugAgendaEventListener;
+import org.kie.api.event.rule.DebugRuleRuntimeEventListener;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.KieSessionConfiguration;
@@ -22,6 +24,7 @@ import org.kie.api.runtime.conf.ClockTypeOption;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 public class ETATest {
@@ -49,14 +52,15 @@ public class ETATest {
 
         new SceneApplication(ClassPool.getDefault(), session, "sensitive-product-storage-scenario");
 
-        //session.addEventListener(new SCENESessionListener());
-        session.addEventListener(new DefaultRuleRuntimeEventListener());
+        session.addEventListener(new SCENESessionListener());
+//        session.addEventListener(new DebugAgendaEventListener());
 
         LOG.info("Now running data");
         ProductType marijuana = new ProductType("marijuana", 10.0, -7.0);
         Person john = new Person("John Doe", -20.2976178, 40.2957768);
         Container container = new Container(john, "container do john", -20.2976178, 40.2957768, 0);
         Batch batch = new Batch("batch do john", container, marijuana, john);
+        EstimateTimeOfArrival eta = new EstimateTimeOfArrival("john ETA", john, container);
         john.getContainers().add(container);
         john.getBatches().add(batch);
         session.insert(john);
@@ -65,6 +69,7 @@ public class ETATest {
         container.getContexts().forEach(session::insert);
         session.insert(batch);
         batch.getContexts().forEach(session::insert);
+        session.insert(eta);
         session.fireAllRules();
         long initialTime = clock.getCurrentTime();
         int aux = 1;

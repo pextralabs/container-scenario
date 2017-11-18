@@ -4,7 +4,7 @@ import co.pextra.model.Context;
 import co.pextra.model.Entity;
 import org.kie.api.time.SessionClock;
 
-public class Temperature implements Context<TemperatureReading>{
+public class Temperature implements Context<TemperatureReading> {
     private TemperatureReading value;
     private String id;
     private Entity bearer;
