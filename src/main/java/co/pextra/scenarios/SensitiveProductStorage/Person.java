@@ -5,34 +5,34 @@ import co.pextra.model.Entity;
 import org.kie.api.time.SessionClock;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Person implements Entity {
     private String name;
     private Location location;
     private Speed speed;
+    private EstimateTimeOfArrival eta;
     private List<Container> containers;
+    private List<Batch> batches;
 
     public Person(String name) {
         this.name = name;
-        this.location = new Location(this.name + "-location", this, 0.0, 0.0);
-        this.speed = new Speed(this, this.name + "-speed");
-        this.containers = new ArrayList<Container>();
-    }
-
-    public Person(String name, Location location) {
-        this.name = name;
-        this.location = location;
+        this.location = new Location(this.name + "-location", this);
         location.setBearer(this);
         this.speed = new Speed(this, this.name + "-speed");
-        this.containers = new ArrayList<Container>();
+        this.eta = new EstimateTimeOfArrival(this, this.name + "-eta");
+        this.containers = new ArrayList<>();
+        this.batches = new ArrayList<>();
     }
 
     public Person(String name, double latitude, double longitude) {
         this.name = name;
         this.location = new Location(this.name + "-location", this, latitude, longitude);
         this.speed = new Speed(this, this.name + "-speed");
-        this.containers = new ArrayList<Container>();
+        this.eta = new EstimateTimeOfArrival(this, this.name + "-eta");
+        this.containers = new ArrayList<>();
+        this.batches = new ArrayList<>();
     }
 
     static public GPSReading walk(Person person, double x, double y) {
@@ -83,6 +83,14 @@ public class Person implements Entity {
         this.containers = containers;
     }
 
+    public List<Batch> getBatches() {
+        return batches;
+    }
+
+    public void setBatches(List<Batch> batches) {
+        this.batches = batches;
+    }
+
     @Override
     public String getID() {
         return this.name;
@@ -90,9 +98,7 @@ public class Person implements Entity {
 
     @Override
     public List<Context> getContexts() {
-        ArrayList<Context> contexts = new ArrayList<>();
-        contexts.add(location);
-        contexts.add(speed);
-        return contexts;
+        return Arrays.asList(location, speed, eta);
     }
+
 }

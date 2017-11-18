@@ -7,6 +7,7 @@ import java.util.ArrayList
 import java.lang.Double;
 
 rule SpeedUpdate
+    no-loop
     when
         speed: Speed(bearer: bearer)
         readings: List() from accumulate(
@@ -14,7 +15,6 @@ rule SpeedUpdate
                 collectList(gpsReading)
         )
     then
-    System.out.println("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooi");
         if (readings.size() < 2) speed.setValue(new Double(0));
         else {
             ArrayList<Double> speeds = new ArrayList<>();
@@ -22,9 +22,11 @@ rule SpeedUpdate
                 GPSReading curr = (GPSReading) readings.get(i);
                 GPSReading next = (GPSReading) readings.get(i + 1);
                 double ds = Location.distance(next, curr);
-                long dt = (next.getExecutionTime().getTime() - curr.getExecutionTime().getTime()) * 1000;
+                long dt = (next.getExecutionTime().getTime() - curr.getExecutionTime().getTime()) / 1000;
                 speeds.add(ds/dt);
             }
             Double avg = speeds.stream().reduce(0.0, (a, b) -> a + b) / speeds.size();
+            speed.setValue(Math.round(avg*100.0)/100.0);
         }
+        update(speed);
     end

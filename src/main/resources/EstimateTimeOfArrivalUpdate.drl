@@ -1,0 +1,22 @@
+package co.pextra.scenarios.SensitiveProductStorage;
+
+import java.util.List;
+import java.util.Date;
+import co.pextra.model.*
+import java.util.ArrayList
+import java.lang.Double
+
+rule EstimateTimeOfArrivalUpdate
+    no-loop
+    when
+        eta: EstimateTimeOfArrival(bearer: bearer)
+        Person(this == bearer)
+        speed: Speed(bearer == bearer)
+        personLocation: Location(bearer == bearer)
+        container: Container(owner == bearer)
+        containerLocation: Location(bearer == container)
+    then
+        double distance = Location.distance(personLocation.getValue(), containerLocation.getValue());
+        eta.setValue(new Date((long) (distance / speed.getValue())));
+        update(eta);
+    end

@@ -4,7 +4,7 @@ import co.pextra.model.Context;
 
 public class Speed implements Context<Double> {
     private Person bearer;
-    private Double value;
+    private Double value = 0.0;
     private String id;
     public Speed(Person bearer, String id) {
         this.bearer = bearer;
@@ -31,5 +31,10 @@ public class Speed implements Context<Double> {
     @Override
     public String getID() {
         return this.id;
+    }
+
+    @Override
+    public String toString() {
+        return bearer.toString() + " Speed: " + value + "m/s";
     }
 }

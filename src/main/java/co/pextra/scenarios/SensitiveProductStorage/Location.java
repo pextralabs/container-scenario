@@ -1,18 +1,21 @@
 package co.pextra.scenarios.SensitiveProductStorage;
 
 import co.pextra.model.Context;
+import co.pextra.model.Entity;
 import co.pextra.model.Reading;
+import org.kie.api.time.SessionClock;
 
 public class Location implements Context<GPSReading> {
     private GPSReading value;
-    private Person bearer;
+    private Entity bearer;
     private String id;
 
-    public Location(String id) {
+    public Location(String id, Entity bearer) {
         this.id = id;
+        this.bearer = bearer;
     }
 
-    public Location(String id, Person bearer, Double latitude, Double longitude) {
+    public Location(String id, Entity bearer, Double latitude, Double longitude) {
         this.value = new GPSReading(bearer, this, latitude, longitude);
         this.bearer = bearer;
         this.id = id;
@@ -29,11 +32,11 @@ public class Location implements Context<GPSReading> {
     }
 
     @Override
-    public Person getBearer() {
+    public Entity getBearer() {
         return bearer;
     }
 
-    public void setBearer(Person bearer) {
+    public void setBearer(Entity bearer) {
         this.bearer = bearer;
     }
 
@@ -44,7 +47,7 @@ public class Location implements Context<GPSReading> {
 
     @Override
     public String toString() {
-        return "Latitude: " + value.getLatitude() + "\nLongitude: " + value.getLongitude();
+        return bearer.toString() +  " Lat: " + value.getLatitude() + " Lng: " + value.getLongitude();
     }
 
     public boolean near(Location loc, Double distance) {
@@ -80,4 +83,20 @@ public class Location implements Context<GPSReading> {
     }
 
     static public double earthRadius = (6.37814) * Math.pow(10, 6);
+
+    static public GPSReading walk(Location location, double x, double y) {
+        double earthRadius = (6.37814) * Math.pow(10, 6); //earth radius in meters
+        GPSReading cur = location.getValue();
+        double nextLatitude = cur.getLatitude() + (y / earthRadius) * (180 / Math.PI);
+        double nextLongitude = cur.getLongitude() + (x / earthRadius) * (180 / Math.PI) / Math.cos(cur.getLatitude() * Math.PI / 180);
+        return new GPSReading(location.bearer, location, nextLatitude, nextLongitude);
+    }
+
+    static public GPSReading walk(Location location, double x, double y, SessionClock clock) {
+        double earthRadius = (6.37814) * Math.pow(10, 6); //earth radius in meters
+        GPSReading cur = location.getValue();
+        double nextLatitude = cur.getLatitude() + (y / earthRadius) * (180 / Math.PI);
+        double nextLongitude = cur.getLongitude() + (x / earthRadius) * (180 / Math.PI) / Math.cos(cur.getLatitude() * Math.PI / 180);
+        return new GPSReading(location.bearer, location, nextLatitude, nextLongitude, clock);
+    }
 }

@@ -5,9 +5,10 @@ public class ProductType {
     private  double maxThreshold;
     private  double minThreshold;
 
-    public ProductType(String name, double maxTemp) {
+    public ProductType(String name, double maxThreshold, double minThreshold) {
         this.name = name;
-        this.maxThreshold = maxTemp;
+        this.maxThreshold = maxThreshold;
+        this.minThreshold = minThreshold;
     }
 
     public String getName() {

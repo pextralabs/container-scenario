@@ -1,0 +1,31 @@
+package co.pextra.scenarios.SensitiveProductStorage;
+
+import java.util.List;
+import java.util.Date;
+import co.pextra.model.*
+import java.util.ArrayList
+import java.lang.Double
+import java.util.stream.Collectors;
+
+rule TimeToThresholdUpdate
+    no-loop
+    when
+        ttt: TimeToThreshold(bearer: bearer)
+        readings: List() from accumulate(
+            temperatureReading: TemperatureReading(bearer == bearer) over window:length( 2 ),
+            collectList(temperatureReading)
+        )
+    then
+        if (readings.size() < 2) ttt.setValue(new Date(Long.MAX_VALUE));
+        else {
+            TemperatureReading temp1 = ((TemperatureReading) readings.get(0));
+            TemperatureReading temp2 = ((TemperatureReading) readings.get(1));
+            double m = (temp2.getValue() - temp1.getValue()) / (temp2.getExecutionTime().getTime() - temp1.getExecutionTime().getTime());
+            double maxTemperature = bearer.getProductType().getMaxThreshold();
+            double maxTime = ((maxTemperature - temp2.getValue()) / m) + temp2.getExecutionTime().getTime();
+            double minTemperature = bearer.getProductType().getMinThreshold();
+            double minTime = ((minTemperature - temp2.getValue()) / m) + temp2.getExecutionTime().getTime();
+            ttt.setValue(new Date((long) (m >= 0 ? maxTime : minTime)));
+        }
+        update(ttt);
+    end
