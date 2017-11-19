@@ -25,6 +25,9 @@ public abstract class IntrinsicContext<T> {
     public void setReading(Reading<T> value) {
         this.reading = value;
     }
+    public void setReading(T value) {
+        this.reading = new Reading<>(value, this.bearer.id, this.id);
+    }
     public T getValue() {
         return reading == null ? null : reading.getValue();
     }

@@ -12,12 +12,14 @@ public class Speed extends IntrinsicContext<Double>{
 
     public Speed(String id, Entity bearer) {
         super(id, bearer);
+        this.setReading(0.0);
     }
 
     @Override
     public String toString() {
         return "Bearer( " + bearer + " )" + " Speed: " + getValue() + " m/s";
     }
+
     static public Double computeSpeed(List<Reading<LatLng>> readings){
         if (readings.size() < 2) return 0.0;
         else {

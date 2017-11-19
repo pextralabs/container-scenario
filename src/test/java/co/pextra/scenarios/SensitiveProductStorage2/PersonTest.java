@@ -1,24 +1,11 @@
 package co.pextra.scenarios.SensitiveProductStorage2;
 
-import br.ufes.inf.lprm.scene.SceneApplication;
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
 import co.pextra.model2.Reading;
-import javassist.ClassPool;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Assert;
 import org.junit.Test;
-import org.kie.api.KieBase;
-import org.kie.api.KieBaseConfiguration;
-import org.kie.api.KieServices;
-import org.kie.api.builder.Message;
-import org.kie.api.builder.Results;
-import org.kie.api.conf.EventProcessingOption;
-import org.kie.api.definition.KiePackage;
-import org.kie.api.definition.rule.Rule;
-import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
-import org.kie.api.runtime.KieSessionConfiguration;
-import org.kie.api.runtime.conf.ClockTypeOption;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,7 +39,7 @@ public class PersonTest extends SessionTest{
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
         Assert.assertNull(john.getLocation().getValue());
 
-        session.insert(new Reading<>(vix, "john", "location"));
+        session.insert(new Reading<>(vix, "john", "location", clock.getCurrentTime()));
         session.fireAllRules();
         Assert.assertNotNull(john.getLocation().getValue());
         Assert.assertEquals(john.getLocation().getValue(), vix);
@@ -62,6 +49,7 @@ public class PersonTest extends SessionTest{
     public void speed () {
         KieSession session = this.startSession(this.makePseudoClockConfiguration());
         SessionPseudoClock clock = session.getSessionClock();
+        session.setGlobal("clock", clock);
         session.addEventListener(new SCENESessionListener());
 
         LOG.info("Now running data");

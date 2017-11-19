@@ -1,9 +1,7 @@
 package co.pextra.model2;
-import co.pextra.scenarios.SensitiveProductStorage2.LatLng;
 import org.kie.api.definition.type.Expires;
 import org.kie.api.definition.type.Role;
 import org.kie.api.definition.type.Timestamp;
-import org.kie.api.time.SessionClock;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -15,20 +13,32 @@ public class Reading<T> implements Serializable{
     private static final long serialVersionUID = 1L;
     private long executionTime;
     private T value;
-    private String entityID;
-    private String contextID;
+    private String entityId;
+    private String contextId;
+
+    public Reading(T value, String contextId) {
+        this.value = value;
+        this.contextId = contextId;
+        this.executionTime = new Date().getTime();
+    }
+    public Reading(T value, String contextId, long executionTime) {
+        this.value = value;
+        this.contextId = contextId;
+        this.executionTime = executionTime;
+    }
+
 
     public Reading(T value, String entityID, String contextID) {
         this.value = value;
-        this.entityID = entityID;
-        this.contextID = contextID;
+        this.entityId = entityID;
+        this.contextId = contextID;
         this.executionTime = new Date().getTime();
     }
 
-    public Reading(T value, String entityID, String contextID, long executionTime) {
+    public Reading(T value, String entityId, String contextId, long executionTime) {
         this.value = value;
-        this.entityID = entityID;
-        this.contextID = contextID;
+        this.entityId = entityId;
+        this.contextId = contextId;
         this.executionTime = executionTime;
     }
 
@@ -40,16 +50,16 @@ public class Reading<T> implements Serializable{
         return value;
     }
 
-    public String getEntityID() {
-        return entityID;
+    public String getEntityId() {
+        return entityId;
     }
 
-    public String getContextID() {
-        return contextID;
+    public String getContextId() {
+        return contextId;
     }
 
     @Override
     public String toString() {
-        return "Reading: " + value.toString();
+        return "Reading: " + value.toString() + ", from Entity: '" + entityId + "' and Context: '" + contextId + "'";
     }
 }

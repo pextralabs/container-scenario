@@ -31,7 +31,6 @@ public class Person extends Entity {
         return "Person: " + id;
     }
 
-
     static public LatLng walk(Person person, double x, double y) {
         double earthRadius = (6.37814) * Math.pow(10, 6);
         LatLng latLng = person.getLocation().getValue();

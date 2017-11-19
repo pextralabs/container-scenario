@@ -16,8 +16,7 @@ public class Location extends IntrinsicContext<LatLng>{
     }
     @Override
     public String toString() {
-        LatLng value = this.getValue();
-        return "Bearer( " + bearer + " ) Location: " +  value;
+        return "Bearer( " + bearer + " ) Location: " +  getValue();
     }
 
     static public double distance (LatLng l1, LatLng l2) {

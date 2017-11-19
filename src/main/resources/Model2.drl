@@ -2,14 +2,19 @@ package co.pextra.scenarios.SensitiveProductStorage2;
 
 import java.util.List
 import co.pextra.model2.Reading
-import java.lang.Double;
+import java.lang.Double
+import java.lang.Long
+import java.util.Date;
+import org.drools.core.time.SessionPseudoClock;
+
+global SessionPseudoClock clock;
 
 rule IntrinsicContextUpdate2
     no-loop
     when
         entity: co.pextra.model2.Entity()
         intrinsicContext: co.pextra.model2.IntrinsicContext(bearer == entity)
-        reading: co.pextra.model2.Reading(entityID == entity.id, contextID == intrinsicContext.id)
+        reading: co.pextra.model2.Reading(entityId == entity.id, contextId == intrinsicContext.id)
     then
         intrinsicContext.setReading(reading);
         update(intrinsicContext);
@@ -22,10 +27,45 @@ rule SpeedReading2
         location: Location(bearer: bearer)
         Person(this == bearer, speed: speed)
         readings: List() from accumulate(
-                reading: co.pextra.model2.Reading(entityID == bearer.id, contextID == location.id) over window:time( 2m ),
-                collectList(reading)
+                r: co.pextra.model2.Reading(entityId == bearer.id, contextId == location.id) over window:time( 2m ),
+                collectList(r)
         )
     then
-        Reading<Double> reading = new Reading<>(Speed.computeSpeed(readings), bearer.getId(), speed.getId());
+        Reading<Double> reading = new Reading<>(Speed.computeSpeed(readings), bearer.getId(), speed.getId(), clock.getCurrentTime());
         insert(reading);
     end
+
+
+rule TimeToThresholdReading2
+    no-loop
+    when
+        temperature: Temperature(bearer: bearer)
+        batch: Batch(container == bearer, ttt: ttt)
+        readings: List(size > 0) from accumulate(
+            r: co.pextra.model2.Reading(entityId == bearer.id, contextId == temperature.id),
+            collectList(r)
+        )
+    then
+        Reading<Long> reading = new Reading<>(
+                TimeToThreshold.computeTTT(readings, batch.getProductType()),
+                batch.getId(),
+                ttt.getId(),
+                clock.getCurrentTime()
+                );
+        insert(reading);
+    end
+
+
+
+//rule EstimateTimeOfArrivalUpdate
+//    no-loop
+//    when
+//        responsibility: Responsibility(responsible: responsible, batches: batches)
+//        person: Person( this memberOf responsible)
+//        Batch( this memberOf batches, container: container )
+//        Location(this == person.location, pl: value)
+//        Speed(this == person.speed, ps: value)
+//        Location(this == container.location, cl: value)
+//    then
+//        new Reading<Long>(EstimateTimeOfArrival.computeETA(person, container), );
+//    end
