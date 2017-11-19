@@ -25,11 +25,11 @@ public class Reading<T> implements Serializable{
         this.executionTime = new Date().getTime();
     }
 
-    public Reading(T value, String entityID, String contextID, SessionClock clock) {
+    public Reading(T value, String entityID, String contextID, long executionTime) {
         this.value = value;
         this.entityID = entityID;
         this.contextID = contextID;
-        this.executionTime = new Date(clock.getCurrentTime()).getTime();
+        this.executionTime = executionTime;
     }
 
     public long getExecutionTime() {

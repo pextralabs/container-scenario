@@ -5,7 +5,7 @@ import co.pextra.model2.Entity;
 import co.pextra.model2.IntrinsicContext;
 import co.pextra.model2.Reading;
 
-public class Location extends IntrinsicContext<Reading<LatLng>>{
+public class Location extends IntrinsicContext<LatLng>{
     static  public  double degreesToRadians (double degrees) {
         return degrees * Math.PI / 180;
     }
@@ -16,16 +16,15 @@ public class Location extends IntrinsicContext<Reading<LatLng>>{
     }
     @Override
     public String toString() {
-        if (value == null) return "Bearer( " + bearer + " )" + " null";
-        LatLng value = this.value.getValue();
-        return "Bearer( " + bearer + " )" +  value;
+        LatLng value = this.getValue();
+        return "Bearer( " + bearer + " ) Location: " +  value;
     }
 
-    static public double distance (Reading<LatLng> l1, Reading<LatLng> l2) {
-        double lat1 = l1.getValue().getLatitude();
-        double lng1 = l1.getValue().getLongitude();
-        double lat2 = l2.getValue().getLatitude();
-        double lng2 = l2.getValue().getLongitude();
+    static public double distance (LatLng l1, LatLng l2) {
+        double lat1 = l1.getLatitude();
+        double lng1 = l1.getLongitude();
+        double lat2 = l2.getLatitude();
+        double lng2 = l2.getLongitude();
         double dlat = degreesToRadians(lat1 - lat2);
         double dlng = degreesToRadians(lng1 - lng2);
         lat1 = degreesToRadians(lat1);
@@ -35,6 +34,6 @@ public class Location extends IntrinsicContext<Reading<LatLng>>{
         return earthRadius * c;
     }
     static public double distance (Location l1, Location l2) {
-        return distance(l1.value, l2.value);
+        return distance(l1.getValue(), l2.getValue());
     }
 }

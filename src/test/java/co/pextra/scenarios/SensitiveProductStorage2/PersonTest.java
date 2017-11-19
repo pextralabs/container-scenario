@@ -24,7 +24,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class PersonTest {
+public class PersonTest extends SessionTest{
     static private final Logger LOG = LoggerFactory.getLogger(PersonTest.class);
 
     @Test
@@ -37,24 +37,8 @@ public class PersonTest {
 
     @Test
     public void location () {
-        KieServices kieServices = KieServices.Factory.get();
-        KieContainer kContainer = kieServices.getKieClasspathContainer();
-        Results verifyResults = kContainer.verify();
-        for (Message m : verifyResults.getMessages()) LOG.info("{}", m);
-        LOG.info("Creating kieBase");
-        KieBaseConfiguration config = KieServices.Factory.get().newKieBaseConfiguration();
-        config.setOption(EventProcessingOption.STREAM);
-        KieBase kieBase = kContainer.newKieBase(config);
-        KieSessionConfiguration pseudoConfig = KieServices.Factory.get().newKieSessionConfiguration();
-        pseudoConfig.setOption(ClockTypeOption.get("pseudo"));
-        LOG.info("There should be rules: ");
-        for ( KiePackage kp : kieBase.getKiePackages() ) {
-            for (Rule rule : kp.getRules()) LOG.info("kp " + kp + " rule " + rule.getName());
-        }
-        LOG.info("Creating kieSession");
-        KieSession session = kieBase.newKieSession(pseudoConfig, null);
+        KieSession session = this.startSession(this.makePseudoClockConfiguration());
         SessionPseudoClock clock = session.getSessionClock();
-        new SceneApplication(ClassPool.getDefault(), session, "sensitive-product-storage-scenario");
         session.addEventListener(new SCENESessionListener());
 
         LOG.info("Now running data");
@@ -70,8 +54,27 @@ public class PersonTest {
 
         session.insert(new Reading<>(vix, "john", "location"));
         session.fireAllRules();
-
         Assert.assertNotNull(john.getLocation().getValue());
-        Assert.assertEquals(john.getLocation().getValue().getValue(), vix);
+        Assert.assertEquals(john.getLocation().getValue(), vix);
+    }
+
+    @Test
+    public void speed () {
+        KieSession session = this.startSession(this.makePseudoClockConfiguration());
+        SessionPseudoClock clock = session.getSessionClock();
+        session.addEventListener(new SCENESessionListener());
+
+        LOG.info("Now running data");
+        Person john = new Person("john");
+        session.insert(john);
+        john.getIntrinsicContexts().forEach(session::insert);
+        session.insert(new Reading<>(new LatLng(-20.2976178, 40.2957768), "john", "location", clock.getCurrentTime()));
+        session.fireAllRules();
+        clock.advanceTime(1, TimeUnit.HOURS);
+        for (int i = 0; i < 10; i++) {
+            clock.advanceTime(1, TimeUnit.SECONDS);
+            session.insert(new Reading<>(Person.walk(john, 2.5 * i,0), "john", "location", clock.getCurrentTime()));
+            session.fireAllRules();
+        }
     }
 }

@@ -2,7 +2,7 @@ package co.pextra.model2;
 
 public abstract class IntrinsicContext<T> {
     protected Entity bearer;
-    protected T value;
+    protected Reading<T> reading;
     protected String id;
 
     public IntrinsicContext(String id, Entity bearer) {
@@ -19,10 +19,13 @@ public abstract class IntrinsicContext<T> {
     public void setBearer(Entity bearer) {
         this.bearer = bearer;
     }
-    public T getValue() {
-        return value;
+    public Reading<T> getReading() {
+        return reading;
     }
-    public void setValue(T value) {
-        this.value = value;
+    public void setReading(Reading<T> value) {
+        this.reading = value;
+    }
+    public T getValue() {
+        return reading == null ? null : reading.getValue();
     }
 }

@@ -6,6 +6,7 @@ import co.pextra.model2.Reading;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Speed extends IntrinsicContext<Double>{
 
@@ -15,8 +16,7 @@ public class Speed extends IntrinsicContext<Double>{
 
     @Override
     public String toString() {
-        if (value == null) return "Bearer( " + bearer + " )" + "Speed: null";
-        return "Bearer( " + bearer + " )" + " Speed: " + value + "m/s";
+        return "Bearer( " + bearer + " )" + " Speed: " + getValue() + " m/s";
     }
     static public Double computeSpeed(List<Reading<LatLng>> readings){
         if (readings.size() < 2) return 0.0;
@@ -25,7 +25,7 @@ public class Speed extends IntrinsicContext<Double>{
             for(int i = 0; i < readings.size() - 1; i++) {
                 Reading<LatLng> curr = readings.get(i);
                 Reading<LatLng> next = readings.get(i + 1);
-                double ds = Location.distance(next, curr);
+                double ds = Location.distance(next.getValue(), curr.getValue());
                 long dt = (next.getExecutionTime() - curr.getExecutionTime()) / 1000;
                 speeds.add(ds/dt);
             }
