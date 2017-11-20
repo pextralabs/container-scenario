@@ -54,7 +54,7 @@ public class BatchTest extends SessionTest{
         int aux = 0;
         while (clock.getCurrentTime() < initialTime + TimeUnit.MINUTES.toMillis(30)) {
             clock.advanceTime(5, TimeUnit.MINUTES);
-            session.insert(new Reading<>(10.0 + 0.5 * ++aux, "container", "temperature", clock.getCurrentTime()));
+            session.insert(new Reading<>(10.0 + 0.5 * ++aux, "container-temperature", clock.getCurrentTime()));
             session.fireAllRules();
         }
         System.out.println(new Date(clock.getCurrentTime()));

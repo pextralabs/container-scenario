@@ -9,8 +9,6 @@ import org.kie.api.runtime.KieSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
 public class ContainerTest extends  SessionTest {
@@ -48,7 +46,7 @@ public class ContainerTest extends  SessionTest {
         int aux = 0;
         while (clock.getCurrentTime() < initialTime + TimeUnit.HOURS.toMillis(2)) {
             clock.advanceTime(30, TimeUnit.MINUTES);
-            session.insert(new Reading<>(0.05 * ++aux, "container", "temperature", clock.getCurrentTime()));
+            session.insert(new Reading<>(0.05 * ++aux, "container-temperature", clock.getCurrentTime()));
             session.fireAllRules();
         }
         Assert.assertTrue(container.getTemperature().getValue() == 0.05 * aux);

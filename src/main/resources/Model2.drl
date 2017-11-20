@@ -12,12 +12,11 @@ global SessionPseudoClock clock;
 rule IntrinsicContextUpdate2
     no-loop
     when
-        entity: co.pextra.model2.Entity()
-        intrinsicContext: co.pextra.model2.IntrinsicContext(bearer == entity)
-        reading: co.pextra.model2.Reading(entityId == entity.id, contextId == intrinsicContext.id)
+        context: co.pextra.model2.Context()
+        reading: co.pextra.model2.Reading(id == context.id)
     then
-        intrinsicContext.setReading(reading);
-        update(intrinsicContext);
+        context.setReading(reading);
+        update(context);
     end
 
 
@@ -27,11 +26,11 @@ rule SpeedReading2
         location: Location(bearer: bearer)
         Person(this == bearer, speed: speed)
         readings: List() from accumulate(
-                r: co.pextra.model2.Reading(entityId == bearer.id, contextId == location.id) over window:time( 2m ),
+                r: co.pextra.model2.Reading(id == location.id) over window:time( 2m ),
                 collectList(r)
         )
     then
-        Reading<Double> reading = new Reading<>(Speed.computeSpeed(readings), bearer.getId(), speed.getId(), clock.getCurrentTime());
+        Reading<Double> reading = new Reading<>(Speed.computeSpeed(readings), speed.getId(), clock.getCurrentTime());
         insert(reading);
     end
 
@@ -42,13 +41,12 @@ rule TimeToThresholdReading2
         temperature: Temperature(bearer: bearer)
         batch: Batch(container == bearer, ttt: ttt)
         readings: List(size > 0) from accumulate(
-            r: co.pextra.model2.Reading(entityId == bearer.id, contextId == temperature.id),
+            r: co.pextra.model2.Reading(id == temperature.id),
             collectList(r)
         )
     then
         Reading<Long> reading = new Reading<>(
                 TimeToThreshold.computeTTT(readings, batch.getProductType()),
-                batch.getId(),
                 ttt.getId(),
                 clock.getCurrentTime()
                 );
@@ -57,15 +55,14 @@ rule TimeToThresholdReading2
 
 
 
-//rule EstimateTimeOfArrivalUpdate
-//    no-loop
-//    when
-//        responsibility: Responsibility(responsible: responsible, batches: batches)
-//        person: Person( this memberOf responsible)
-//        Batch( this memberOf batches, container: container )
-//        Location(this == person.location, pl: value)
-//        Speed(this == person.speed, ps: value)
-//        Location(this == container.location, cl: value)
-//    then
-//        new Reading<Long>(EstimateTimeOfArrival.computeETA(person, container), );
-//    end
+rule EstimateTimeOfArrivalUpdate
+    no-loop
+    when
+        responsibility: Responsibility(responsible: responsible, batches: batches)
+        person: Person( this memberOf responsible)
+        Batch( this memberOf batches, container: container )
+        Location(this == person.location, pl: value)
+        Speed(this == person.speed, ps: value)
+        Location(this == container.location, cl: value)
+    then
+    end

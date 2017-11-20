@@ -19,7 +19,7 @@ public class PersonTest extends SessionTest{
         Person john = new Person("john");
         Location location = john.getLocation();
         Assert.assertNotNull(location);
-        Assert.assertEquals("location", location.getId());
+        Assert.assertEquals("john-location", location.getId());
     }
 
     @Test
@@ -27,6 +27,7 @@ public class PersonTest extends SessionTest{
         KieSession session = this.startSession(this.makePseudoClockConfiguration());
         SessionPseudoClock clock = session.getSessionClock();
         session.addEventListener(new SCENESessionListener());
+        session.setGlobal("clock", clock);
 
         LOG.info("Now running data");
 
@@ -39,7 +40,7 @@ public class PersonTest extends SessionTest{
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
         Assert.assertNull(john.getLocation().getValue());
 
-        session.insert(new Reading<>(vix, "john", "location", clock.getCurrentTime()));
+        session.insert(new Reading<>(vix, "john-location", clock.getCurrentTime()));
         session.fireAllRules();
         Assert.assertNotNull(john.getLocation().getValue());
         Assert.assertEquals(john.getLocation().getValue(), vix);
@@ -56,12 +57,12 @@ public class PersonTest extends SessionTest{
         Person john = new Person("john");
         session.insert(john);
         john.getIntrinsicContexts().forEach(session::insert);
-        session.insert(new Reading<>(new LatLng(-20.2976178, 40.2957768), "john", "location", clock.getCurrentTime()));
+        session.insert(new Reading<>(new LatLng(-20.2976178, 40.2957768), "john-location", clock.getCurrentTime()));
         session.fireAllRules();
         clock.advanceTime(1, TimeUnit.HOURS);
         for (int i = 0; i < 10; i++) {
             clock.advanceTime(1, TimeUnit.SECONDS);
-            session.insert(new Reading<>(Person.walk(john, 2.5 * i,0), "john", "location", clock.getCurrentTime()));
+            session.insert(new Reading<>(Person.walk(john, 2.5 * i,0), "john-location", clock.getCurrentTime()));
             session.fireAllRules();
         }
     }

@@ -13,32 +13,16 @@ public class Reading<T> implements Serializable{
     private static final long serialVersionUID = 1L;
     private long executionTime;
     private T value;
-    private String entityId;
-    private String contextId;
+    private String id;
 
     public Reading(T value, String contextId) {
         this.value = value;
-        this.contextId = contextId;
+        this.id = contextId;
         this.executionTime = new Date().getTime();
     }
     public Reading(T value, String contextId, long executionTime) {
         this.value = value;
-        this.contextId = contextId;
-        this.executionTime = executionTime;
-    }
-
-
-    public Reading(T value, String entityID, String contextID) {
-        this.value = value;
-        this.entityId = entityID;
-        this.contextId = contextID;
-        this.executionTime = new Date().getTime();
-    }
-
-    public Reading(T value, String entityId, String contextId, long executionTime) {
-        this.value = value;
-        this.entityId = entityId;
-        this.contextId = contextId;
+        this.id = contextId;
         this.executionTime = executionTime;
     }
 
@@ -50,16 +34,12 @@ public class Reading<T> implements Serializable{
         return value;
     }
 
-    public String getEntityId() {
-        return entityId;
-    }
-
-    public String getContextId() {
-        return contextId;
+    public String getId() {
+        return id;
     }
 
     @Override
     public String toString() {
-        return "Reading: " + value.toString() + ", from Entity: '" + entityId + "' and Context: '" + contextId + "'";
+        return "Reading: " + value.toString() + ", from: '" + id + "'";
     }
 }

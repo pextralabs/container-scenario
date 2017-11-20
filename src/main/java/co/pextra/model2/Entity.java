@@ -23,7 +23,7 @@ public abstract class Entity {
         boolean accessibility = field.isAccessible();
         try {
             field.setAccessible(true);
-            field.set(this, field.getType().getConstructor(String.class, Entity.class).newInstance(field.getName(), this));
+            field.set(this, field.getType().getConstructor(String.class, Entity.class).newInstance(this.id + "-" + field.getName(), this));
             intrinsicContexts.add((IntrinsicContext) field.get(this));
         } catch (Exception e) {
             e.printStackTrace();
