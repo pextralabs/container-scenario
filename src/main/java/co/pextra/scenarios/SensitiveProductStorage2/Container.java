@@ -14,6 +14,7 @@ public class Container extends Entity {
     public Container(String id, Batch... batches) {
         super(id);
         this.batches = new HashSet<>(Arrays.asList(batches));
+        this.batches.forEach(batch -> batch.setContainer(this));
     }
 
     public void addBatches(Batch... batches) {

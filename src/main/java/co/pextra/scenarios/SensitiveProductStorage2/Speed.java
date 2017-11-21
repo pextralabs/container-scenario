@@ -12,7 +12,7 @@ public class Speed extends IntrinsicContext<Double>{
 
     public Speed(String id, Entity bearer) {
         super(id, bearer);
-        this.setReading(0.0);
+        this.setValue(0.0);
     }
 
     @Override

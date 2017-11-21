@@ -5,7 +5,7 @@ import co.pextra.model2.Entity;
 import co.pextra.model2.IntrinsicContext;
 import co.pextra.model2.Reading;
 
-public class Location extends IntrinsicContext<LatLng>{
+public class Location extends IntrinsicContext<Reading<LatLng>>{
     static  public  double degreesToRadians (double degrees) {
         return degrees * Math.PI / 180;
     }
@@ -33,6 +33,6 @@ public class Location extends IntrinsicContext<LatLng>{
         return earthRadius * c;
     }
     static public double distance (Location l1, Location l2) {
-        return distance(l1.getValue(), l2.getValue());
+        return distance(l1.getValue().getValue(), l2.getValue().getValue());
     }
 }

@@ -37,8 +37,8 @@ public class BatchTest extends SessionTest{
         Batch batch = new Batch("batch1", productType);
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
         Container container = new Container("container", batch);
-        container.getLocation().setReading(vix);
-        container.getTemperature().setReading(10.0);
+        container.getLocation().setValue(new Reading<>(vix, container.getLocation().getId()));
+        container.getTemperature().setValue(new Reading<>(10.0, container.getTemperature().getId()));
         batch.setContainer(container);
 
         session.insert(productType);
@@ -54,7 +54,7 @@ public class BatchTest extends SessionTest{
         int aux = 0;
         while (clock.getCurrentTime() < initialTime + TimeUnit.MINUTES.toMillis(30)) {
             clock.advanceTime(5, TimeUnit.MINUTES);
-            session.insert(new Reading<>(10.0 + 0.5 * ++aux, "container-temperature", clock.getCurrentTime()));
+            session.insert(new Reading<>(10.0 + 0.5 * ++aux, container.getTemperature().getId(), clock.getCurrentTime()));
             session.fireAllRules();
         }
         System.out.println(new Date(clock.getCurrentTime()));

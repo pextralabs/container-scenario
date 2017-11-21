@@ -6,21 +6,28 @@ import java.lang.Double
 import java.lang.Long
 import java.util.Date;
 import org.drools.core.time.SessionPseudoClock;
+import br.ufes.inf.lprm.scene.model.Situation;
+import br.ufes.inf.lprm.situation.bindings.*;
+import br.ufes.inf.lprm.situation.model.Participation;
+import br.ufes.inf.lprm.situation.model.SituationType
+import br.ufes.inf.lprm.scene.util.SituationHelper
+import co.pextra.scenarios.SensitiveProductStorage.EstimateTimeOfArrival;
 
 global SessionPseudoClock clock;
 
-rule IntrinsicContextUpdate2
+rule PerceivedIntrinsicContextUpdate2
     no-loop
     when
         context: co.pextra.model2.Context()
         reading: co.pextra.model2.Reading(id == context.id)
     then
-        context.setReading(reading);
-        update(context);
+        context.setValue(reading);
+        retract(context);
+        insert(context);
     end
 
 
-rule SpeedReading2
+rule SpeedUpdate2
     no-loop
     when
         location: Location(bearer: bearer)
@@ -30,12 +37,13 @@ rule SpeedReading2
                 collectList(r)
         )
     then
-        Reading<Double> reading = new Reading<>(Speed.computeSpeed(readings), speed.getId(), clock.getCurrentTime());
-        insert(reading);
+        speed.setValue(Speed.computeSpeed(readings));
+        retract(speed);
+        insert(speed);
     end
 
 
-rule TimeToThresholdReading2
+rule TimeToThresholdUpdate2
     no-loop
     when
         temperature: Temperature(bearer: bearer)
@@ -45,24 +53,48 @@ rule TimeToThresholdReading2
             collectList(r)
         )
     then
-        Reading<Long> reading = new Reading<>(
-                TimeToThreshold.computeTTT(readings, batch.getProductType()),
-                ttt.getId(),
-                clock.getCurrentTime()
-                );
-        insert(reading);
+        ttt.setValue(TimeToThreshold.computeTTT(readings, batch.getProductType()));
+        update(ttt);
     end
 
-
-
-rule EstimateTimeOfArrivalUpdate
+rule EstimateTimeOfArrivalInsert2
     no-loop
     when
-        responsibility: Responsibility(responsible: responsible, batches: batches)
-        person: Person( this memberOf responsible)
-        Batch( this memberOf batches, container: container )
-        Location(this == person.location, pl: value)
-        Speed(this == person.speed, ps: value)
-        Location(this == container.location, cl: value)
+        person: Person()
+        batch: Batch()
+        container: Container() from batch.container
+        Watch(watcher == person, target == batch)
+        Location(this == person.location || this == container.location)
     then
+        System.out.println("----------------------------------------- EstimateTimeOfArrivalInsert2");
+        EstimateTimeOfArrival eta = new EstimateTimeOfArrival("", person, container);
     end
+
+//rule EstimateTimeOfArrivalUpdate2
+//    no-loop
+//    when
+//        person: Person()
+//        batch: Batch(container: container)
+//        eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities)
+//        Watch(watcher == person, target == batch)
+//        Location(this == person.location)
+//        Location(this == container.location)
+//    then
+//        eta.setValue(EstimateTimeOfArrival.computeETA(person, container));
+//        update(eta);
+//    end
+
+//declare ETABiggerThanTTT2 extends Situation
+//  eta: EstimateTimeOfArrival @part @key
+//  ttt: TimeToThreshold @part @key
+//end
+//rule ETABiggerThanTTT2
+// @role(situation) @type(ETABiggerThanTTT2)
+//  when
+//    person: Person()
+//    batch: Batch(container: container)
+//    ttt: TimeToThreshold(bearer == batch)
+//    eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities, value > ttt.value)
+//  then
+//    SituationHelper.situationDetected(drools);
+//end

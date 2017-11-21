@@ -18,12 +18,12 @@ public class ContainerTest extends  SessionTest {
     public void instantiation () {
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
         Container container = new Container("container");
-        container.getLocation().setReading(vix);
-        container.getTemperature().setReading(0.0);
+        container.getLocation().setValue(new Reading<>(vix, container.getLocation().getId()));
+        container.getTemperature().setValue(new Reading<>(0.0, container.getTemperature().getId()));
 
         Assert.assertEquals(container.getBatches().size(), 0);
-        Assert.assertEquals(container.getLocation().getValue(), vix);
-        Assert.assertEquals(container.getTemperature().getValue(), new Double(0.0));
+        Assert.assertEquals(container.getLocation().getValue().getValue(), vix);
+        Assert.assertEquals(container.getTemperature().getValue().getValue(), new Double(0.0));
     }
 
     @Test
@@ -35,8 +35,8 @@ public class ContainerTest extends  SessionTest {
         LOG.info("Now running data");
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
         Container container = new Container("container");
-        container.getLocation().setReading(vix);
-        container.getTemperature().setReading(0.0);
+        container.getLocation().setValue(new Reading<>(vix, container.getLocation().getId()));
+        container.getTemperature().setValue(new Reading<>(0.0, container.getTemperature().getId()));
 
         session.insert(container);
         container.getIntrinsicContexts().forEach(session::insert);
@@ -49,6 +49,6 @@ public class ContainerTest extends  SessionTest {
             session.insert(new Reading<>(0.05 * ++aux, "container-temperature", clock.getCurrentTime()));
             session.fireAllRules();
         }
-        Assert.assertTrue(container.getTemperature().getValue() == 0.05 * aux);
+        Assert.assertTrue(container.getTemperature().getValue().getValue() == 0.05 * aux);
     }
 }

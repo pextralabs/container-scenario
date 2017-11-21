@@ -10,7 +10,7 @@ import java.util.List;
 public class TimeToThreshold extends IntrinsicContext<Long> {
     public TimeToThreshold(String id, Entity bearer) {
         super(id, bearer);
-        setReading(Long.MAX_VALUE);
+        setValue(Long.MAX_VALUE);
     }
     @Override
     public String toString() {

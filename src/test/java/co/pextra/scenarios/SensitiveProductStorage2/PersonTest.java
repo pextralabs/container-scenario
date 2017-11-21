@@ -43,7 +43,7 @@ public class PersonTest extends SessionTest{
         session.insert(new Reading<>(vix, "john-location", clock.getCurrentTime()));
         session.fireAllRules();
         Assert.assertNotNull(john.getLocation().getValue());
-        Assert.assertEquals(john.getLocation().getValue(), vix);
+        Assert.assertEquals(john.getLocation().getValue().getValue(), vix);
     }
 
     @Test

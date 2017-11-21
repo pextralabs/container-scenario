@@ -6,7 +6,7 @@ import co.pextra.model2.RelationalContext;
 public class EstimateTimeOfArrival extends RelationalContext<Long>{
 
     public EstimateTimeOfArrival(String id, Entity... entities) {
-        super(id, entities);
+        super(id, Long.MAX_VALUE, entities);
     }
 
     public EstimateTimeOfArrival(String id, Long initialValue, Entity... entities) {
@@ -19,10 +19,15 @@ public class EstimateTimeOfArrival extends RelationalContext<Long>{
     }
 
     static  public long computeETA(Person p, Container c) {
-        return computeETA(p.getLocation().getValue(), p.getSpeed().getValue(), c.getLocation().getValue());
+        return computeETA(p.getLocation().getValue().getValue(), p.getSpeed().getValue(), c.getLocation().getValue().getValue());
     }
     static public long computeETA (LatLng pl, double ps, LatLng cl) {
         double distance = Location.distance(pl, cl);
         return (long) (distance / ps);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return  o instanceof  EstimateTimeOfArrival && this.id.equals(((EstimateTimeOfArrival) o).id);
     }
 }

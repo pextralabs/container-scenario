@@ -1,21 +1,12 @@
 package co.pextra.scenarios.SensitiveProductStorage2;
 
-import co.pextra.model2.Entity;
-
-public class Watch extends Entity {
+public class Watch {
     private Person watcher;
     private Batch target;
-    private EstimateTimeOfArrival eta;
-    public Watch(String id) {
-        super(id);
-    }
 
-    public EstimateTimeOfArrival getEta() {
-        return eta;
-    }
-
-    public void setEta(EstimateTimeOfArrival eta) {
-        this.eta = eta;
+    public Watch(Person watcher, Batch target) {
+        this.watcher = watcher;
+        this.target = target;
     }
 
     public Person getWatcher() {
@@ -32,5 +23,10 @@ public class Watch extends Entity {
 
     public void setTarget(Batch target) {
         this.target = target;
+    }
+
+    @Override
+    public String toString() {
+        return "Watcher: " + watcher + " Target: " +target;
     }
 }
