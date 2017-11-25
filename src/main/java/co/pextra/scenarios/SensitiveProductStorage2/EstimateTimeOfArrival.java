@@ -8,14 +8,19 @@ public class EstimateTimeOfArrival extends RelationalContext<Long>{
     public EstimateTimeOfArrival(String id, Entity... entities) {
         super(id, Long.MAX_VALUE, entities);
     }
-
-    public EstimateTimeOfArrival(String id, Long initialValue, Entity... entities) {
+    public EstimateTimeOfArrival(String id, long initialValue, Entity... entities) {
         super(id, initialValue, entities);
     }
+
 
     @Override
     public String toString() {
         return "ETA: " + getValue() + "s";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return  o instanceof  EstimateTimeOfArrival && this.id.equals(((EstimateTimeOfArrival) o).id);
     }
 
     static  public long computeETA(Person p, Container c) {
@@ -24,10 +29,5 @@ public class EstimateTimeOfArrival extends RelationalContext<Long>{
     static public long computeETA (LatLng pl, double ps, LatLng cl) {
         double distance = Location.distance(pl, cl);
         return (long) (distance / ps);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        return  o instanceof  EstimateTimeOfArrival && this.id.equals(((EstimateTimeOfArrival) o).id);
     }
 }

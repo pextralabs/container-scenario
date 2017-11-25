@@ -1,6 +1,7 @@
 package co.pextra.scenarios.SensitiveProductStorage2;
 
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
+import co.pextra.model2.Entity;
 import co.pextra.model2.Reading;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Test;
@@ -8,6 +9,9 @@ import org.kie.api.runtime.KieSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 
@@ -19,7 +23,6 @@ public class ETATest extends SessionTest {
         KieSession session = this.startSession(this.makePseudoClockConfiguration());
         SessionPseudoClock clock = session.getSessionClock();
         session.addEventListener(new SCENESessionListener());
-        session.setGlobal("clock", clock);
 
         LOG.info("Now running data");
         LatLng vix = new LatLng(-20.2976178, -40.2957768);
@@ -45,5 +48,12 @@ public class ETATest extends SessionTest {
         john.getWatchers().add(new Watch(john, batch));
         john.getWatchers().forEach(session::insert);
         session.fireAllRules();
+
+        clock.advanceTime(1, TimeUnit.HOURS);
+        for (int i = 0; i < 10; i++) {
+            clock.advanceTime(1, TimeUnit.SECONDS);
+            session.insert(new Reading<>(Person.walk(john, 2.5 * i,0), john.getLocation().getId(), clock.getCurrentTime()));
+            session.fireAllRules();
+        }
     }
 }

@@ -5,17 +5,17 @@ import co.pextra.model2.Reading
 import java.lang.Double
 import java.lang.Long
 import java.util.Date;
-import org.drools.core.time.SessionPseudoClock;
 import br.ufes.inf.lprm.scene.model.Situation;
 import br.ufes.inf.lprm.situation.bindings.*;
 import br.ufes.inf.lprm.situation.model.Participation;
 import br.ufes.inf.lprm.situation.model.SituationType
 import br.ufes.inf.lprm.scene.util.SituationHelper
-import co.pextra.scenarios.SensitiveProductStorage.EstimateTimeOfArrival;
+import java.util.HashSet
+import java.util.Arrays
+import co.pextra.model2.Entity
+import java.util.Set;
 
-global SessionPseudoClock clock;
-
-rule PerceivedIntrinsicContextUpdate2
+rule PerceivedIntrinsicContextUpdate
     no-loop
     when
         context: co.pextra.model2.Context()
@@ -27,7 +27,7 @@ rule PerceivedIntrinsicContextUpdate2
     end
 
 
-rule SpeedUpdate2
+rule SpeedUpdate
     no-loop
     when
         location: Location(bearer: bearer)
@@ -43,7 +43,7 @@ rule SpeedUpdate2
     end
 
 
-rule TimeToThresholdUpdate2
+rule TimeToThresholdUpdate
     no-loop
     when
         temperature: Temperature(bearer: bearer)
@@ -57,44 +57,58 @@ rule TimeToThresholdUpdate2
         update(ttt);
     end
 
-rule EstimateTimeOfArrivalInsert2
+rule EstimateTimeOfArrivalInsert
     no-loop
     when
         person: Person()
         batch: Batch()
         container: Container() from batch.container
         Watch(watcher == person, target == batch)
-        Location(this == person.location || this == container.location)
     then
-        System.out.println("----------------------------------------- EstimateTimeOfArrivalInsert2");
-        EstimateTimeOfArrival eta = new EstimateTimeOfArrival("", person, container);
+        EstimateTimeOfArrival eta = new EstimateTimeOfArrival(person.getId() + "-" + batch.getId(), person, container);
+        insertLogical(eta);
     end
 
-//rule EstimateTimeOfArrivalUpdate2
-//    no-loop
-//    when
-//        person: Person()
-//        batch: Batch(container: container)
-//        eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities)
-//        Watch(watcher == person, target == batch)
-//        Location(this == person.location)
-//        Location(this == container.location)
-//    then
-//        eta.setValue(EstimateTimeOfArrival.computeETA(person, container));
-//        update(eta);
-//    end
+rule EstimateTimeOfArrivalUpdate
+    no-loop
+    when
+        person: Person()
+        batch: Batch(container: container)
+        eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities)
+        Location(this == person.location)
+        Location(this == container.location)
+    then
+        eta.setValue(EstimateTimeOfArrival.computeETA(person, container));
+        update(eta);
+    end
 
-//declare ETABiggerThanTTT2 extends Situation
-//  eta: EstimateTimeOfArrival @part @key
-//  ttt: TimeToThreshold @part @key
-//end
-//rule ETABiggerThanTTT2
-// @role(situation) @type(ETABiggerThanTTT2)
-//  when
-//    person: Person()
-//    batch: Batch(container: container)
-//    ttt: TimeToThreshold(bearer == batch)
-//    eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities, value > ttt.value)
-//  then
-//    SituationHelper.situationDetected(drools);
-//end
+declare ETABiggerThanTTT extends Situation
+  person: Person @part @key
+  container: Container @part @key
+  eta: EstimateTimeOfArrival @part @key
+  ttt: TimeToThreshold @part @key
+end
+rule ETABiggerThanTTT
+ @role(situation) @type(ETABiggerThanTTT)
+  when
+    person: Person()
+    batch: Batch(container: container)
+    ttt: TimeToThreshold(bearer == batch)
+    eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities, value > ttt.value)
+  then
+    SituationHelper.situationDetected(drools);
+end
+
+declare AllETABiggerThanTTT extends Situation
+    batch: Batch @part @key
+end
+rule AllETABiggerThanTTT
+ @role(situation) @type(AllETABiggerThanTTT)
+  when
+    forall (
+        Watch(person: watcher, batch: target)
+        ETABiggerThanTTT(person == person, container == batch.container, active)
+    )
+  then
+    SituationHelper.situationDetected(drools);
+end

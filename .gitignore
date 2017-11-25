@@ -5,3 +5,5 @@
 /.vscode
 /.settings
 .classpath
+.project
+*.log.*
