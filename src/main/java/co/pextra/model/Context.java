@@ -1,9 +1,26 @@
 package co.pextra.model;
 
-public interface Context<T> {
-    String getID();
-    Entity getBearer();
+public abstract class Context<T> {
+    protected T value;
+    protected String id;
 
-    T getValue();
-    void setValue(T value);
+    public Context(String id) {
+        this.id = id;
+        this.value = null;
+    }
+
+    public Context(String id, T initialValue) {
+        this.id = id;
+        this.value = initialValue;
+    }
+
+    public String getId() {
+        return id;
+    }
+    public void setValue(T value) {
+        this.value = value;
+    }
+    public T getValue() {
+        return value;
+    }
 }

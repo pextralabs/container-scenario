@@ -1,7 +1,7 @@
-package co.pextra.scenarios.SensitiveProductStorage2;
+package co.pextra.scenarios.SensitiveProductStorage;
 
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
-import co.pextra.model2.Reading;
+import co.pextra.model.Reading;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Assert;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class BatchTest extends SessionTest{
     }
 
     @Test
-    public void ttt() {
+    public void ttt() throws Exception {
         KieSession session = this.startSession(this.makePseudoClockConfiguration());
         SessionPseudoClock clock = session.getSessionClock();
         session.addEventListener(new SCENESessionListener());
@@ -39,7 +39,6 @@ public class BatchTest extends SessionTest{
         Container container = new Container("container", batch);
         container.getLocation().setValue(new Reading<>(vix, container.getLocation().getId()));
         container.getTemperature().setValue(new Reading<>(10.0, container.getTemperature().getId()));
-        batch.setContainer(container);
 
         session.insert(productType);
         session.insert(batch);

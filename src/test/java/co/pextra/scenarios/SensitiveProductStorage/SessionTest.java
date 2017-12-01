@@ -1,4 +1,4 @@
-package co.pextra.scenarios.SensitiveProductStorage2;
+package co.pextra.scenarios.SensitiveProductStorage;
 
 import br.ufes.inf.lprm.scene.SceneApplication;
 import javassist.ClassPool;
@@ -25,7 +25,7 @@ public abstract class SessionTest {
         return pseudoConfig;
     }
 
-    public KieSession startSession (KieSessionConfiguration configuration) {
+    public KieSession startSession (KieSessionConfiguration configuration) throws Exception {
         KieServices kieServices = KieServices.Factory.get();
         KieContainer kContainer = kieServices.getKieClasspathContainer();
         Results verifyResults = kContainer.verify();
@@ -41,6 +41,7 @@ public abstract class SessionTest {
         LOG.info("Creating kieSession");
         KieSession session = kieBase.newKieSession(configuration, null);
         new SceneApplication(ClassPool.getDefault(), session, "sensitive-product-storage-scenario");
+        if (verifyResults.hasMessages()) throw new Exception("chora q n rola sessão pra ti hj n.");
         return session;
     }
 }

@@ -1,7 +1,7 @@
-package co.pextra.scenarios.SensitiveProductStorage2;
+package co.pextra.scenarios.SensitiveProductStorage;
 
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
-import co.pextra.model2.Reading;
+import co.pextra.model.Reading;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,7 +27,7 @@ public class ContainerTest extends  SessionTest {
     }
 
     @Test
-    public void temperature () {
+    public void temperature () throws Exception{
         KieSession session = this.startSession(this.makePseudoClockConfiguration());
         SessionPseudoClock clock = session.getSessionClock();
         session.addEventListener(new SCENESessionListener());

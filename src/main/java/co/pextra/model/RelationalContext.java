@@ -1,4 +1,4 @@
-package co.pextra.model2;
+package co.pextra.model;
 
 import java.util.Arrays;
 import java.util.HashSet;

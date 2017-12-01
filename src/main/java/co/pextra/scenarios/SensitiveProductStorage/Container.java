@@ -1,40 +1,24 @@
 package co.pextra.scenarios.SensitiveProductStorage;
 
-import co.pextra.model.Context;
 import co.pextra.model.Entity;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Container implements Entity {
+public class Container extends Entity {
     private Location location;
+    private Set<Batch> batches;
     private Temperature temperature;
-    private Batch batch;
-    private String id;
-    private Person owner;
 
-    public Container(Person owner, String id, Location location, Temperature temperature) {
-        this.owner = owner;
-        this.location = location;
-        this.temperature = temperature;
-        this.id = id;
+    public Container(String id, Batch... batches) {
+        super(id);
+        this.batches = new HashSet<>(Arrays.asList(batches));
+        this.batches.forEach(batch -> batch.setContainer(this));
     }
 
-    public Container(Person owner, String id, double latitude, double longitude, double temperature) {
-        this.owner = owner;
-        this.location = new Location("location-" + id, this, latitude, longitude);
-        this.temperature = new Temperature("temperature-" +  id, this, temperature);
-        this.id = id;
-    }
-
-    @Override
-    public String getID() {
-        return id;
-    }
-
-    @Override
-    public List<Context> getContexts() {
-        return Arrays.asList(location, temperature);
+    public void addBatches(Batch... batches) {
+        this.batches.addAll(Arrays.asList(batches));
     }
 
     public Location getLocation() {
@@ -45,40 +29,24 @@ public class Container implements Entity {
         this.location = location;
     }
 
+    public Set<Batch> getBatches() {
+        return batches;
+    }
+
+    public void setBatches(Set<Batch> batches) {
+        this.batches = batches;
+    }
+
+    @Override
+    public String toString() {
+        return "Container '" + id + "'";
+    }
+
     public Temperature getTemperature() {
         return temperature;
     }
 
     public void setTemperature(Temperature temperature) {
         this.temperature = temperature;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Batch getBatch() {
-        return batch;
-    }
-
-    public void setBatch(Batch batch) {
-        this.batch = batch;
-    }
-
-    public Person getOwner() {
-        return owner;
-    }
-
-    public void setOwner(Person owner) {
-        this.owner = owner;
-    }
-
-    @Override
-    public String toString() {
-        return "Container '" + id + "'";
     }
 }

@@ -1,4 +1,4 @@
-package co.pextra.scenarios.SensitiveProductStorage2;
+package co.pextra.scenarios.SensitiveProductStorage;
 
 public class Watch {
     private Person watcher;

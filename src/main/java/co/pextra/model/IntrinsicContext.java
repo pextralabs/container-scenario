@@ -1,4 +1,4 @@
-package co.pextra.model2;
+package co.pextra.model;
 
 public abstract class IntrinsicContext<T> extends Context<T> {
     protected Entity bearer;

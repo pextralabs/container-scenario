@@ -34,4 +34,9 @@ public class ProductType {
     public void setMinThreshold(double minThreshold) {
         this.minThreshold = minThreshold;
     }
+
+    @Override
+    public String toString() {
+        return "ProductType: " + name;
+    }
 }

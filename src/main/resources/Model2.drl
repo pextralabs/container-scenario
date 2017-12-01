@@ -1,7 +1,6 @@
-package co.pextra.scenarios.SensitiveProductStorage2;
+package co.pextra.scenarios.SensitiveProductStorage;
 
 import java.util.List
-import co.pextra.model2.Reading
 import java.lang.Double
 import java.lang.Long
 import java.util.Date;
@@ -12,14 +11,20 @@ import br.ufes.inf.lprm.situation.model.SituationType
 import br.ufes.inf.lprm.scene.util.SituationHelper
 import java.util.HashSet
 import java.util.Arrays
-import co.pextra.model2.Entity
+import co.pextra.model.*;
 import java.util.Set;
+import org.kie.api.time.SessionClock
+import java.time.LocalDateTime
+import java.time.Instant
+import java.util.TimeZone;
+
+global SessionClock clock;
 
 rule PerceivedIntrinsicContextUpdate
     no-loop
     when
-        context: co.pextra.model2.Context()
-        reading: co.pextra.model2.Reading(id == context.id)
+        context: Context()
+        reading: Reading(id == context.id)
     then
         context.setValue(reading);
         retract(context);
@@ -33,7 +38,7 @@ rule SpeedUpdate
         location: Location(bearer: bearer)
         Person(this == bearer, speed: speed)
         readings: List() from accumulate(
-                r: co.pextra.model2.Reading(id == location.id) over window:time( 2m ),
+                r: Reading(id == location.id) over window:time( 2m ),
                 collectList(r)
         )
     then
@@ -49,11 +54,12 @@ rule TimeToThresholdUpdate
         temperature: Temperature(bearer: bearer)
         batch: Batch(container == bearer, ttt: ttt)
         readings: List(size > 0) from accumulate(
-            r: co.pextra.model2.Reading(id == temperature.id),
+            r: Reading(id == temperature.id),
             collectList(r)
         )
     then
-        ttt.setValue(TimeToThreshold.computeTTT(readings, batch.getProductType()));
+        LocalDateTime now = LocalDateTime.ofInstant(Instant.ofEpochMilli(clock.getCurrentTime()), TimeZone.getDefault().toZoneId());
+        ttt.setValue(TimeToThreshold.computeTTT(readings, batch.getProductType(), now));
         update(ttt);
     end
 
@@ -105,10 +111,11 @@ end
 rule AllETABiggerThanTTT
  @role(situation) @type(AllETABiggerThanTTT)
   when
+    Watch(person: watcher, batch: target)
     forall (
-        Watch(person: watcher, batch: target)
-        ETABiggerThanTTT(person == person, container == batch.container, active)
+        Watch(person == watcher, batch == target)
+        ETABiggerThanTTT(person == person, active)
     )
   then
-    SituationHelper.situationDetected(drools);
+  SituationHelper.situationDetected(drools);
 end
