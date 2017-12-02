@@ -1,9 +1,9 @@
 /.idea
 /*.iml
-/target
+target/
 /*.log*
-/.vscode
-/.settings
+.vscode/
+.settings/
 .classpath
 .project
 *.log.*
