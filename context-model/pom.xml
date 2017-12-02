@@ -53,8 +53,18 @@
       <id>Scene repo</id>
       <url>https://mymavenrepo.com/repo/BG5Za6vz3CyY7SaQjMOa/</url>
     </repository>
-
   </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>Pextra Maven Repo</id>
+      <url>https://mymavenrepo.com/repo/PkZASKyCrrcPaIvQ1RtQ/</url>
+    </repository>
+    <snapshotRepository>
+      <id>Pextra Maven Repo</id>
+      <url>https://mymavenrepo.com/repo/PkZASKyCrrcPaIvQ1RtQ/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <build>
     <plugins>
