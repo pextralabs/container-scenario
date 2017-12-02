@@ -1,0 +1,393 @@
+16:23:07,107  INFO SessionTest:32 - Message [id=28, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=105, column=0
+   text=Unable to Analyse Expression person == watcher:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.person()]
+[Near : {... person == watcher ....}]
+             ^
+[Line: 105, Column: 8]]
+16:23:07,114  INFO SessionTest:32 - Message [id=29, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=105, column=0
+   text=Unable to Analyse Expression batch == target:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.batch()]
+[Near : {... batch == target ....}]
+             ^
+[Line: 105, Column: 8]]
+16:23:07,114  INFO SessionTest:32 - Message [id=30, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=106, column=0
+   text=Unable to resolve ObjectType 'ETABiggerThanTTT']
+16:23:07,114  INFO SessionTest:32 - Message [id=31, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=40, column=0
+   text=Rule Compilation error ttt cannot be resolved
+TimeToThreshold cannot be resolved
+batch cannot be resolved
+ttt cannot be resolved to a variable]
+16:23:07,114  INFO SessionTest:32 - Message [id=32, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=55, column=0
+   text=Rule Compilation error EstimateTimeOfArrival cannot be resolved to a type
+EstimateTimeOfArrival cannot be resolved to a type
+person cannot be resolved
+batch cannot be resolved
+person cannot be resolved to a variable
+container cannot be resolved to a variable]
+16:23:07,115  INFO SessionTest:32 - Message [id=33, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=24, column=0
+   text=Rule Compilation error speed cannot be resolved
+Speed cannot be resolved
+speed cannot be resolved to a variable
+speed cannot be resolved to a variable]
+16:23:07,115  INFO SessionTest:32 - Message [id=34, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=67, column=0
+   text=Rule Compilation error eta cannot be resolved
+EstimateTimeOfArrival cannot be resolved
+person cannot be resolved to a variable
+container cannot be resolved to a variable
+eta cannot be resolved to a variable]
+16:23:07,116  INFO SessionTest:33 - Creating kieBase
+16:23:07,253  INFO SessionTest:37 - There should be rules: 
+16:23:07,254  INFO SessionTest:41 - Creating kieSession
+16:26:15,110  INFO ClasspathKieProject:131 - Found kmodule: file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes/META-INF/kmodule.xml
+16:26:15,119 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes
+16:26:15,907  WARN ClasspathKieProject:289 - Unable to find pom.properties in /home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes
+16:26:15,945  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/pom.xml
+16:26:15,956 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-scenario:1.0
+16:26:15,967  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-scenario:1.0,file=/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes]
+16:26:15,967  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+16:26:15,971 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+16:26:15,990  WARN ClasspathKieProject:261 - Unable to find pom.properties in /home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+16:26:15,991  WARN ClasspathKieProject:231 - Unable to load pom.properties from/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+16:26:15,991  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+16:26:16,019 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+16:26:16,020  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
+16:26:16,021  INFO ClasspathKieProject:131 - Found kmodule: file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes/META-INF/kmodule.xml
+16:26:16,022 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes
+16:26:16,034  WARN ClasspathKieProject:289 - Unable to find pom.properties in /home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes
+16:26:16,049  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/pom.xml
+16:26:16,050 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-model:1.0
+16:26:16,053  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-model:1.0,file=/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes]
+16:26:19,138 ERROR AbstractKieModule:250 - Unable to build KieBaseModel:scenarioKieBase
+Cannot resolve type 'Person for field person in declared type ETABiggerThanTTT
+Cannot resolve type 'Container for field container in declared type ETABiggerThanTTT
+Cannot resolve type 'EstimateTimeOfArrival for field eta in declared type ETABiggerThanTTT
+Cannot resolve type 'TimeToThreshold for field ttt in declared type ETABiggerThanTTT
+Cannot resolve type 'Batch for field batch in declared type AllETABiggerThanTTT
+Unable to resolve ObjectType 'Location' : [Rule name='SpeedUpdate']
+
+Unable to resolve ObjectType 'Person' : [Rule name='SpeedUpdate']
+
+Unable to resolve ObjectType 'Reading' : [Rule name='SpeedUpdate']
+
+Unable to resolve ObjectType 'Temperature' : [Rule name='TimeToThresholdUpdate']
+
+Unable to resolve ObjectType 'Batch' : [Rule name='TimeToThresholdUpdate']
+
+Unable to resolve ObjectType 'Reading' : [Rule name='TimeToThresholdUpdate']
+
+Unable to resolve ObjectType 'Person' : [Rule name='EstimateTimeOfArrivalInsert']
+
+Unable to resolve ObjectType 'Batch' : [Rule name='EstimateTimeOfArrivalInsert']
+
+Unable to resolve ObjectType 'Container' : [Rule name='EstimateTimeOfArrivalInsert']
+
+Unable to Analyse Expression watcher == person:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.watcher()]
+[Near : {... watcher == person ....}]
+             ^
+[Line: 59, Column: 8] : [Rule name='EstimateTimeOfArrivalInsert']
+
+Unable to Analyse Expression target == batch:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.target()]
+[Near : {... target == batch ....}]
+             ^
+[Line: 59, Column: 8] : [Rule name='EstimateTimeOfArrivalInsert']
+
+Unable to resolve ObjectType 'Person' : [Rule name='EstimateTimeOfArrivalUpdate']
+
+Unable to resolve ObjectType 'Batch' : [Rule name='EstimateTimeOfArrivalUpdate']
+
+Unable to resolve ObjectType 'EstimateTimeOfArrival' : [Rule name='EstimateTimeOfArrivalUpdate']
+
+Unable to resolve ObjectType 'Location' : [Rule name='EstimateTimeOfArrivalUpdate']
+
+Unable to resolve ObjectType 'Location' : [Rule name='EstimateTimeOfArrivalUpdate']
+
+Unable to resolve ObjectType 'Person' : [Rule name='ETABiggerThanTTT']
+
+Unable to resolve ObjectType 'Batch' : [Rule name='ETABiggerThanTTT']
+
+Unable to resolve ObjectType 'TimeToThreshold' : [Rule name='ETABiggerThanTTT']
+
+Unable to resolve ObjectType 'EstimateTimeOfArrival' : [Rule name='ETABiggerThanTTT']
+
+Field Reader does not exist for declaration 'person' in 'person : watcher' in the rule 'AllETABiggerThanTTT' : [Rule name='AllETABiggerThanTTT']
+
+Field Reader does not exist for declaration 'batch' in 'batch : target' in the rule 'AllETABiggerThanTTT' : [Rule name='AllETABiggerThanTTT']
+
+Unable to Analyse Expression person == watcher:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.person()]
+[Near : {... person == watcher ....}]
+             ^
+[Line: 103, Column: 8] : [Rule name='AllETABiggerThanTTT']
+
+Unable to Analyse Expression batch == target:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.batch()]
+[Near : {... batch == target ....}]
+             ^
+[Line: 103, Column: 8] : [Rule name='AllETABiggerThanTTT']
+
+Unable to resolve ObjectType 'ETABiggerThanTTT' : [Rule name='AllETABiggerThanTTT']
+
+Rule Compilation error : [Rule name='TimeToThresholdUpdate']
+	br/ufes/lprm/context/scenario/Rule_TimeToThresholdUpdate864065893.java (8:1166) : ttt cannot be resolved
+	br/ufes/lprm/context/scenario/Rule_TimeToThresholdUpdate864065893.java (8:1179) : TimeToThreshold cannot be resolved
+	br/ufes/lprm/context/scenario/Rule_TimeToThresholdUpdate864065893.java (8:1216) : batch cannot be resolved
+	br/ufes/lprm/context/scenario/Rule_TimeToThresholdUpdate864065893.java (9:1284) : ttt cannot be resolved to a variable
+
+Rule Compilation error : [Rule name='EstimateTimeOfArrivalInsert']
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalInsert1394439499.java (7:919) : EstimateTimeOfArrival cannot be resolved to a type
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalInsert1394439499.java (7:951) : EstimateTimeOfArrival cannot be resolved to a type
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalInsert1394439499.java (7:973) : person cannot be resolved
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalInsert1394439499.java (7:996) : batch cannot be resolved
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalInsert1394439499.java (7:1011) : person cannot be resolved to a variable
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalInsert1394439499.java (7:1019) : container cannot be resolved to a variable
+
+Rule Compilation error : [Rule name='SpeedUpdate']
+	br/ufes/lprm/context/scenario/Rule_SpeedUpdate182524499.java (7:984) : speed cannot be resolved
+	br/ufes/lprm/context/scenario/Rule_SpeedUpdate182524499.java (7:999) : Speed cannot be resolved
+	br/ufes/lprm/context/scenario/Rule_SpeedUpdate182524499.java (8:1067) : speed cannot be resolved to a variable
+	br/ufes/lprm/context/scenario/Rule_SpeedUpdate182524499.java (9:1223) : speed cannot be resolved to a variable
+
+Rule Compilation error : [Rule name='EstimateTimeOfArrivalUpdate']
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalUpdate694941427.java (7:918) : eta cannot be resolved
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalUpdate694941427.java (7:931) : EstimateTimeOfArrival cannot be resolved
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalUpdate694941427.java (7:964) : person cannot be resolved to a variable
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalUpdate694941427.java (7:972) : container cannot be resolved to a variable
+	br/ufes/lprm/context/scenario/Rule_EstimateTimeOfArrivalUpdate694941427.java (8:1022) : eta cannot be resolved to a variable
+
+
+16:26:19,743  INFO SessionTest:32 - Message [id=1, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=78, column=0
+   text=Cannot resolve type 'Person for field person in declared type ETABiggerThanTTT]
+16:26:19,743  INFO SessionTest:32 - Message [id=2, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=78, column=0
+   text=Cannot resolve type 'Container for field container in declared type ETABiggerThanTTT]
+16:26:19,744  INFO SessionTest:32 - Message [id=3, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=78, column=0
+   text=Cannot resolve type 'EstimateTimeOfArrival for field eta in declared type ETABiggerThanTTT]
+16:26:19,744  INFO SessionTest:32 - Message [id=4, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=78, column=0
+   text=Cannot resolve type 'TimeToThreshold for field ttt in declared type ETABiggerThanTTT]
+16:26:19,744  INFO SessionTest:32 - Message [id=5, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=95, column=0
+   text=Cannot resolve type 'Batch for field batch in declared type AllETABiggerThanTTT]
+16:26:19,744  INFO SessionTest:32 - Message [id=6, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=25, column=0
+   text=Unable to resolve ObjectType 'Location']
+16:26:19,745  INFO SessionTest:32 - Message [id=7, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=26, column=0
+   text=Unable to resolve ObjectType 'Person']
+16:26:19,745  INFO SessionTest:32 - Message [id=8, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=28, column=0
+   text=Unable to resolve ObjectType 'Reading']
+16:26:19,746  INFO SessionTest:32 - Message [id=9, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=41, column=0
+   text=Unable to resolve ObjectType 'Temperature']
+16:26:19,746  INFO SessionTest:32 - Message [id=10, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=42, column=0
+   text=Unable to resolve ObjectType 'Batch']
+16:26:19,746  INFO SessionTest:32 - Message [id=11, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=44, column=0
+   text=Unable to resolve ObjectType 'Reading']
+16:26:19,747  INFO SessionTest:32 - Message [id=12, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=56, column=0
+   text=Unable to resolve ObjectType 'Person']
+16:26:19,747  INFO SessionTest:32 - Message [id=13, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=57, column=0
+   text=Unable to resolve ObjectType 'Batch']
+16:26:19,747  INFO SessionTest:32 - Message [id=14, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=58, column=0
+   text=Unable to resolve ObjectType 'Container']
+16:26:19,748  INFO SessionTest:32 - Message [id=15, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=59, column=0
+   text=Unable to Analyse Expression watcher == person:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.watcher()]
+[Near : {... watcher == person ....}]
+             ^
+[Line: 59, Column: 8]]
+16:26:19,748  INFO SessionTest:32 - Message [id=16, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=59, column=0
+   text=Unable to Analyse Expression target == batch:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.target()]
+[Near : {... target == batch ....}]
+             ^
+[Line: 59, Column: 8]]
+16:26:19,748  INFO SessionTest:32 - Message [id=17, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=68, column=0
+   text=Unable to resolve ObjectType 'Person']
+16:26:19,748  INFO SessionTest:32 - Message [id=18, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=69, column=0
+   text=Unable to resolve ObjectType 'Batch']
+16:26:19,748  INFO SessionTest:32 - Message [id=19, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=70, column=0
+   text=Unable to resolve ObjectType 'EstimateTimeOfArrival']
+16:26:19,749  INFO SessionTest:32 - Message [id=20, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=71, column=0
+   text=Unable to resolve ObjectType 'Location']
+16:26:19,749  INFO SessionTest:32 - Message [id=21, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=72, column=0
+   text=Unable to resolve ObjectType 'Location']
+16:26:19,750  INFO SessionTest:32 - Message [id=22, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=87, column=0
+   text=Unable to resolve ObjectType 'Person']
+16:26:19,750  INFO SessionTest:32 - Message [id=23, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=88, column=0
+   text=Unable to resolve ObjectType 'Batch']
+16:26:19,750  INFO SessionTest:32 - Message [id=24, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=89, column=0
+   text=Unable to resolve ObjectType 'TimeToThreshold']
+16:26:19,751  INFO SessionTest:32 - Message [id=25, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=90, column=0
+   text=Unable to resolve ObjectType 'EstimateTimeOfArrival']
+16:26:19,751  INFO SessionTest:32 - Message [id=26, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=101, column=0
+   text=Field Reader does not exist for declaration 'person' in 'person : watcher' in the rule 'AllETABiggerThanTTT']
+16:26:19,751  INFO SessionTest:32 - Message [id=27, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=101, column=0
+   text=Field Reader does not exist for declaration 'batch' in 'batch : target' in the rule 'AllETABiggerThanTTT']
+16:26:19,754  INFO SessionTest:32 - Message [id=28, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=103, column=0
+   text=Unable to Analyse Expression person == watcher:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.person()]
+[Near : {... person == watcher ....}]
+             ^
+[Line: 103, Column: 8]]
+16:26:19,754  INFO SessionTest:32 - Message [id=29, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=103, column=0
+   text=Unable to Analyse Expression batch == target:
+[Error: unable to resolve method using strict-mode: org.kie.api.definition.rule.Watch.batch()]
+[Near : {... batch == target ....}]
+             ^
+[Line: 103, Column: 8]]
+16:26:19,754  INFO SessionTest:32 - Message [id=30, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=104, column=0
+   text=Unable to resolve ObjectType 'ETABiggerThanTTT']
+16:26:19,754  INFO SessionTest:32 - Message [id=31, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=38, column=0
+   text=Rule Compilation error ttt cannot be resolved
+TimeToThreshold cannot be resolved
+batch cannot be resolved
+ttt cannot be resolved to a variable]
+16:26:19,754  INFO SessionTest:32 - Message [id=32, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=53, column=0
+   text=Rule Compilation error EstimateTimeOfArrival cannot be resolved to a type
+EstimateTimeOfArrival cannot be resolved to a type
+person cannot be resolved
+batch cannot be resolved
+person cannot be resolved to a variable
+container cannot be resolved to a variable]
+16:26:19,755  INFO SessionTest:32 - Message [id=33, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=22, column=0
+   text=Rule Compilation error speed cannot be resolved
+Speed cannot be resolved
+speed cannot be resolved to a variable
+speed cannot be resolved to a variable]
+16:26:19,755  INFO SessionTest:32 - Message [id=34, kieBase=scenarioKieBase, level=ERROR, path=ScenarioRules.drl, line=65, column=0
+   text=Rule Compilation error eta cannot be resolved
+EstimateTimeOfArrival cannot be resolved
+person cannot be resolved to a variable
+container cannot be resolved to a variable
+eta cannot be resolved to a variable]
+16:26:19,756  INFO SessionTest:33 - Creating kieBase
+16:26:19,870  INFO SessionTest:37 - There should be rules: 
+16:26:19,870  INFO SessionTest:41 - Creating kieSession
+16:27:06,230  INFO ClasspathKieProject:131 - Found kmodule: file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes/META-INF/kmodule.xml
+16:27:06,234 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes
+16:27:06,824  WARN ClasspathKieProject:289 - Unable to find pom.properties in /home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes
+16:27:06,836  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/pom.xml
+16:27:06,842 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-scenario:1.0
+16:27:06,848  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-scenario:1.0,file=/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes]
+16:27:06,848  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+16:27:06,850 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+16:27:06,858  WARN ClasspathKieProject:261 - Unable to find pom.properties in /home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+16:27:06,858  WARN ClasspathKieProject:231 - Unable to load pom.properties from/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+16:27:06,858  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+16:27:06,864 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+16:27:06,865  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
+16:27:06,866  INFO ClasspathKieProject:131 - Found kmodule: file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes/META-INF/kmodule.xml
+16:27:06,866 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes
+16:27:06,871  WARN ClasspathKieProject:289 - Unable to find pom.properties in /home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes
+16:27:06,879  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/pom.xml
+16:27:06,880 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-model:1.0
+16:27:06,881  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-model:1.0,file=/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes]
+16:27:10,733  INFO SessionTest:33 - Creating kieBase
+16:27:10,914  INFO SessionTest:37 - There should be rules: 
+16:27:10,914  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.model] rule PerceivedIntrinsicContextUpdate
+16:27:10,915  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule OnGoingSituation
+16:27:10,915  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationType
+16:27:10,915  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationDeactivation
+16:27:10,915  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationActivation
+16:27:10,915  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule SpeedUpdate
+16:27:10,915  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule TimeToThresholdUpdate
+16:27:10,916  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalInsert
+16:27:10,916  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalUpdate
+16:27:10,916  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule ETABiggerThanTTT
+16:27:10,916  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule AllETABiggerThanTTT
+16:27:10,916  INFO SessionTest:41 - Creating kieSession
+16:27:11,173 DEBUG Reflections:186 - going to scan these urls:
+file:/home/pereirazc/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/dnsns.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/management-agent.jar
+file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+file:/home/pereirazc/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/rt.jar
+file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/test-classes/
+file:/home/pereirazc/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
+file:/home/pereirazc/devel/tools/idea-2017/plugins/junit/lib/junit-rt.jar
+file:/home/pereirazc/devel/tools/idea-2017/plugins/junit/lib/junit5-rt.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/jfxrt.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/zipfs.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/nashorn.jar
+file:/home/pereirazc/.m2/repository/org/kie/kie-internal/7.0.0.Final/kie-internal-7.0.0.Final.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/resources.jar
+file:/home/pereirazc/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+file:/home/pereirazc/.m2/repository/org/drools/drools-core/7.0.0.Final/drools-core-7.0.0.Final.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/jsse.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/jfr.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/deploy.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/sunpkcs11.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/cldrdata.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/jaccess.jar
+file:/home/pereirazc/.m2/repository/com/google/guava/guava/15.0/guava-15.0.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/javaws.jar
+file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar
+file:/home/pereirazc/.m2/repository/junit/junit/4.12/junit-4.12.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/localedata.jar
+file:/home/pereirazc/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar
+file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes/
+file:/home/pereirazc/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+file:/home/pereirazc/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+file:/home/pereirazc/.m2/repository/org/antlr/antlr-runtime/3.5/antlr-runtime-3.5.jar
+file:/home/pereirazc/.m2/repository/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/sunec.jar
+file:/home/pereirazc/.m2/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
+file:/home/pereirazc/.m2/repository/org/kie/kie-api/7.0.0.Final/kie-api-7.0.0.Final.jar
+file:/home/pereirazc/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
+file:/home/pereirazc/devel/tools/idea-2017/lib/idea_rt.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/charsets.jar
+file:/home/pereirazc/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/jfxswt.jar
+file:/home/pereirazc/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar
+file:/home/pereirazc/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/jce.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/ext/sunjce_provider.jar
+file:/home/pereirazc/.m2/repository/org/drools/drools-compiler/7.0.0.Final/drools-compiler-7.0.0.Final.jar
+file:/home/pereirazc/.m2/repository/org/mvel/mvel2/2.3.0.Final/mvel2-2.3.0.Final.jar
+file:/home/pereirazc/.jenv/candidates/java/1.8.0_77/jre/lib/plugin.jar
+file:/home/pereirazc/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
+file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes/
+file:/home/pereirazc/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+16:27:11,558  INFO Reflections:229 - Reflections took 383 ms to scan 52 urls, producing 324 keys and 1571 values 
+16:27:11,568 DEBUG Reflections:186 - going to scan these urls:
+file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes/
+16:27:11,575 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes/ with scanner SubTypesScanner
+16:27:11,575 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-model/target/classes/ with scanner TypeAnnotationsScanner
+16:27:11,576  INFO Reflections:229 - Reflections took 8 ms to scan 1 urls, producing 5 keys and 6 values 
+16:27:11,577 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+16:27:11,579 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
+16:27:11,580 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
+16:27:11,582  INFO Reflections:229 - Reflections took 5 ms to scan 1 urls, producing 28 keys and 28 values 
+16:27:11,583 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+16:27:11,584  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 3 keys and 4 values 
+16:27:11,588 DEBUG Reflections:186 - going to scan these urls:
+file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/test-classes/
+file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes/
+16:27:11,591 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes/ with scanner SubTypesScanner
+16:27:11,591 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/home/pereirazc/devel/repos/pextralabs/container-scenario/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+16:27:11,593  INFO Reflections:229 - Reflections took 4 ms to scan 2 urls, producing 5 keys and 13 values 
+16:27:11,597 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+16:27:11,598  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 5 keys and 5 values 
+16:27:11,599 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+16:27:11,601  INFO Reflections:229 - Reflections took 2 ms to scan 1 urls, producing 8 keys and 9 values 
+16:27:11,602 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/home/pereirazc/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+16:27:11,603  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 0 keys and 0 values 
+16:27:11,614  INFO PersonTest:33 - Now running data
+16:27:11,620 DEBUG SCENELogger:24 - INSERT - Person: john
+16:27:11,622 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Location: null
+16:27:11,622 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Speed: 6.0 m/s
+16:27:11,622 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:27:11,663 DEBUG SCENELogger:43 - RETRACT - Bearer( Person: john ) Speed: 6.0 m/s
+16:27:11,664 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - Bearer( Person: john ) Speed: 6.0 m/s
+16:27:11,667 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:27:11,667 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:27:11,672 DEBUG SCENELogger:24 - INSERT - Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'john-location'
+16:27:11,673 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:27:11,690 DEBUG SCENELogger:43 - RETRACT - Bearer( Person: john ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'john-location'
+16:27:11,690 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Bearer( Person: john ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'john-location'
+16:27:11,693 DEBUG SCENELogger:43 - RETRACT - Bearer( Person: john ) Speed: 6.0 m/s
+16:27:11,693 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - Bearer( Person: john ) Speed: 6.0 m/s
+16:27:11,694 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:27:11,694 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE

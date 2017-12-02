@@ -1,6 +1,6 @@
-package co.pextra.scenarios.SensitiveProductStorage;
+package br.ufes.inf.lprm.context.scenario;
 
-import co.pextra.model.*;
+import br.ufes.inf.lprm.context.model.*;
 
 import java.util.List;
 import java.lang.Double;

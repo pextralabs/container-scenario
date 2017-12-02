@@ -1,13 +1,13 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.Entity;
-import br.ufes.inf.lprm.context.IntrinsicContext;
-import br.ufes.inf.lprm.context.Reading;
+import br.ufes.inf.lprm.context.model.Entity;
+import br.ufes.inf.lprm.context.model.IntrinsicContext;
+import br.ufes.inf.lprm.context.model.Reading;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Speed extends IntrinsicContext<Double>{
+public class Speed extends IntrinsicContext<Double> {
     static public double MIN_SPEED = 6.0;
     static public double MAX_SPEED = Double.MAX_VALUE;
     public Speed(String id, Entity bearer) {

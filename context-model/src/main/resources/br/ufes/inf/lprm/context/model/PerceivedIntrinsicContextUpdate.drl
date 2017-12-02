@@ -1,4 +1,4 @@
-package co.pextra.model;
+package br.ufes.inf.lprm.context.model;
 
 rule PerceivedIntrinsicContextUpdate
     no-loop

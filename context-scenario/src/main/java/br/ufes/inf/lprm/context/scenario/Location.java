@@ -1,11 +1,9 @@
 package br.ufes.inf.lprm.context.scenario;
 
 
-import br.ufes.inf.lprm.context.Entity;
-import br.ufes.inf.lprm.context.IntrinsicContext;
-import br.ufes.inf.lprm.context.Reading;
+import br.ufes.inf.lprm.context.model.*;
 
-public class Location extends IntrinsicContext<Reading<LatLng>>{
+public class Location extends IntrinsicContext<Reading<LatLng>> {
     static  public  double degreesToRadians (double degrees) {
         return degrees * Math.PI / 180;
     }

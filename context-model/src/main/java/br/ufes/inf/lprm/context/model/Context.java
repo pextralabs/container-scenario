@@ -1,4 +1,4 @@
-package br.ufes.inf.lprm.context;
+package br.ufes.inf.lprm.context.model;
 
 public abstract class Context<T> {
     protected T value;

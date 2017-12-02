@@ -1,4 +1,4 @@
-package br.ufes.inf.lprm.context;
+package br.ufes.inf.lprm.context.model;
 
 public abstract class IntrinsicContext<T> extends Context<T> {
     protected Entity bearer;

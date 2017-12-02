@@ -1,4 +1,4 @@
-package br.ufes.inf.lprm.context;
+package br.ufes.inf.lprm.context.model;
 
 import java.util.Arrays;
 import java.util.HashSet;

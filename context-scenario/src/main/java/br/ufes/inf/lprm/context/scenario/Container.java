@@ -1,6 +1,6 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.Entity;
+import br.ufes.inf.lprm.context.model.Entity;
 
 import java.util.Arrays;
 import java.util.HashSet;

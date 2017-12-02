@@ -1,9 +1,9 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.Entity;
-import br.ufes.inf.lprm.context.RelationalContext;
+import br.ufes.inf.lprm.context.model.Entity;
+import br.ufes.inf.lprm.context.model.RelationalContext;
 
-public class EstimateTimeOfArrival extends RelationalContext<Long>{
+public class EstimateTimeOfArrival extends RelationalContext<Long> {
     static public double MIN_DISTANCE = 500;
     static public double MAX_DISTANCE = Double.MAX_VALUE;
     static public long MAX_ETA = Long.MAX_VALUE;

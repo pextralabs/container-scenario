@@ -1,4 +1,4 @@
-package br.ufes.inf.lprm.context;
+package br.ufes.inf.lprm.context.model;
 
 import org.kie.api.definition.type.Expires;
 import org.kie.api.definition.type.Role;

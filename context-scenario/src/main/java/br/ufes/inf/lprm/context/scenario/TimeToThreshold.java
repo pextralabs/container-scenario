@@ -1,8 +1,8 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.Entity;
-import br.ufes.inf.lprm.context.IntrinsicContext;
-import br.ufes.inf.lprm.context.Reading;
+import br.ufes.inf.lprm.context.model.Entity;
+import br.ufes.inf.lprm.context.model.IntrinsicContext;
+import br.ufes.inf.lprm.context.model.Reading;
 
 import java.time.Duration;
 import java.time.Instant;

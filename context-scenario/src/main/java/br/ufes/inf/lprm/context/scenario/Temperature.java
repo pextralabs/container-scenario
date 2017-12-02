@@ -1,8 +1,6 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.Entity;
-import br.ufes.inf.lprm.context.IntrinsicContext;
-import br.ufes.inf.lprm.context.Reading;
+import br.ufes.inf.lprm.context.model.*;
 
 public class Temperature extends IntrinsicContext<Reading<Double>> {
     public Temperature(String id, Entity bearer) {

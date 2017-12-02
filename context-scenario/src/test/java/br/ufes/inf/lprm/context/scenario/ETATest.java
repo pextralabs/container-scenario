@@ -1,7 +1,7 @@
 package br.ufes.inf.lprm.context.scenario;
 
+import br.ufes.inf.lprm.context.model.Reading;
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
-import br.ufes.inf.lprm.context.Reading;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Test;
 import org.kie.api.runtime.KieSession;
