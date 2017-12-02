@@ -76,35 +76,3 @@ rule EstimateTimeOfArrivalUpdate
         eta.setValue(EstimateTimeOfArrival.computeETA(person, container));
         update(eta);
     end
-
-declare ETABiggerThanTTT extends Situation
-  person: Person @part @key
-  container: Container @part @key
-  eta: EstimateTimeOfArrival @part @key
-  ttt: TimeToThreshold @part @key
-end
-rule ETABiggerThanTTT
- @role(situation) @type(ETABiggerThanTTT)
-  when
-    person: Person()
-    batch: Batch(container: container)
-    ttt: TimeToThreshold(bearer == batch)
-    eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities, value > ttt.value)
-  then
-    SituationHelper.situationDetected(drools);
-end
-
-declare AllETABiggerThanTTT extends Situation
-    batch: Batch @part @key
-end
-rule AllETABiggerThanTTT
- @role(situation) @type(AllETABiggerThanTTT)
-  when
-    Watch(person: watcher, batch: target)
-    forall (
-        Watch(person == watcher, batch == target)
-        ETABiggerThanTTT(person == person, active)
-    )
-  then
-  SituationHelper.situationDetected(drools);
-end
