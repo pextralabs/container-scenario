@@ -2,13 +2,16 @@ package br.ufes.inf.lprm.context.scenario;
 
 import br.ufes.inf.lprm.context.model.Reading;
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
+import br.ufes.inf.lprm.situation.model.Situation;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Assert;
 import org.junit.Test;
+import org.kie.api.definition.type.FactType;
+import org.kie.api.runtime.ClassObjectFilter;
 import org.kie.api.runtime.KieSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -56,5 +59,67 @@ public class BatchTest extends SessionTest{
             session.fireAllRules();
         }
         System.out.println(new Date(clock.getCurrentTime()));
+    }
+
+    @Test
+    public void noRecentTemperatureReading () throws  Exception {
+        KieSession session = this.startSession(this.makePseudoClockConfiguration());
+        SessionPseudoClock clock = session.getSessionClock();
+        session.addEventListener(new SCENESessionListener());
+        session.setGlobal("clock", clock);
+
+        FactType situationType = session.getKieBase().getFactType("br.ufes.inf.lprm.context.scenario", "NoRecentTemperatureReading");
+
+        LOG.info("Now running data");
+
+        ProductType productType = new ProductType("Marijuana", 15.0, 5.0);
+        Batch batch = new Batch("batch", productType);
+        LatLng vix = new LatLng(-20.2976178, 40.2957768);
+        Container container = new Container("container", batch);
+        session.insert(productType);
+        session.insert(batch);
+        batch.getIntrinsicContexts().forEach(session::insert);
+        session.insert(container);
+        container.getIntrinsicContexts().forEach(session::insert);
+        session.insert(new Reading<>(vix, container.getLocation().getId()));
+        session.fireAllRules();
+
+        {
+            ArrayList<Object> situations = new ArrayList<>(session.getObjects(new ClassObjectFilter(situationType.getFactClass())));
+            Assert.assertEquals(situations.size(), 0);
+        }
+
+        session.insert(new Reading<>(10.0 + 0.5, container.getTemperature().getId(), clock.getCurrentTime()));
+        clock.advanceTime(1, TimeUnit.MINUTES);
+        clock.advanceTime(29, TimeUnit.SECONDS);
+        session.fireAllRules();
+
+        {
+            ArrayList<Object> situations = new ArrayList<>(session.getObjects(new ClassObjectFilter(situationType.getFactClass())));
+            Assert.assertEquals(situations.size(), 0);
+        }
+
+        clock.advanceTime(2, TimeUnit.SECONDS);
+        session.fireAllRules();
+
+        {
+            ArrayList<Object> situations = new ArrayList<>(session.getObjects(new ClassObjectFilter(situationType.getFactClass())));
+            Assert.assertEquals(situations.size(), 1);
+        }
+
+        clock.advanceTime(1, TimeUnit.HOURS);
+        session.fireAllRules();
+
+        {
+            ArrayList<Object> situations = new ArrayList<>(session.getObjects(new ClassObjectFilter(situationType.getFactClass())));
+            Assert.assertEquals(situations.size(), 1);
+        }
+        session.insert(new Reading<>(10.0 + 0.5, container.getTemperature().getId(), clock.getCurrentTime()));
+        session.fireAllRules();
+        {
+            ArrayList<Object> situations = new ArrayList<>(session.getObjects(new ClassObjectFilter(situationType.getFactClass())));
+            Assert.assertEquals(situations.size(), 1);
+            Assert.assertTrue(!((Situation)situations.get(0)).isActive());
+        }
     }
 }

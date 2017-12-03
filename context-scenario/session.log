@@ -1,336 +1,555 @@
-18:15:47,605  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
-18:15:47,624 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
-18:15:47,638  WARN ClasspathKieProject:261 - Unable to find pom.properties in /home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
-18:15:47,639  WARN ClasspathKieProject:231 - Unable to load pom.properties from/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
-18:15:47,641  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
-18:15:47,654 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
-18:15:47,657  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
-18:15:47,657  INFO ClasspathKieProject:131 - Found kmodule: file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/META-INF/kmodule.xml
-18:15:47,658 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes
-18:15:47,664  WARN ClasspathKieProject:289 - Unable to find pom.properties in /mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes
-18:15:47,673  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /mnt/windows/Users/berna/Documents/Arch/context/context-model/pom.xml
-18:15:47,674 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-model:1.0
-18:15:47,674  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-model:1.0,file=/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes]
-18:15:53,145  INFO SessionTest:33 - Creating kieBase
-18:15:53,471  INFO SessionTest:37 - There should be rules: 
-18:15:53,473  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.model] rule PerceivedIntrinsicContextUpdate
-18:15:53,473  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule OnGoingSituation
-18:15:53,473  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationType
-18:15:53,474  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationDeactivation
-18:15:53,475  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationActivation
-18:15:53,477  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule SpeedUpdate
-18:15:53,477  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule TimeToThresholdUpdate
-18:15:53,477  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalInsert
-18:15:53,478  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalUpdate
-18:15:53,478  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule NoPippingHotNewTemperature
-18:15:53,478  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule ETABiggerThanTTT
-18:15:53,479  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule AllETABiggerThanTTT
-18:15:53,479  INFO SessionTest:41 - Creating kieSession
-18:15:53,778 DEBUG Reflections:186 - going to scan these urls:
-file:/home/sunderhus/.m2/repository/org/kie/kie-internal/7.0.0.Final/kie-internal-7.0.0.Final.jar
-file:/home/sunderhus/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/resources.jar
-file:/opt/intellij-idea-ultimate-edition/lib/idea_rt.jar
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes/
-file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar
-file:/home/sunderhus/.m2/repository/org/drools/drools-compiler/7.0.0.Final/drools-compiler-7.0.0.Final.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/charsets.jar
-file:/home/sunderhus/.m2/repository/com/google/guava/guava/15.0/guava-15.0.jar
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/test-classes/
-file:/home/sunderhus/.m2/repository/org/kie/kie-api/7.0.0.Final/kie-api-7.0.0.Final.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/plugin.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/rt.jar
-file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
-file:/home/sunderhus/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
-file:/home/sunderhus/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
-file:/home/sunderhus/.m2/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
-file:/home/sunderhus/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
-file:/home/sunderhus/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar
-file:/home/sunderhus/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
-file:/home/sunderhus/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/jce.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/localedata.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/sunec.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/sunjce_provider.jar
-file:/home/sunderhus/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
-file:/home/sunderhus/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/jfxswt.jar
-file:/home/sunderhus/.m2/repository/org/antlr/antlr-runtime/3.5/antlr-runtime-3.5.jar
-file:/home/sunderhus/.m2/repository/org/drools/drools-core/7.0.0.Final/drools-core-7.0.0.Final.jar
-file:/home/sunderhus/.m2/repository/junit/junit/4.12/junit-4.12.jar
-file:/home/sunderhus/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/jsse.jar
-file:/home/sunderhus/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/sunpkcs11.jar
-file:/home/sunderhus/.m2/repository/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar
-file:/home/sunderhus/.m2/repository/org/mvel/mvel2/2.3.0.Final/mvel2-2.3.0.Final.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/jaccess.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/zipfs.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/javaws.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/jfxrt.jar
-file:/home/sunderhus/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/cldrdata.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/dnsns.jar
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/
-file:/home/sunderhus/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
-file:/opt/intellij-idea-ultimate-edition/plugins/junit/lib/junit-rt.jar
-file:/opt/intellij-idea-ultimate-edition/plugins/junit/lib/junit5-rt.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/jfr.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/nashorn.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/management-agent.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/deploy.jar
-18:15:54,059  INFO Reflections:229 - Reflections took 280 ms to scan 52 urls, producing 324 keys and 1571 values 
-18:15:54,075 DEBUG Reflections:186 - going to scan these urls:
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/
-18:15:54,082 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/ with scanner SubTypesScanner
-18:15:54,083 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/ with scanner TypeAnnotationsScanner
-18:15:54,084  INFO Reflections:229 - Reflections took 9 ms to scan 1 urls, producing 5 keys and 6 values 
-18:15:54,085 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
-18:15:54,088 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
-18:15:54,089 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
-18:15:54,091  INFO Reflections:229 - Reflections took 5 ms to scan 1 urls, producing 28 keys and 28 values 
-18:15:54,092 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
-18:15:54,093  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 3 keys and 4 values 
-18:15:54,098 DEBUG Reflections:186 - going to scan these urls:
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes/
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/test-classes/
-18:15:54,103 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes/ with scanner SubTypesScanner
-18:15:54,103 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
-18:15:54,112  INFO Reflections:229 - Reflections took 14 ms to scan 2 urls, producing 5 keys and 13 values 
-18:15:54,113 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
-18:15:54,115  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 5 keys and 5 values 
-18:15:54,116 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
-18:15:54,123  INFO Reflections:229 - Reflections took 4 ms to scan 1 urls, producing 8 keys and 9 values 
-18:15:54,125 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
-18:15:54,125  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 0 keys and 0 values 
-18:15:54,137  INFO BatchTest:34 - Now running data
-18:15:54,148 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:15:54,170 DEBUG SCENELogger:24 - INSERT - ProductType: Marijuana
-18:15:54,170 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch1'
-18:15:54,172 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch1' TTT: 9223372036854775807
-18:15:54,172 DEBUG SCENELogger:24 - INSERT - Container 'container'
-18:15:54,178 DEBUG SCENELogger:24 - INSERT - Bearer( Container 'container' ) Location: null
-18:15:54,179 DEBUG SCENELogger:24 - INSERT - Container 'container' Temperature: null degrees
-18:15:54,184 DEBUG SCENELogger:24 - INSERT - Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
-18:15:54,315 DEBUG SCENELogger:43 - RETRACT - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
-18:15:54,316 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
-18:15:54,324 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:15:54,324 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:15:54,325 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
-18:15:54,325 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:15:54,413 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
-18:15:54,414 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
-18:15:54,436 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 9223372036854775807
-18:15:54,439 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:15:54,439 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:15:54,441 DEBUG SCENELogger:24 - INSERT - Reading: 11.0, from: 'container-temperature'
-18:15:54,443 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:15:54,445 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 11.0, from: 'container-temperature' degrees
-18:15:54,445 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 11.0, from: 'container-temperature' degrees
-18:15:54,449 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 2400
-18:15:54,449 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:15:54,450 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:15:54,450 DEBUG SCENELogger:24 - INSERT - Reading: 11.5, from: 'container-temperature'
-18:15:54,450 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:15:54,451 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 11.5, from: 'container-temperature' degrees
-18:15:54,452 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 11.5, from: 'container-temperature' degrees
-18:15:54,454 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 2100
-18:15:54,454 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:15:54,454 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:15:54,455 DEBUG SCENELogger:24 - INSERT - Reading: 12.0, from: 'container-temperature'
-18:15:54,455 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:15:54,458 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 12.0, from: 'container-temperature' degrees
-18:15:54,458 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 12.0, from: 'container-temperature' degrees
-18:15:54,459 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 1800
-18:15:54,459 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:15:54,460 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:15:54,460 DEBUG SCENELogger:24 - INSERT - Reading: 12.5, from: 'container-temperature'
-18:15:54,461 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:15:54,461 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 12.5, from: 'container-temperature' degrees
-18:15:54,462 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 12.5, from: 'container-temperature' degrees
-18:15:54,464 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 1500
-18:15:54,465 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:15:54,465 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:15:54,466 DEBUG SCENELogger:24 - INSERT - Reading: 13.0, from: 'container-temperature'
-18:15:54,466 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:15:54,467 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 13.0, from: 'container-temperature' degrees
-18:15:54,467 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 13.0, from: 'container-temperature' degrees
-18:15:54,469 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 1200
-18:15:54,470 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:15:54,470 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:17:39,936  INFO ClasspathKieProject:131 - Found kmodule: file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes/META-INF/kmodule.xml
-18:17:39,941 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes
-18:17:40,554  WARN ClasspathKieProject:289 - Unable to find pom.properties in /mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes
-18:17:40,590  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /mnt/windows/Users/berna/Documents/Arch/context/context-scenario/pom.xml
-18:17:40,597 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-scenario:1.0
-18:17:40,604  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-scenario:1.0,file=/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes]
-18:17:40,605  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
-18:17:40,607 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
-18:17:40,617  WARN ClasspathKieProject:261 - Unable to find pom.properties in /home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
-18:17:40,618  WARN ClasspathKieProject:231 - Unable to load pom.properties from/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
-18:17:40,618  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
-18:17:40,631 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
-18:17:40,633  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
-18:17:40,634  INFO ClasspathKieProject:131 - Found kmodule: file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/META-INF/kmodule.xml
-18:17:40,634 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes
-18:17:40,641  WARN ClasspathKieProject:289 - Unable to find pom.properties in /mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes
-18:17:40,647  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /mnt/windows/Users/berna/Documents/Arch/context/context-model/pom.xml
-18:17:40,647 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-model:1.0
-18:17:40,648  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-model:1.0,file=/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes]
-18:17:46,654  INFO SessionTest:33 - Creating kieBase
-18:17:47,061  INFO SessionTest:37 - There should be rules: 
-18:17:47,063  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.model] rule PerceivedIntrinsicContextUpdate
-18:17:47,063  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule OnGoingSituation
-18:17:47,063  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationType
-18:17:47,064  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationDeactivation
-18:17:47,064  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationActivation
-18:17:47,065  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule SpeedUpdate
-18:17:47,065  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule TimeToThresholdUpdate
-18:17:47,065  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalInsert
-18:17:47,066  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalUpdate
-18:17:47,066  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule NoPippingHotNewTemperature
-18:17:47,066  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule ETABiggerThanTTT
-18:17:47,066  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule AllETABiggerThanTTT
-18:17:47,066  INFO SessionTest:41 - Creating kieSession
-18:17:47,448 DEBUG Reflections:186 - going to scan these urls:
-file:/home/sunderhus/.m2/repository/org/kie/kie-internal/7.0.0.Final/kie-internal-7.0.0.Final.jar
-file:/home/sunderhus/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/resources.jar
-file:/opt/intellij-idea-ultimate-edition/lib/idea_rt.jar
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes/
-file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar
-file:/home/sunderhus/.m2/repository/org/drools/drools-compiler/7.0.0.Final/drools-compiler-7.0.0.Final.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/charsets.jar
-file:/home/sunderhus/.m2/repository/com/google/guava/guava/15.0/guava-15.0.jar
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/test-classes/
-file:/home/sunderhus/.m2/repository/org/kie/kie-api/7.0.0.Final/kie-api-7.0.0.Final.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/plugin.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/rt.jar
-file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
-file:/home/sunderhus/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
-file:/home/sunderhus/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
-file:/home/sunderhus/.m2/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
-file:/home/sunderhus/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
-file:/home/sunderhus/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar
-file:/home/sunderhus/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
-file:/home/sunderhus/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/jce.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/localedata.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/sunec.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/sunjce_provider.jar
-file:/home/sunderhus/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
-file:/home/sunderhus/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/jfxswt.jar
-file:/home/sunderhus/.m2/repository/org/antlr/antlr-runtime/3.5/antlr-runtime-3.5.jar
-file:/home/sunderhus/.m2/repository/org/drools/drools-core/7.0.0.Final/drools-core-7.0.0.Final.jar
-file:/home/sunderhus/.m2/repository/junit/junit/4.12/junit-4.12.jar
-file:/home/sunderhus/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/jsse.jar
-file:/home/sunderhus/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/sunpkcs11.jar
-file:/home/sunderhus/.m2/repository/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar
-file:/home/sunderhus/.m2/repository/org/mvel/mvel2/2.3.0.Final/mvel2-2.3.0.Final.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/jaccess.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/zipfs.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/javaws.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/jfxrt.jar
-file:/home/sunderhus/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/cldrdata.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/dnsns.jar
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/
-file:/home/sunderhus/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
-file:/opt/intellij-idea-ultimate-edition/plugins/junit/lib/junit-rt.jar
-file:/opt/intellij-idea-ultimate-edition/plugins/junit/lib/junit5-rt.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/jfr.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/ext/nashorn.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/management-agent.jar
-file:/usr/local/java/jdk1.8.0_151/jre/lib/deploy.jar
-18:17:47,711  INFO Reflections:229 - Reflections took 262 ms to scan 52 urls, producing 324 keys and 1571 values 
-18:17:47,733 DEBUG Reflections:186 - going to scan these urls:
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/
-18:17:47,745 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/ with scanner SubTypesScanner
-18:17:47,746 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/mnt/windows/Users/berna/Documents/Arch/context/context-model/target/classes/ with scanner TypeAnnotationsScanner
-18:17:47,748  INFO Reflections:229 - Reflections took 15 ms to scan 1 urls, producing 5 keys and 6 values 
-18:17:47,750 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
-18:17:47,753 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
-18:17:47,753 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
-18:17:47,756  INFO Reflections:229 - Reflections took 5 ms to scan 1 urls, producing 28 keys and 28 values 
-18:17:47,757 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
-18:17:47,759  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 3 keys and 4 values 
-18:17:47,766 DEBUG Reflections:186 - going to scan these urls:
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes/
-file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/test-classes/
-18:17:47,772 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes/ with scanner SubTypesScanner
-18:17:47,772 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/mnt/windows/Users/berna/Documents/Arch/context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
-18:17:47,782  INFO Reflections:229 - Reflections took 15 ms to scan 2 urls, producing 5 keys and 13 values 
-18:17:47,784 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
-18:17:47,786  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 5 keys and 5 values 
-18:17:47,788 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
-18:17:47,789  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 8 keys and 9 values 
-18:17:47,791 DEBUG Reflections:186 - going to scan these urls:
-jar:file:/home/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
-18:17:47,792  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 0 keys and 0 values 
-18:17:47,806  INFO BatchTest:34 - Now running data
-18:17:47,832 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:17:47,869 DEBUG SCENELogger:24 - INSERT - ProductType: Marijuana
-18:17:47,870 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch1'
-18:17:47,872 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch1' TTT: 9223372036854775807
-18:17:47,872 DEBUG SCENELogger:24 - INSERT - Container 'container'
-18:17:47,874 DEBUG SCENELogger:24 - INSERT - Bearer( Container 'container' ) Location: null
-18:17:47,875 DEBUG SCENELogger:24 - INSERT - Container 'container' Temperature: null degrees
-18:17:47,882 DEBUG SCENELogger:24 - INSERT - Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
-18:17:48,115 DEBUG SCENELogger:43 - RETRACT - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
-18:17:48,116 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
-18:17:48,122 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:17:48,123 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:17:48,124 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
-18:17:48,125 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:17:48,205 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
-18:17:48,205 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
-18:17:48,225 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 9223372036854775807
-18:17:48,231 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:17:48,234 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:17:48,235 DEBUG SCENELogger:24 - INSERT - Reading: 11.0, from: 'container-temperature'
-18:17:48,235 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:17:48,236 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 11.0, from: 'container-temperature' degrees
-18:17:48,236 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 11.0, from: 'container-temperature' degrees
-18:17:48,241 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 2100
-18:17:48,242 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:17:48,242 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:17:48,242 DEBUG SCENELogger:24 - INSERT - Reading: 11.5, from: 'container-temperature'
-18:17:48,243 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:17:48,249 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 11.5, from: 'container-temperature' degrees
-18:17:48,249 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 11.5, from: 'container-temperature' degrees
-18:17:48,251 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 1800
-18:17:48,251 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:17:48,252 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:17:48,253 DEBUG SCENELogger:24 - INSERT - Reading: 12.0, from: 'container-temperature'
-18:17:48,253 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:17:48,254 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 12.0, from: 'container-temperature' degrees
-18:17:48,254 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 12.0, from: 'container-temperature' degrees
-18:17:48,255 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 1500
-18:17:48,257 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:17:48,257 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:17:48,257 DEBUG SCENELogger:24 - INSERT - Reading: 12.5, from: 'container-temperature'
-18:17:48,258 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:17:48,259 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 12.5, from: 'container-temperature' degrees
-18:17:48,259 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 12.5, from: 'container-temperature' degrees
-18:17:48,261 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 1200
-18:17:48,262 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:17:48,263 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-18:17:48,263 DEBUG SCENELogger:24 - INSERT - Reading: 13.0, from: 'container-temperature'
-18:17:48,265 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-18:17:48,266 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 13.0, from: 'container-temperature' degrees
-18:17:48,267 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 13.0, from: 'container-temperature' degrees
-18:17:48,268 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch1' TTT: 900
-18:17:48,269 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-18:17:48,269 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:26:44,766  INFO Reflections:229 - Reflections took 450 ms to scan 54 urls, producing 322 keys and 1555 values 
+15:26:44,786 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/
+15:26:44,792 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/ with scanner SubTypesScanner
+15:26:44,792 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/ with scanner TypeAnnotationsScanner
+15:26:44,794  INFO Reflections:229 - Reflections took 8 ms to scan 1 urls, producing 5 keys and 6 values 
+15:26:44,795 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:26:44,803 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
+15:26:44,804 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
+15:26:44,806  INFO Reflections:229 - Reflections took 10 ms to scan 1 urls, producing 28 keys and 28 values 
+15:26:44,810 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:26:44,813  INFO Reflections:229 - Reflections took 2 ms to scan 1 urls, producing 3 keys and 4 values 
+15:26:44,818 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/test-classes/
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/
+15:26:44,827 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner SubTypesScanner
+15:26:44,828 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:26:44,831 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner SubTypesScanner
+15:26:44,832 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:26:44,836  INFO Reflections:229 - Reflections took 18 ms to scan 2 urls, producing 5 keys and 13 values 
+15:26:44,839 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:26:44,841  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 5 keys and 5 values 
+15:26:44,842 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:26:44,843  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 8 keys and 9 values 
+15:26:44,844 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:26:44,844  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 0 keys and 0 values 
+15:26:44,852  INFO BatchTest:76 - Now running data
+15:26:44,861 DEBUG SCENELogger:24 - INSERT - ProductType: Marijuana
+15:26:44,861 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch'
+15:26:44,863 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:26:44,863 DEBUG SCENELogger:24 - INSERT - Container 'container'
+15:26:44,864 DEBUG SCENELogger:24 - INSERT - Bearer( Container 'container' ) Location: null
+15:26:44,865 DEBUG SCENELogger:24 - INSERT - Container 'container' Temperature: null degrees
+15:26:44,869 DEBUG SCENELogger:24 - INSERT - Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:26:44,869 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:26:44,942 DEBUG SCENELogger:43 - RETRACT - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:26:44,942 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:26:44,945 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:26:44,945 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:26:44,947 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
+15:26:44,948 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:26:44,968 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:26:44,968 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:26:44,993 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:26:44,996 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:26:44,996 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:26:44,998 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:26:45,042 DEBUG SCENELogger:17 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:26:45,140 DEBUG SCENELogger:19 - 	Activation timestamp: 1969 12 31 21:01:31.
+15:26:45,140 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.model.Participation@3a5c2626
+15:26:45,141 DEBUG SCENELogger:24 - INSERT - NoRecentTemperatureReading( deactivation=null, temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees )
+15:26:45,141 DEBUG SCENELogger:32 - UPDATE (SituationActivation) - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:26:45,160 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:26:45,161 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:26:45,162 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:26:45,163 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:26:45,163 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:26:45,164 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
+15:26:45,164 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:26:45,165 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:26:45,165 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:26:45,166 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:26:45,173 DEBUG SCENELogger:19 - 	Deactivation timestamp: 1969 12 31 22:01:31. Duration: 0 days 1 hours 0 minutes 0 seconds.
+15:26:45,173 DEBUG SCENELogger:34 - UPDATE - NoRecentTemperatureReading( deactivation=	Deactivation timestamp: 1969 12 31 22:01:31. Duration: 0 days 1 hours 0 minutes 0 seconds., temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees )
+15:26:45,174 DEBUG SCENELogger:42 - SITUATION DEACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:26:45,174 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:26:45,174 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:27:17,209  INFO ClasspathKieProject:131 - Found kmodule: file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/META-INF/kmodule.xml
+15:27:17,214 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes
+15:27:17,597  WARN ClasspathKieProject:289 - Unable to find pom.properties in /C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes
+15:27:17,616  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml C:\Users\bernardosunderhus\Documents\container-scenario\context-scenario\pom.xml
+15:27:17,621 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-scenario:1.0
+15:27:17,628  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-scenario:1.0,file=C:\Users\bernardosunderhus\Documents\container-scenario\context-scenario\target\classes]
+15:27:17,628  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+15:27:17,632 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+15:27:17,646  WARN ClasspathKieProject:261 - Unable to find pom.properties in /C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+15:27:17,647  WARN ClasspathKieProject:231 - Unable to load pom.properties from/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+15:27:17,647  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+15:27:17,656 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+15:27:17,658  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=C:\Users\bernardosunderhus\.m2\repository\br\ufes\inf\lprm\scene-core\0.10.7\scene-core-0.10.7.jar]
+15:27:17,658  INFO ClasspathKieProject:131 - Found kmodule: file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/META-INF/kmodule.xml
+15:27:17,659 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes
+15:27:17,663  WARN ClasspathKieProject:289 - Unable to find pom.properties in /C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes
+15:27:17,670  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml C:\Users\bernardosunderhus\Documents\container-scenario\context-model\pom.xml
+15:27:17,671 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-model:1.0
+15:27:17,671  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-model:1.0,file=C:\Users\bernardosunderhus\Documents\container-scenario\context-model\target\classes]
+15:27:21,161  INFO SessionTest:33 - Creating kieBase
+15:27:21,352  INFO SessionTest:37 - There should be rules: 
+15:27:21,352  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.model] rule PerceivedIntrinsicContextUpdate
+15:27:21,352  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule OnGoingSituation
+15:27:21,352  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationType
+15:27:21,352  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationDeactivation
+15:27:21,352  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationActivation
+15:27:21,352  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule SpeedUpdate
+15:27:21,353  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule TimeToThresholdUpdate
+15:27:21,353  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalInsert
+15:27:21,353  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalUpdate
+15:27:21,353  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule NoRecentTemperatureReading
+15:27:21,353  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule ETABiggerThanTTT
+15:27:21,353  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule AllETABiggerThanTTT
+15:27:21,353  INFO SessionTest:41 - Creating kieSession
+15:27:21,594 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/access-bridge-64.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/junit/junit/4.12/junit-4.12.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunec.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/zipfs.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/kie/kie-api/7.0.0.Final/kie-api-7.0.0.Final.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/jfxrt.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/localedata.jar
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/test-classes/
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/plugin.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/rt.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202017.3/plugins/junit/lib/junit-rt.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jsse.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/antlr/antlr-runtime/3.5/antlr-runtime-3.5.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunmscapi.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/deploy.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/javaws.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jfxswt.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jfr.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202017.3/lib/idea_rt.jar
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/management-agent.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/cldrdata.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunpkcs11.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/mvel/mvel2/2.3.0.Final/mvel2-2.3.0.Final.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/drools/drools-compiler/7.0.0.Final/drools-compiler-7.0.0.Final.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/drools/drools-core/7.0.0.Final/drools-core-7.0.0.Final.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/resources.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/guava/guava/15.0/guava-15.0.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/kie/kie-internal/7.0.0.Final/kie-internal-7.0.0.Final.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jce.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/nashorn.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/dnsns.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/charsets.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202017.3/plugins/junit/lib/junit5-rt.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/jaccess.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunjce_provider.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
+15:27:22,011  INFO Reflections:229 - Reflections took 413 ms to scan 54 urls, producing 322 keys and 1555 values 
+15:27:22,027 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/
+15:27:22,034 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/ with scanner SubTypesScanner
+15:27:22,036 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/ with scanner TypeAnnotationsScanner
+15:27:22,042  INFO Reflections:229 - Reflections took 14 ms to scan 1 urls, producing 5 keys and 6 values 
+15:27:22,046 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:27:22,051 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
+15:27:22,051 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
+15:27:22,052  INFO Reflections:229 - Reflections took 5 ms to scan 1 urls, producing 28 keys and 28 values 
+15:27:22,054 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:27:22,060  INFO Reflections:229 - Reflections took 2 ms to scan 1 urls, producing 3 keys and 4 values 
+15:27:22,066 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/test-classes/
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/
+15:27:22,074 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner SubTypesScanner
+15:27:22,076 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:27:22,077 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner SubTypesScanner
+15:27:22,078 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:27:22,081  INFO Reflections:229 - Reflections took 14 ms to scan 2 urls, producing 5 keys and 13 values 
+15:27:22,081 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:27:22,083  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 5 keys and 5 values 
+15:27:22,084 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:27:22,085  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 8 keys and 9 values 
+15:27:22,086 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:27:22,087  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 0 keys and 0 values 
+15:27:22,095  INFO BatchTest:76 - Now running data
+15:27:22,101 DEBUG SCENELogger:24 - INSERT - ProductType: Marijuana
+15:27:22,102 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch'
+15:27:22,103 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:27:22,103 DEBUG SCENELogger:24 - INSERT - Container 'container'
+15:27:22,104 DEBUG SCENELogger:24 - INSERT - Bearer( Container 'container' ) Location: null
+15:27:22,104 DEBUG SCENELogger:24 - INSERT - Container 'container' Temperature: null degrees
+15:27:22,108 DEBUG SCENELogger:24 - INSERT - Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:27:22,108 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:27:22,178 DEBUG SCENELogger:43 - RETRACT - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:27:22,179 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:27:22,183 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:27:22,183 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:27:22,185 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
+15:27:22,186 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:27:22,206 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:27:22,207 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:27:22,231 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:27:22,237 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:27:22,237 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:27:22,241 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:27:22,299 DEBUG SCENELogger:17 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:27:22,401 DEBUG SCENELogger:19 - 	Activation timestamp: 1969 12 31 21:01:31.
+15:27:22,401 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.model.Participation@3a5c2626
+15:27:22,401 DEBUG SCENELogger:24 - INSERT - NoRecentTemperatureReading( deactivation=null, temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees )
+15:27:22,402 DEBUG SCENELogger:32 - UPDATE (SituationActivation) - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:27:22,419 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:27:22,419 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:27:22,420 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:27:22,422 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:27:22,423 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:27:22,423 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
+15:27:22,423 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:27:22,424 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:27:22,424 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:27:22,425 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:27:22,430 DEBUG SCENELogger:19 - 	Deactivation timestamp: 1969 12 31 22:01:31. Duration: 0 days 1 hours 0 minutes 0 seconds.
+15:27:22,431 DEBUG SCENELogger:34 - UPDATE - NoRecentTemperatureReading( deactivation=	Deactivation timestamp: 1969 12 31 22:01:31. Duration: 0 days 1 hours 0 minutes 0 seconds., temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees )
+15:27:22,431 DEBUG SCENELogger:42 - SITUATION DEACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:27:22,432 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:27:22,432 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:28:27,457  INFO ClasspathKieProject:131 - Found kmodule: file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/META-INF/kmodule.xml
+15:28:27,462 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes
+15:28:27,872  WARN ClasspathKieProject:289 - Unable to find pom.properties in /C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes
+15:28:27,893  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml C:\Users\bernardosunderhus\Documents\container-scenario\context-scenario\pom.xml
+15:28:27,897 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-scenario:1.0
+15:28:27,914  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-scenario:1.0,file=C:\Users\bernardosunderhus\Documents\container-scenario\context-scenario\target\classes]
+15:28:27,915  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+15:28:27,916 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+15:28:27,924  WARN ClasspathKieProject:261 - Unable to find pom.properties in /C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+15:28:27,924  WARN ClasspathKieProject:231 - Unable to load pom.properties from/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+15:28:27,924  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+15:28:27,930 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+15:28:27,932  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=C:\Users\bernardosunderhus\.m2\repository\br\ufes\inf\lprm\scene-core\0.10.7\scene-core-0.10.7.jar]
+15:28:27,932  INFO ClasspathKieProject:131 - Found kmodule: file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/META-INF/kmodule.xml
+15:28:27,933 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes
+15:28:27,939  WARN ClasspathKieProject:289 - Unable to find pom.properties in /C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes
+15:28:27,946  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml C:\Users\bernardosunderhus\Documents\container-scenario\context-model\pom.xml
+15:28:27,947 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-model:1.0
+15:28:27,948  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-model:1.0,file=C:\Users\bernardosunderhus\Documents\container-scenario\context-model\target\classes]
+15:28:31,307  INFO SessionTest:33 - Creating kieBase
+15:28:31,550  INFO SessionTest:37 - There should be rules: 
+15:28:31,551  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.model] rule PerceivedIntrinsicContextUpdate
+15:28:31,551  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule OnGoingSituation
+15:28:31,551  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationType
+15:28:31,551  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationDeactivation
+15:28:31,551  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationActivation
+15:28:31,551  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule SpeedUpdate
+15:28:31,552  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule TimeToThresholdUpdate
+15:28:31,552  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalInsert
+15:28:31,552  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalUpdate
+15:28:31,552  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule NoRecentTemperatureReading
+15:28:31,552  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule ETABiggerThanTTT
+15:28:31,552  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule AllETABiggerThanTTT
+15:28:31,553  INFO SessionTest:41 - Creating kieSession
+15:28:31,744 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/access-bridge-64.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/junit/junit/4.12/junit-4.12.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunec.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/zipfs.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/kie/kie-api/7.0.0.Final/kie-api-7.0.0.Final.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/jfxrt.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/localedata.jar
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/test-classes/
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/plugin.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/rt.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202017.3/plugins/junit/lib/junit-rt.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jsse.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/antlr/antlr-runtime/3.5/antlr-runtime-3.5.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunmscapi.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/deploy.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/javaws.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jfxswt.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jfr.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202017.3/lib/idea_rt.jar
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/management-agent.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/cldrdata.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunpkcs11.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/mvel/mvel2/2.3.0.Final/mvel2-2.3.0.Final.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/drools/drools-compiler/7.0.0.Final/drools-compiler-7.0.0.Final.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/drools/drools-core/7.0.0.Final/drools-core-7.0.0.Final.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/resources.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/guava/guava/15.0/guava-15.0.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/kie/kie-internal/7.0.0.Final/kie-internal-7.0.0.Final.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jce.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/nashorn.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/dnsns.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/charsets.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202017.3/plugins/junit/lib/junit5-rt.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/jaccess.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunjce_provider.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
+15:28:32,111  INFO Reflections:229 - Reflections took 363 ms to scan 54 urls, producing 322 keys and 1555 values 
+15:28:32,126 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/
+15:28:32,132 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/ with scanner SubTypesScanner
+15:28:32,133 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/ with scanner TypeAnnotationsScanner
+15:28:32,134  INFO Reflections:229 - Reflections took 8 ms to scan 1 urls, producing 5 keys and 6 values 
+15:28:32,135 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:28:32,138 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
+15:28:32,139 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
+15:28:32,140  INFO Reflections:229 - Reflections took 5 ms to scan 1 urls, producing 28 keys and 28 values 
+15:28:32,141 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:28:32,142  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 3 keys and 4 values 
+15:28:32,150 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/test-classes/
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/
+15:28:32,156 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner SubTypesScanner
+15:28:32,157 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:28:32,157 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner SubTypesScanner
+15:28:32,158 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:28:32,160  INFO Reflections:229 - Reflections took 10 ms to scan 2 urls, producing 5 keys and 13 values 
+15:28:32,161 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:28:32,162  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 5 keys and 5 values 
+15:28:32,163 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:28:32,164  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 8 keys and 9 values 
+15:28:32,166 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:28:32,167  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 0 keys and 0 values 
+15:28:32,177  INFO BatchTest:76 - Now running data
+15:28:32,187 DEBUG SCENELogger:24 - INSERT - ProductType: Marijuana
+15:28:32,187 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch'
+15:28:32,189 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:28:32,189 DEBUG SCENELogger:24 - INSERT - Container 'container'
+15:28:32,190 DEBUG SCENELogger:24 - INSERT - Bearer( Container 'container' ) Location: null
+15:28:32,191 DEBUG SCENELogger:24 - INSERT - Container 'container' Temperature: null degrees
+15:28:32,199 DEBUG SCENELogger:24 - INSERT - Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:28:32,199 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:28:32,318 DEBUG SCENELogger:43 - RETRACT - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:28:32,318 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:28:32,325 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:28:32,326 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:28:32,331 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
+15:28:32,333 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:28:32,378 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:28:32,378 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:28:32,421 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:28:32,428 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:28:32,428 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:28:32,430 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:28:32,474 DEBUG SCENELogger:17 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:28:32,613 DEBUG SCENELogger:19 - 	Activation timestamp: 1969 12 31 21:01:31.
+15:28:32,614 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.model.Participation@3a5c2626
+15:28:32,615 DEBUG SCENELogger:24 - INSERT - NoRecentTemperatureReading( deactivation=null, temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees )
+15:28:32,615 DEBUG SCENELogger:32 - UPDATE (SituationActivation) - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:28:32,652 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:28:32,652 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:28:32,653 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:28:32,658 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:28:32,659 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:28:32,659 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
+15:28:32,659 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:28:32,660 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:28:32,660 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:28:32,661 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:28:32,669 DEBUG SCENELogger:19 - 	Deactivation timestamp: 1969 12 31 22:01:31. Duration: 0 days 1 hours 0 minutes 0 seconds.
+15:28:32,669 DEBUG SCENELogger:34 - UPDATE - NoRecentTemperatureReading( deactivation=	Deactivation timestamp: 1969 12 31 22:01:31. Duration: 0 days 1 hours 0 minutes 0 seconds., temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees )
+15:28:32,670 DEBUG SCENELogger:42 - SITUATION DEACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:28:32,670 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:28:32,670 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:41:14,423  INFO ClasspathKieProject:131 - Found kmodule: file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/META-INF/kmodule.xml
+15:41:14,428 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes
+15:41:14,786  WARN ClasspathKieProject:289 - Unable to find pom.properties in /C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes
+15:41:14,802  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml C:\Users\bernardosunderhus\Documents\container-scenario\context-scenario\pom.xml
+15:41:14,809 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-scenario:1.0
+15:41:14,819  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-scenario:1.0,file=C:\Users\bernardosunderhus\Documents\container-scenario\context-scenario\target\classes]
+15:41:14,820  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+15:41:14,820 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+15:41:14,837  WARN ClasspathKieProject:261 - Unable to find pom.properties in /C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+15:41:14,844  WARN ClasspathKieProject:231 - Unable to load pom.properties from/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+15:41:14,844  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+15:41:14,854 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+15:41:14,856  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=C:\Users\bernardosunderhus\.m2\repository\br\ufes\inf\lprm\scene-core\0.10.7\scene-core-0.10.7.jar]
+15:41:14,857  INFO ClasspathKieProject:131 - Found kmodule: file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/META-INF/kmodule.xml
+15:41:14,857 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes
+15:41:14,867  WARN ClasspathKieProject:289 - Unable to find pom.properties in /C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes
+15:41:14,873  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml C:\Users\bernardosunderhus\Documents\container-scenario\context-model\pom.xml
+15:41:14,874 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-model:1.0
+15:41:14,875  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-model:1.0,file=C:\Users\bernardosunderhus\Documents\container-scenario\context-model\target\classes]
+15:41:18,473  INFO SessionTest:33 - Creating kieBase
+15:41:18,668  INFO SessionTest:37 - There should be rules: 
+15:41:18,669  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.model] rule PerceivedIntrinsicContextUpdate
+15:41:18,669  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule OnGoingSituation
+15:41:18,669  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationType
+15:41:18,669  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationDeactivation
+15:41:18,670  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationActivation
+15:41:18,670  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule SpeedUpdate
+15:41:18,670  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule TimeToThresholdUpdate
+15:41:18,670  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalInsert
+15:41:18,670  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalUpdate
+15:41:18,670  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule NoRecentTemperatureReading
+15:41:18,670  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule ETABiggerThanTTT
+15:41:18,670  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule AllETABiggerThanTTT
+15:41:18,670  INFO SessionTest:41 - Creating kieSession
+15:41:18,896 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/access-bridge-64.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/junit/junit/4.12/junit-4.12.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunec.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/zipfs.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/kie/kie-api/7.0.0.Final/kie-api-7.0.0.Final.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/jfxrt.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/localedata.jar
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/test-classes/
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/plugin.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/rt.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202017.3/plugins/junit/lib/junit-rt.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jsse.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/antlr/antlr-runtime/3.5/antlr-runtime-3.5.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunmscapi.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/deploy.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/javaws.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jfxswt.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jfr.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202017.3/lib/idea_rt.jar
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/management-agent.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/cldrdata.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunpkcs11.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/mvel/mvel2/2.3.0.Final/mvel2-2.3.0.Final.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/drools/drools-compiler/7.0.0.Final/drools-compiler-7.0.0.Final.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/drools/drools-core/7.0.0.Final/drools-core-7.0.0.Final.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/resources.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/guava/guava/15.0/guava-15.0.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/kie/kie-internal/7.0.0.Final/kie-internal-7.0.0.Final.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/jce.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/nashorn.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/dnsns.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/charsets.jar
+file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202017.3/plugins/junit/lib/junit5-rt.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/jaccess.jar
+file:/C:/jenv/candidates/java/1.8.0_71/jre/lib/ext/sunjce_provider.jar
+file:/C:/Users/bernardosunderhus/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
+15:41:19,297  INFO Reflections:229 - Reflections took 397 ms to scan 54 urls, producing 322 keys and 1555 values 
+15:41:19,319 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/
+15:41:19,326 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/ with scanner SubTypesScanner
+15:41:19,326 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/PerceivedIntrinsicContextUpdate.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-model/target/classes/ with scanner TypeAnnotationsScanner
+15:41:19,327  INFO Reflections:229 - Reflections took 8 ms to scan 1 urls, producing 5 keys and 6 values 
+15:41:19,328 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:41:19,330 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
+15:41:19,330 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
+15:41:19,331  INFO Reflections:229 - Reflections took 3 ms to scan 1 urls, producing 28 keys and 28 values 
+15:41:19,334 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:41:19,335  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 3 keys and 4 values 
+15:41:19,341 DEBUG Reflections:186 - going to scan these urls:
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/test-classes/
+file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/
+15:41:19,347 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner SubTypesScanner
+15:41:19,348 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:41:19,349 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner SubTypesScanner
+15:41:19,350 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/C:/Users/bernardosunderhus/Documents/container-scenario/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:41:19,352  INFO Reflections:229 - Reflections took 10 ms to scan 2 urls, producing 5 keys and 13 values 
+15:41:19,353 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:41:19,354  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 5 keys and 5 values 
+15:41:19,356 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:41:19,358  INFO Reflections:229 - Reflections took 2 ms to scan 1 urls, producing 8 keys and 9 values 
+15:41:19,359 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/C:/Users/bernardosunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:41:19,360  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 0 keys and 0 values 
+15:41:19,371  INFO BatchTest:76 - Now running data
+15:41:19,382 DEBUG SCENELogger:24 - INSERT - ProductType: Marijuana
+15:41:19,383 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch'
+15:41:19,385 DEBUG SCENELogger:24 - INSERT - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:41:19,386 DEBUG SCENELogger:24 - INSERT - Container 'container'
+15:41:19,387 DEBUG SCENELogger:24 - INSERT - Bearer( Container 'container' ) Location: null
+15:41:19,389 DEBUG SCENELogger:24 - INSERT - Container 'container' Temperature: null degrees
+15:41:19,396 DEBUG SCENELogger:24 - INSERT - Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:41:19,396 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:41:19,528 DEBUG SCENELogger:43 - RETRACT - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:41:19,528 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Bearer( Container 'container' ) Location: Reading: Lat: -20.2976178 Lng: 40.2957768, from: 'container-location'
+15:41:19,542 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:41:19,543 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:41:19,548 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
+15:41:19,562 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:41:19,612 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:41:19,612 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:41:19,643 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:41:19,647 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:41:19,647 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:41:19,650 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:41:19,698 DEBUG SCENELogger:17 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:41:19,937 DEBUG SCENELogger:19 - 	Activation timestamp: 1969 12 31 21:01:31.
+15:41:19,937 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.model.Participation@3a5c2626
+15:41:19,938 DEBUG SCENELogger:24 - INSERT - NoRecentTemperatureReading( deactivation=null, temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees )
+15:41:19,938 DEBUG SCENELogger:32 - UPDATE (SituationActivation) - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:41:19,998 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:41:19,998 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:41:20,000 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:41:20,002 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:41:20,002 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:41:20,002 DEBUG SCENELogger:24 - INSERT - Reading: 10.5, from: 'container-temperature'
+15:41:20,003 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:41:20,003 DEBUG SCENELogger:43 - RETRACT - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:41:20,004 DEBUG SCENELogger:22 - INSERT (PerceivedIntrinsicContextUpdate) - Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees
+15:41:20,005 DEBUG SCENELogger:32 - UPDATE (TimeToThresholdUpdate) - Batch of Marijuana 'batch' TTT: 9223372036854775807
+15:41:20,011 DEBUG SCENELogger:19 - 	Deactivation timestamp: 1969 12 31 22:01:31. Duration: 0 days 1 hours 0 minutes 0 seconds.
+15:41:20,012 DEBUG SCENELogger:34 - UPDATE - NoRecentTemperatureReading( deactivation=	Deactivation timestamp: 1969 12 31 22:01:31. Duration: 0 days 1 hours 0 minutes 0 seconds., temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees )
+15:41:20,012 DEBUG SCENELogger:42 - SITUATION DEACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.NoRecentTemperatureReading	ID: -588221621	CAST: {temperature=Container 'container' Temperature: Reading: 10.5, from: 'container-temperature' degrees}
+15:41:20,013 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:41:20,013 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
