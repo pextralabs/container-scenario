@@ -1,0 +1,54 @@
+package br.ufes.inf.lprm.context.model;
+
+import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+
+rule ContextUpdate
+when
+    $update: ContextUpdate()
+    $context: IntrinsicContext(UID == $update.contextUID)
+then
+    $context.setValue($update.getValue());
+    update($context);
+end
+
+rule RelationalContextUpdate
+when
+    $update: ContextUpdate()
+    $context: RelationalContext(UID == $update.contextUID)
+then
+    $context.setValue($update.getValue());
+    update($context);
+end
+
+rule RelationalContextInsertion
+when
+    $insert: RelationalContextInsert()
+    not RelationalContext(UID == $insert.contextUID)
+    $entities: List() from accumulate(
+        $entity: Entity(UID memberOf $insert.entitiesUID),
+        collectList($entity)
+    )
+then
+    RelationalContext $context = $insert.hasValue()
+    ? $insert
+        .getContextClass()
+        .getConstructor(String.class, $insert.getValue().getClass(), Set.class)
+        .newInstance($insert.getContextUID(), $insert.getValue(), new HashSet<Entity>($entities))
+    : $insert
+        .getContextClass()
+        .getConstructor(String.class, Set.class)
+        .newInstance($insert.getContextUID(), new HashSet<Entity>($entities));
+     delete($insert);
+     insert($context);
+end
+
+rule RelationalContextDeletion
+when
+    $delete: RelationalContextDelete()
+    $context: RelationalContext(UID == $delete.contextUID)
+then
+    delete($delete);
+    delete($context);
+end

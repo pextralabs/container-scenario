@@ -5,19 +5,13 @@ import br.ufes.inf.lprm.context.model.*;
 import java.util.List;
 import java.lang.Double;
 import java.lang.Long;
-import java.util.Date;
-import br.ufes.inf.lprm.scene.model.Situation;
-import br.ufes.inf.lprm.situation.bindings.*;
-import br.ufes.inf.lprm.situation.model.Participation;
-import br.ufes.inf.lprm.situation.model.SituationType
-import br.ufes.inf.lprm.scene.util.SituationHelper
 import java.util.HashSet
 import java.util.Arrays
 import java.util.Set;
 import org.kie.api.time.SessionClock
 import java.time.LocalDateTime
 import java.time.Instant
-import java.util.TimeZone;
+import java.util.TimeZone
 
 global SessionClock clock;
 
@@ -27,13 +21,12 @@ rule SpeedUpdate
         location: Location(bearer: bearer)
         Person(this == bearer, speed: speed)
         readings: List() from accumulate(
-                r: Reading(id == location.id) over window:time( 2m ),
+                r: ContextUpdate(contextUID == location.UID) over window:time( 2m ),
                 collectList(r)
         )
     then
-        speed.setValue(Speed.computeSpeed(readings));
-        retract(speed);
-        insert(speed);
+        ContextUpdate $update = new ContextUpdate<>(Speed.computeSpeed(readings), speed.getUID(), clock.getCurrentTime());
+        insert($update);
     end
 
 
@@ -43,13 +36,15 @@ rule TimeToThresholdUpdate
         temperature: Temperature(bearer: bearer)
         batch: Batch(container == bearer, ttt: ttt)
         readings: List(size > 0) from accumulate(
-            r: Reading(id == temperature.id),
+            r: ContextUpdate(contextUID == temperature.UID),
             collectList(r)
         )
     then
         LocalDateTime now = LocalDateTime.ofInstant(Instant.ofEpochMilli(clock.getCurrentTime()), TimeZone.getDefault().toZoneId());
-        ttt.setValue(TimeToThreshold.computeTTT(readings, batch.getProductType(), now));
-        update(ttt);
+        ContextUpdate $update = new ContextUpdate<>(
+                TimeToThreshold.computeTTT(readings, batch.getProductType(), now), ttt.getUID(), clock.getCurrentTime()
+        );
+        insert($update);
     end
 
 rule EstimateTimeOfArrivalInsert
@@ -60,19 +55,20 @@ rule EstimateTimeOfArrivalInsert
         container: Container() from batch.container
         Watch(watcher == person, target == batch)
     then
-        EstimateTimeOfArrival eta = new EstimateTimeOfArrival(person.getId() + "-" + batch.getId(), person, container);
-        insertLogical(eta);
+        EstimateTimeOfArrival $eta = new EstimateTimeOfArrival("eta-" + person.getUID() + "-" + batch.getUID(), new HashSet<>(Arrays.asList(person, container)));
+        insertLogical($eta);
     end
 
 rule EstimateTimeOfArrivalUpdate
     no-loop
     when
         person: Person()
-        batch: Batch(container: container)
+        batch: Batch()
+        container: Container() from batch.container
         eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities)
         Location(this == person.location)
         Location(this == container.location)
     then
-        eta.setValue(EstimateTimeOfArrival.computeETA(person, container));
-        update(eta);
+        ContextUpdate $update = new ContextUpdate<>(EstimateTimeOfArrival.computeETA(person, container), eta.getUID(), clock.getCurrentTime());
+        insert($update);
     end

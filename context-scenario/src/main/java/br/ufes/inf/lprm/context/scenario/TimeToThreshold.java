@@ -2,7 +2,7 @@ package br.ufes.inf.lprm.context.scenario;
 
 import br.ufes.inf.lprm.context.model.Entity;
 import br.ufes.inf.lprm.context.model.IntrinsicContext;
-import br.ufes.inf.lprm.context.model.Reading;
+import br.ufes.inf.lprm.context.model.ContextUpdate;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -21,19 +21,19 @@ public class TimeToThreshold extends IntrinsicContext<Long> {
     public String toString() {
         return bearer + " TTT: " + getValue();
     }
-    static public long computeTTT (List<Reading<Double>> readings, ProductType productType) {
+    static public long computeTTT (List<ContextUpdate<Double>> readings, ProductType productType) {
         return computeTTT(readings, productType, LocalDateTime.now());
     }
-    static public long computeTTT (List<Reading<Double>> readings, ProductType productType, LocalDateTime now) {
+    static public long computeTTT (List<ContextUpdate<Double>> readings, ProductType productType, LocalDateTime now) {
         if (readings.size() < 2) return MAX_VALUE;
         else {
-            Reading<Double> temp1 = (readings.get(readings.size() - 2));
-            Reading<Double> temp2 = (readings.get(readings.size() - 1));
-            double m = (temp2.getValue() - temp1.getValue()) / (temp2.getExecutionTime() - temp1.getExecutionTime());
+            ContextUpdate<Double> temp1 = (readings.get(readings.size() - 2));
+            ContextUpdate<Double> temp2 = (readings.get(readings.size() - 1));
+            double m = (temp2.getValue() - temp1.getValue()) / (temp2.getUpdateTime() - temp1.getUpdateTime());
             double maxTemperature = productType.getMaxThreshold();
-            double maxTime = ((maxTemperature - temp2.getValue()) / m) + temp2.getExecutionTime();
+            double maxTime = ((maxTemperature - temp2.getValue()) / m) + temp2.getUpdateTime();
             double minTemperature = productType.getMinThreshold();
-            double minTime = ((minTemperature - temp2.getValue()) / m) + temp2.getExecutionTime();
+            double minTime = ((minTemperature - temp2.getValue()) / m) + temp2.getUpdateTime();
             long time = (long) (m >= 0 ? maxTime : minTime);
             long ttt = Duration
                     .between(

@@ -1,6 +1,8 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.model.Reading;
+import br.ufes.inf.lprm.context.model.ContextUpdate;
+import br.ufes.inf.lprm.context.model.RelationalContextDelete;
+import br.ufes.inf.lprm.context.model.RelationalContextInsert;
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Test;
@@ -8,6 +10,7 @@ import org.kie.api.runtime.KieSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 
@@ -25,13 +28,13 @@ public class ETATest extends SessionTest {
         LatLng vix = new LatLng(-20.2976178, -40.2957768);
         LatLng vv = new LatLng(-20.347782, -40.294953);
         Person john = new Person("john");
-        john.getLocation().setValue(new Reading<>(vix, john.getLocation().getId()));
+        john.getLocation().setValue(vix);
 
         ProductType productType = new ProductType("Marijuana", 15.0, 5.0);
         Batch batch = new Batch("batch", productType);
 
         Container container = new Container("container", batch);
-        container.getLocation().setValue(new Reading<>(vv, john.getLocation().getId()));
+        container.getLocation().setValue(vv);
 
         session.insert(john);
         john.getIntrinsicContexts().forEach(session::insert);
@@ -42,16 +45,17 @@ public class ETATest extends SessionTest {
 
         session.fireAllRules();
         clock.advanceTime(1, TimeUnit.HOURS);
-        john.getWatchers().add(new Watch(john, batch));
-        john.getWatchers().forEach(session::insert);
+        session.insert(new RelationalContextInsert(Watch.class, "watch-john-batch", Arrays.asList("john", "batch"), clock.getCurrentTime()));
         session.fireAllRules();
-
         clock.advanceTime(1, TimeUnit.HOURS);
         for (int i = 0; i < 10; i++) {
             clock.advanceTime(1, TimeUnit.SECONDS);
-            session.insert(new Reading<>(Person.walk(john, 2.5 * i,0), john.getLocation().getId(), clock.getCurrentTime()));
+            session.insert(new ContextUpdate<>(Person.walk(john, 2.5 * i,0), john.getLocation().getUID(), clock.getCurrentTime()));
             session.fireAllRules();
         }
+        clock.advanceTime(1, TimeUnit.HOURS);
+        session.insert(new RelationalContextDelete("watch-john-batch", clock.getCurrentTime()));
+        session.fireAllRules();
     }
 
     @Test
@@ -67,35 +71,33 @@ public class ETATest extends SessionTest {
         LatLng vix = new LatLng(-20.2976178, -40.2957768);
         LatLng vv = new LatLng(-20.347782, -40.294953);
         Container container = new Container("freezer1@office", batch);
-        container.getLocation().setValue(new Reading<>(vix, container.getLocation().getId()));
-        container.getTemperature().setValue(new Reading<>(0.0, container.getTemperature().getId()));
+        container.getLocation().setValue(vix);
+        container.getTemperature().setValue(0.0);
 
         Person john = new Person("john");
-        john.getLocation().setValue(new Reading<>(vv, john.getId()));
-        john.getWatchers().add(new Watch(john, batch));
-
+        john.getLocation().setValue(vv);
         session.insert(batch);
         batch.getIntrinsicContexts().forEach(session::insert);
         session.insert(john);
         john.getIntrinsicContexts().forEach(session::insert);
-        john.getWatchers().forEach(session::insert);
         session.insert(container);
         container.getIntrinsicContexts().forEach(session::insert);
+        session.insert(new RelationalContextInsert(Watch.class, "john-batch", Arrays.asList("john", "batch"), clock.getCurrentTime()));
         session.fireAllRules();
-//        double initialTime = clock.getCurrentTime();
-//        double value = 0;
-//        while (clock.getCurrentTime() < initialTime + TimeUnit.HOURS.toMillis(1)) {
-//            clock.advanceTime(30, TimeUnit.SECONDS);
-//            value += 0.01;
-//            session.insert(new Reading<>(value, container.getTemperature().getId(), clock.getCurrentTime()));
-//            session.fireAllRules();
-//        }
-//        initialTime = clock.getCurrentTime();
-//        while (clock.getCurrentTime() < initialTime + TimeUnit.MINUTES.toMillis(1)) {
-//            clock.advanceTime(30, TimeUnit.SECONDS);
-//            value -= 0.01;
-//            session.insert(new Reading<>(value, container.getTemperature().getId(), clock.getCurrentTime()));
-//            session.fireAllRules();
-//        }
+        double initialTime = clock.getCurrentTime();
+        double value = 0;
+        while (clock.getCurrentTime() < initialTime + TimeUnit.HOURS.toMillis(1)) {
+            clock.advanceTime(30, TimeUnit.SECONDS);
+            value += 0.01;
+            session.insert(new ContextUpdate<>(value, container.getTemperature().getUID(), clock.getCurrentTime()));
+            session.fireAllRules();
+        }
+        initialTime = clock.getCurrentTime();
+        while (clock.getCurrentTime() < initialTime + TimeUnit.HOURS.toMillis(1)) {
+            clock.advanceTime(30, TimeUnit.SECONDS);
+            value -= 0.01;
+            session.insert(new ContextUpdate<>(value, container.getTemperature().getUID(), clock.getCurrentTime()));
+            session.fireAllRules();
+        }
     }
 }

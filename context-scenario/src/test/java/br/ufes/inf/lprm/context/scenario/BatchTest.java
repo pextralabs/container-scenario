@@ -1,6 +1,6 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.model.Reading;
+import br.ufes.inf.lprm.context.model.ContextUpdate;
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
 import br.ufes.inf.lprm.situation.model.Situation;
 import org.drools.core.time.SessionPseudoClock;
@@ -46,7 +46,7 @@ public class BatchTest extends SessionTest{
             batch.getIntrinsicContexts().forEach(s::insert);
             s.insert(container);
             container.getIntrinsicContexts().forEach(s::insert);
-            s.insert(new Reading<>(vix, container.getLocation().getId()));
+            s.insert(new ContextUpdate<>(vix, container.getLocation().getUID(), clock.getCurrentTime()));
         });
         session.fireAllRules();
 
@@ -54,7 +54,7 @@ public class BatchTest extends SessionTest{
         long initialTime = clock.getCurrentTime();
         int aux = 0;
         while (clock.getCurrentTime() < initialTime + TimeUnit.MINUTES.toMillis(30)) {
-            session.insert(new Reading<>(10.0 + 0.5 * ++aux, container.getTemperature().getId(), clock.getCurrentTime()));
+            session.insert(new ContextUpdate<>(10.0 + 0.5 * ++aux, container.getTemperature().getUID(), clock.getCurrentTime()));
             clock.advanceTime(5, TimeUnit.MINUTES);
             session.fireAllRules();
         }
@@ -81,7 +81,7 @@ public class BatchTest extends SessionTest{
         batch.getIntrinsicContexts().forEach(session::insert);
         session.insert(container);
         container.getIntrinsicContexts().forEach(session::insert);
-        session.insert(new Reading<>(vix, container.getLocation().getId()));
+        session.insert(new ContextUpdate<>(vix, container.getLocation().getUID(), clock.getCurrentTime()));
         session.fireAllRules();
 
         {
@@ -89,7 +89,7 @@ public class BatchTest extends SessionTest{
             Assert.assertEquals(situations.size(), 0);
         }
 
-        session.insert(new Reading<>(10.0 + 0.5, container.getTemperature().getId(), clock.getCurrentTime()));
+        session.insert(new ContextUpdate<>(10.0 + 0.5, container.getTemperature().getUID(), clock.getCurrentTime()));
         clock.advanceTime(1, TimeUnit.MINUTES);
         clock.advanceTime(29, TimeUnit.SECONDS);
         session.fireAllRules();
@@ -114,7 +114,7 @@ public class BatchTest extends SessionTest{
             ArrayList<Object> situations = new ArrayList<>(session.getObjects(new ClassObjectFilter(situationType.getFactClass())));
             Assert.assertEquals(situations.size(), 1);
         }
-        session.insert(new Reading<>(10.0 + 0.5, container.getTemperature().getId(), clock.getCurrentTime()));
+        session.insert(new ContextUpdate<>(10.0 + 0.5, container.getTemperature().getUID(), clock.getCurrentTime()));
         session.fireAllRules();
         {
             ArrayList<Object> situations = new ArrayList<>(session.getObjects(new ClassObjectFilter(situationType.getFactClass())));

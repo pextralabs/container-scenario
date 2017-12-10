@@ -1,17 +1,23 @@
 package br.ufes.inf.lprm.context.scenario;
 
 
-import br.ufes.inf.lprm.context.model.*;
+import br.ufes.inf.lprm.context.model.Entity;
+import br.ufes.inf.lprm.context.model.IntrinsicContext;
 
-public class Location extends IntrinsicContext<Reading<LatLng>> {
+public class Location extends IntrinsicContext<LatLng> {
     static  public  double degreesToRadians (double degrees) {
         return degrees * Math.PI / 180;
     }
     static public double earthRadius = (6.37814) * Math.pow(10, 6);
 
+    public Location(String id, Entity bearer, LatLng value) {
+        super(id, bearer, value);
+    }
+
     public Location(String id, Entity bearer) {
         super(id, bearer);
     }
+
     @Override
     public String toString() {
         return "Bearer( " + bearer + " ) Location: " +  getValue();
@@ -31,6 +37,6 @@ public class Location extends IntrinsicContext<Reading<LatLng>> {
         return earthRadius * c;
     }
     static public double distance (Location l1, Location l2) {
-        return distance(l1.getValue().getValue(), l2.getValue().getValue());
+        return distance(l1.getValue(), l2.getValue());
     }
 }

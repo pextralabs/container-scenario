@@ -1,7 +1,6 @@
 package br.ufes.inf.lprm.context.scenario;
 
 import br.ufes.inf.lprm.context.model.*;
-
 import java.util.List;
 import java.lang.Double;
 import java.lang.Long;
@@ -26,7 +25,7 @@ rule NoRecentTemperatureReading
 @role(situation) @type(NoRecentTemperatureReading)
     when
         temperature: Temperature(value != null)
-        not (Reading(this == temperature.value) over window:time( 1m30s ))
+        not (ContextUpdate(value == temperature.value) over window:time( 1m30s ))
     then
         SituationHelper.situationDetected(drools);
 end

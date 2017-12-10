@@ -6,10 +6,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 public abstract class Entity {
-    protected String id;
+    protected String UID;
     private List<IntrinsicContext> intrinsicContexts;
-    public Entity(String id) {
-        this.id = id;
+    public Entity(String UID) {
+        this.UID = UID;
         intrinsicContexts = new LinkedList<>();
         Arrays.stream(this.getClass().getDeclaredFields())
                 .filter(this::isIntrinsicContextField)
@@ -22,7 +22,7 @@ public abstract class Entity {
         boolean accessibility = field.isAccessible();
         try {
             field.setAccessible(true);
-            field.set(this, field.getType().getConstructor(String.class, Entity.class).newInstance(this.id + "-" + field.getName(), this));
+            field.set(this, field.getType().getConstructor(String.class, Entity.class).newInstance(this.UID + "-" + field.getName(), this));
             intrinsicContexts.add((IntrinsicContext) field.get(this));
         } catch (Exception e) {
             e.printStackTrace();
@@ -30,13 +30,28 @@ public abstract class Entity {
             field.setAccessible(accessibility);
         }
     }
-    public String getId() {
-        return id;
+    public String getUID() {
+        return UID;
     }
-    public void setId(String id) {
-        this.id = id;
+    public void setUID(String UID) {
+        this.UID = UID;
     }
     public List<IntrinsicContext> getIntrinsicContexts() {
         return intrinsicContexts;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Entity)) return false;
+
+        Entity entity = (Entity) o;
+
+        return getUID().equals(entity.getUID());
+    }
+
+    @Override
+    public int hashCode() {
+        return getUID().hashCode();
     }
 }

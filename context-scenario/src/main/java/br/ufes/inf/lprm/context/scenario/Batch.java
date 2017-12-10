@@ -44,6 +44,6 @@ public class Batch extends Entity {
 
     @Override
     public String toString() {
-        return "Batch of " + productType.getName() + " '" + id + "'";
+        return "Batch of " + productType.getName() + " '" + UID + "'";
     }
 }

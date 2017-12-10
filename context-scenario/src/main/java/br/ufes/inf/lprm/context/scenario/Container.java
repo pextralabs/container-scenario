@@ -39,7 +39,7 @@ public class Container extends Entity {
 
     @Override
     public String toString() {
-        return "Container '" + id + "'";
+        return "Container '" + UID + "'";
     }
 
     public Temperature getTemperature() {

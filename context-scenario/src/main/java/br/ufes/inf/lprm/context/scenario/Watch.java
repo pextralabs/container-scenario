@@ -1,12 +1,29 @@
 package br.ufes.inf.lprm.context.scenario;
 
-public class Watch {
+import br.ufes.inf.lprm.context.model.Entity;
+import br.ufes.inf.lprm.context.model.RelationalContext;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Watch extends RelationalContext<Void> {
     private Person watcher;
     private Batch target;
 
-    public Watch(Person watcher, Batch target) {
+    public Watch(String id, Person watcher, Batch target) {
+        super(id, new HashSet<>(Arrays.asList(watcher, target)));
         this.watcher = watcher;
         this.target = target;
+    }
+
+    public Watch(String id, Set<Entity> entities) {
+        super(id, entities);
+        this.entities.forEach(entity -> {
+            if (entity instanceof  Person) this.watcher = (Person) entity;
+            else if (entity instanceof  Batch) this.target = (Batch) entity;
+            else throw new RuntimeException("Deu rui");
+        });
     }
 
     public Person getWatcher() {
