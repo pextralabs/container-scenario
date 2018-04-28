@@ -1,6 +1,6 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.model.ContextUpdate;
+import br.ufes.inf.lprm.context.model.ContextValue;
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Assert;
@@ -42,7 +42,7 @@ public class PersonTest extends SessionTest{
             LatLng vix = new LatLng(-20.2976178, 40.2957768);
             Assert.assertNull(john.getLocation().getValue());
 
-            session.insert(new ContextUpdate<>(vix, "john-location", clock.getCurrentTime()));
+            session.insert(new ContextValue<>(vix, "john-location", clock.getCurrentTime()));
             session.fireAllRules();
             Assert.assertNotNull(john.getLocation().getValue());
             Assert.assertEquals(john.getLocation().getValue(), vix);
@@ -63,12 +63,12 @@ public class PersonTest extends SessionTest{
             Person john = new Person("john");
             session.insert(john);
             john.getIntrinsicContexts().forEach(session::insert);
-            session.insert(new ContextUpdate<>(new LatLng(-20.2976178, 40.2957768), "john-location", clock.getCurrentTime()));
+            session.insert(new ContextValue<>(new LatLng(-20.2976178, 40.2957768), "john-location", clock.getCurrentTime()));
             session.fireAllRules();
             clock.advanceTime(1, TimeUnit.HOURS);
             for (int i = 0; i < 10; i++) {
                 clock.advanceTime(1, TimeUnit.SECONDS);
-                session.insert(new ContextUpdate<>(Person.walk(john, 2.5 * i,0), "john-location", clock.getCurrentTime()));
+                session.insert(new ContextValue<>(Person.walk(john, 2.5 * i,0), "john-location", clock.getCurrentTime()));
                 session.fireAllRules();
             }
         } catch (Exception e) {

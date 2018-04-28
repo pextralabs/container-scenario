@@ -1,6 +1,6 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.model.ContextUpdate;
+import br.ufes.inf.lprm.context.model.ContextValue;
 import br.ufes.inf.lprm.context.model.RelationalContextDelete;
 import br.ufes.inf.lprm.context.model.RelationalContextInsert;
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
@@ -50,7 +50,7 @@ public class ETATest extends SessionTest {
         clock.advanceTime(1, TimeUnit.HOURS);
         for (int i = 0; i < 10; i++) {
             clock.advanceTime(1, TimeUnit.SECONDS);
-            session.insert(new ContextUpdate<>(Person.walk(john, 2.5 * i,0), john.getLocation().getUID(), clock.getCurrentTime()));
+            session.insert(new ContextValue<>(Person.walk(john, 2.5 * i,0), john.getLocation().getUID(), clock.getCurrentTime()));
             session.fireAllRules();
         }
         clock.advanceTime(1, TimeUnit.HOURS);
@@ -89,14 +89,14 @@ public class ETATest extends SessionTest {
         while (clock.getCurrentTime() < initialTime + TimeUnit.HOURS.toMillis(1)) {
             clock.advanceTime(30, TimeUnit.SECONDS);
             value += 0.01;
-            session.insert(new ContextUpdate<>(value, container.getTemperature().getUID(), clock.getCurrentTime()));
+            session.insert(new ContextValue<>(value, container.getTemperature().getUID(), clock.getCurrentTime()));
             session.fireAllRules();
         }
         initialTime = clock.getCurrentTime();
         while (clock.getCurrentTime() < initialTime + TimeUnit.HOURS.toMillis(1)) {
             clock.advanceTime(30, TimeUnit.SECONDS);
             value -= 0.01;
-            session.insert(new ContextUpdate<>(value, container.getTemperature().getUID(), clock.getCurrentTime()));
+            session.insert(new ContextValue<>(value, container.getTemperature().getUID(), clock.getCurrentTime()));
             session.fireAllRules();
         }
     }

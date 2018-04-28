@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Set;
 
 public abstract class RelationalContext<T> {
-    protected String UID;
+    private String UID;
     protected Set<Entity> entities;
-    protected T value;
+    protected ContextValue<T> value;
 
     public RelationalContext(String UID, Set<Entity> entities) {
         this.UID = UID;
@@ -15,7 +15,7 @@ public abstract class RelationalContext<T> {
 
     public RelationalContext(String UID, T value, Set<Entity> entities) {
         this.UID = UID;
-        this.value = value;
+        this.value = new ContextValue<>(value, UID);
         this.entities = entities;
     }
 
@@ -36,11 +36,12 @@ public abstract class RelationalContext<T> {
     }
 
     public T getValue() {
-        return value;
+        if (value != null) return value.getValue();
+        return null;
     }
 
     public void setValue(T value) {
-        this.value = value;
+        this.value = new ContextValue<>(value, UID);
     }
 
     @Override

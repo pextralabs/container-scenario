@@ -1,8 +1,8 @@
 package br.ufes.inf.lprm.context.scenario;
 
+import br.ufes.inf.lprm.context.model.ContextValue;
 import br.ufes.inf.lprm.context.model.Entity;
 import br.ufes.inf.lprm.context.model.IntrinsicContext;
-import br.ufes.inf.lprm.context.model.ContextUpdate;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -21,14 +21,14 @@ public class TimeToThreshold extends IntrinsicContext<Long> {
     public String toString() {
         return bearer + " TTT: " + getValue();
     }
-    static public long computeTTT (List<ContextUpdate<Double>> readings, ProductType productType) {
+    static public long computeTTT (List<ContextValue<Double>> readings, ProductType productType) {
         return computeTTT(readings, productType, LocalDateTime.now());
     }
-    static public long computeTTT (List<ContextUpdate<Double>> readings, ProductType productType, LocalDateTime now) {
+    static public long computeTTT (List<ContextValue<Double>> readings, ProductType productType, LocalDateTime now) {
         if (readings.size() < 2) return MAX_VALUE;
         else {
-            ContextUpdate<Double> temp1 = (readings.get(readings.size() - 2));
-            ContextUpdate<Double> temp2 = (readings.get(readings.size() - 1));
+            ContextValue<Double> temp1 = (readings.get(readings.size() - 2));
+            ContextValue<Double> temp2 = (readings.get(readings.size() - 1));
             double m = (temp2.getValue() - temp1.getValue()) / (temp2.getUpdateTime() - temp1.getUpdateTime());
             double maxTemperature = productType.getMaxThreshold();
             double maxTime = ((maxTemperature - temp2.getValue()) / m) + temp2.getUpdateTime();

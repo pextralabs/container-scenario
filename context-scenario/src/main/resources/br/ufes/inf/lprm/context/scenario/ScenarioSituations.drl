@@ -25,7 +25,7 @@ rule NoRecentTemperatureReading
 @role(situation) @type(NoRecentTemperatureReading)
     when
         temperature: Temperature(value != null)
-        not (ContextUpdate(value == temperature.value) over window:time( 1m30s ))
+        not (ContextValue(value == temperature.value) over window:time( 1m30s ))
     then
         SituationHelper.situationDetected(drools);
 end

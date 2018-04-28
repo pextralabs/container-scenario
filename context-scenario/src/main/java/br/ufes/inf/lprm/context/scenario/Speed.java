@@ -1,6 +1,6 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.model.ContextUpdate;
+import br.ufes.inf.lprm.context.model.ContextValue;
 import br.ufes.inf.lprm.context.model.Entity;
 import br.ufes.inf.lprm.context.model.IntrinsicContext;
 
@@ -16,8 +16,8 @@ public class Speed extends IntrinsicContext<Double> {
     }
     public Speed (String id, double initialValue, Entity bearer) {
         super(id, bearer, initialValue);
-        if (this.value > MAX_SPEED) this.value = MAX_SPEED;
-        if (this.value < MIN_SPEED) this.value = MIN_SPEED;
+        if (this.getValue() > MAX_SPEED) this.setValue(MAX_SPEED);
+        if (this.getValue() < MIN_SPEED) this.setValue(MIN_SPEED);
     }
 
     @Override
@@ -25,13 +25,13 @@ public class Speed extends IntrinsicContext<Double> {
         return "Bearer( " + bearer + " )" + " Speed: " + getValue() + " m/s";
     }
 
-    static public Double computeSpeed(List<ContextUpdate<LatLng>> readings){
+    static public Double computeSpeed(List<ContextValue<LatLng>> readings){
         if (readings.size() < 2) return MIN_SPEED;
         else {
             ArrayList<Double> speeds = new ArrayList<>();
             for(int i = 0; i < readings.size() - 1; i++) {
-                ContextUpdate<LatLng> curr = readings.get(i);
-                ContextUpdate<LatLng> next = readings.get(i + 1);
+                ContextValue<LatLng> curr = readings.get(i);
+                ContextValue<LatLng> next = readings.get(i + 1);
                 double ds = Location.distance(next.getValue(), curr.getValue());
                 long dt = (next.getUpdateTime() - curr.getUpdateTime()) / 1000;
                 speeds.add(ds/dt);

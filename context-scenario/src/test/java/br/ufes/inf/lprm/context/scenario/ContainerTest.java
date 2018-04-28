@@ -1,6 +1,6 @@
 package br.ufes.inf.lprm.context.scenario;
 
-import br.ufes.inf.lprm.context.model.ContextUpdate;
+import br.ufes.inf.lprm.context.model.ContextValue;
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Assert;
@@ -46,7 +46,7 @@ public class ContainerTest extends  SessionTest {
         int aux = 0;
         while (clock.getCurrentTime() < initialTime + TimeUnit.HOURS.toMillis(2)) {
             clock.advanceTime(30, TimeUnit.MINUTES);
-            session.insert(new ContextUpdate<>(0.05 * ++aux, "container-temperature", clock.getCurrentTime()));
+            session.insert(new ContextValue<>(0.05 * ++aux, "container-temperature", clock.getCurrentTime()));
             session.fireAllRules();
         }
         Assert.assertTrue(container.getTemperature().getValue() == 0.05 * aux);

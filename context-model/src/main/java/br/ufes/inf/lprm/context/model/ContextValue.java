@@ -8,18 +8,18 @@ import java.util.Date;
 
 @Role(Role.Type.EVENT)
 @Timestamp("updateTime")
-public class ContextUpdate<T> implements Serializable {
+public class ContextValue<T> implements Serializable {
     private static final long serialVersionUID = 2L;
     private long updateTime;
     private T value;
     private String contextUID;
 
-    public ContextUpdate(T value, String contextUID) {
+    public ContextValue(T value, String contextUID) {
         this.value = value;
         this.contextUID = contextUID;
         this.updateTime = new Date().getTime();
     }
-    public ContextUpdate(T value, String contextUID, long updateTime) {
+    public ContextValue(T value, String contextUID, long updateTime) {
         this.value = value;
         this.contextUID = contextUID;
         this.updateTime = updateTime;

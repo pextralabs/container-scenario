@@ -12,6 +12,7 @@ import org.kie.api.time.SessionClock
 import java.time.LocalDateTime
 import java.time.Instant
 import java.util.TimeZone
+import br.ufes.inf.lprm.context.model.ContextValue
 
 global SessionClock clock;
 
@@ -21,11 +22,11 @@ rule SpeedUpdate
         location: Location(bearer: bearer)
         Person(this == bearer, speed: speed)
         readings: List() from accumulate(
-                r: ContextUpdate(contextUID == location.UID) over window:time( 2m ),
+                r: ContextValue(contextUID == location.UID) over window:time( 2m ),
                 collectList(r)
         )
     then
-        ContextUpdate $update = new ContextUpdate<>(Speed.computeSpeed(readings), speed.getUID(), clock.getCurrentTime());
+        ContextValue $update = new ContextValue<>(Speed.computeSpeed(readings), speed.getUID(), clock.getCurrentTime());
         insert($update);
     end
 
@@ -36,12 +37,12 @@ rule TimeToThresholdUpdate
         temperature: Temperature(bearer: bearer)
         batch: Batch(container == bearer, ttt: ttt)
         readings: List(size > 0) from accumulate(
-            r: ContextUpdate(contextUID == temperature.UID),
+            r: ContextValue(contextUID == temperature.UID),
             collectList(r)
         )
     then
         LocalDateTime now = LocalDateTime.ofInstant(Instant.ofEpochMilli(clock.getCurrentTime()), TimeZone.getDefault().toZoneId());
-        ContextUpdate $update = new ContextUpdate<>(
+        ContextValue $update = new ContextValue<>(
                 TimeToThreshold.computeTTT(readings, batch.getProductType(), now), ttt.getUID(), clock.getCurrentTime()
         );
         insert($update);
@@ -69,6 +70,6 @@ rule EstimateTimeOfArrivalUpdate
         Location(this == person.location)
         Location(this == container.location)
     then
-        ContextUpdate $update = new ContextUpdate<>(EstimateTimeOfArrival.computeETA(person, container), eta.getUID(), clock.getCurrentTime());
+        ContextValue $update = new ContextValue<>(EstimateTimeOfArrival.computeETA(person, container), eta.getUID(), clock.getCurrentTime());
         insert($update);
     end

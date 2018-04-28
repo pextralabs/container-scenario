@@ -17,8 +17,8 @@ public class EstimateTimeOfArrival extends RelationalContext<Long> {
 
     public EstimateTimeOfArrival(String id, long initialValue, Set<Entity> entities) {
         super(id, initialValue, entities);
-        if (this.value > MAX_ETA) this.value = MAX_ETA;
-        else if (this.value < MIN_ETA) this.value = MIN_ETA;
+        if (this.getValue() > MAX_ETA) this.setValue(MAX_ETA);
+        else if (this.getValue() < MIN_ETA) this.setValue(MIN_ETA);
     }
 
     @Override

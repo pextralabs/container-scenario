@@ -1,14 +1,14 @@
 package br.ufes.inf.lprm.context.model;
 
 public abstract class IntrinsicContext<T> {
-    protected String UID;
+    private String UID;
     protected Entity bearer;
-    protected T value;
+    protected ContextValue<T> value;
 
     public IntrinsicContext(String UID, Entity bearer, T value) {
         this.UID = UID;
         this.bearer = bearer;
-        this.value = value;
+        this.value = new ContextValue<>(value, UID);
     }
 
     public IntrinsicContext(String UID, Entity bearer) {
@@ -33,11 +33,12 @@ public abstract class IntrinsicContext<T> {
     }
 
     public T getValue() {
-        return value;
+        if (value != null) return value.getValue();
+        return null;
     }
 
     public void setValue(T value) {
-        this.value = value;
+        this.value = new ContextValue<>(value, UID);
     }
 
     @Override
