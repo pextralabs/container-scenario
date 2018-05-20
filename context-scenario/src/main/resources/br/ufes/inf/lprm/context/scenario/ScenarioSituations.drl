@@ -22,10 +22,10 @@ declare NoRecentTemperatureReading extends Situation
     temperature: Temperature @part @key
 end
 rule NoRecentTemperatureReading
-@role(situation) @type(NoRecentTemperatureReading)
+@role(situation)@type(NoRecentTemperatureReading)
     when
-        temperature: Temperature(value != null)
-        not (ContextValue(value == temperature.value) over window:time( 1m30s ))
+        temperature: Temperature(contextValue != null)
+        not (ContextValue(contextUID == temperature.UID) over window:time( 1m30s ))
     then
         SituationHelper.situationDetected(drools);
 end
@@ -42,7 +42,7 @@ rule ETABiggerThanTTT
     person: Person()
     batch: Batch(container: container)
     ttt: TimeToThreshold(bearer == batch)
-    eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities, value > ttt.value)
+    eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities, contextValue > ttt.contextValue)
   then
     SituationHelper.situationDetected(drools);
 end

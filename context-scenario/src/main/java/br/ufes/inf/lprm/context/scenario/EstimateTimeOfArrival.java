@@ -1,24 +1,19 @@
 package br.ufes.inf.lprm.context.scenario;
 
 import br.ufes.inf.lprm.context.model.Entity;
+import br.ufes.inf.lprm.context.model.FormalRelationalContext;
 import br.ufes.inf.lprm.context.model.RelationalContext;
 
 import java.util.Set;
 
-public class EstimateTimeOfArrival extends RelationalContext<Long> {
+public class EstimateTimeOfArrival extends FormalRelationalContext<Long> {
     static public double MIN_DISTANCE = 500;
     static public double MAX_DISTANCE = Double.MAX_VALUE;
     static public long MAX_ETA = Long.MAX_VALUE;
     static public long MIN_ETA = 0;
 
     public EstimateTimeOfArrival(String id, Set<Entity> entities) {
-        super(id, MAX_ETA, entities);
-    }
-
-    public EstimateTimeOfArrival(String id, long initialValue, Set<Entity> entities) {
-        super(id, initialValue, entities);
-        if (this.getValue() > MAX_ETA) this.setValue(MAX_ETA);
-        else if (this.getValue() < MIN_ETA) this.setValue(MIN_ETA);
+        super(id, entities);
     }
 
     @Override

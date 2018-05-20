@@ -3,22 +3,13 @@ package br.ufes.inf.lprm.context.model;
 import java.util.List;
 import java.util.Set;
 
-public abstract class RelationalContext<T> {
-    private String UID;
+public abstract class RelationalContext {
+    protected String UID;
     protected Set<Entity> entities;
-    protected ContextValue<T> value;
-
     public RelationalContext(String UID, Set<Entity> entities) {
         this.UID = UID;
         this.entities = entities;
     }
-
-    public RelationalContext(String UID, T value, Set<Entity> entities) {
-        this.UID = UID;
-        this.value = new ContextValue<>(value, UID);
-        this.entities = entities;
-    }
-
     public String getUID() {
         return UID;
     }
@@ -33,15 +24,6 @@ public abstract class RelationalContext<T> {
 
     public void setEntities(Set<Entity> entities) {
         this.entities = entities;
-    }
-
-    public T getValue() {
-        if (value != null) return value.getValue();
-        return null;
-    }
-
-    public void setValue(T value) {
-        this.value = new ContextValue<>(value, UID);
     }
 
     @Override

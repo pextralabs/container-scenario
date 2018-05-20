@@ -19,7 +19,7 @@ public class PersonTest extends SessionTest{
         Person john = new Person("john");
         Location location = john.getLocation();
         Assert.assertNotNull(location);
-        Assert.assertNull(location.getValue());
+        Assert.assertNull(location.getContextValue());
         Assert.assertEquals("john-location", location.getUID());
     }
 
@@ -40,11 +40,11 @@ public class PersonTest extends SessionTest{
             session.fireAllRules();
 
             LatLng vix = new LatLng(-20.2976178, 40.2957768);
-            Assert.assertNull(john.getLocation().getValue());
+            Assert.assertNull(john.getLocation().getContextValue());
 
             session.insert(new ContextValue<>(vix, "john-location", clock.getCurrentTime()));
             session.fireAllRules();
-            Assert.assertNotNull(john.getLocation().getValue());
+            Assert.assertNotNull(john.getLocation().getContextValue());
             Assert.assertEquals(john.getLocation().getValue(), vix);
         } catch (Exception e) {
             e.printStackTrace();

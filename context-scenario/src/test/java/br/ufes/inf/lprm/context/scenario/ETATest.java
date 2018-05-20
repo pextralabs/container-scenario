@@ -28,13 +28,15 @@ public class ETATest extends SessionTest {
         LatLng vix = new LatLng(-20.2976178, -40.2957768);
         LatLng vv = new LatLng(-20.347782, -40.294953);
         Person john = new Person("john");
-        john.getLocation().setValue(vix);
+        Location johnsLocation = john.getLocation();
+        johnsLocation.setContextValue(johnsLocation.createContextValue(vix));
 
         ProductType productType = new ProductType("Marijuana", 15.0, 5.0);
         Batch batch = new Batch("batch", productType);
 
         Container container = new Container("container", batch);
-        container.getLocation().setValue(vv);
+        Location containersLocation = container.getLocation();
+        containersLocation.setContextValue(containersLocation.createContextValue(vv));
 
         session.insert(john);
         john.getIntrinsicContexts().forEach(session::insert);
@@ -71,11 +73,14 @@ public class ETATest extends SessionTest {
         LatLng vix = new LatLng(-20.2976178, -40.2957768);
         LatLng vv = new LatLng(-20.347782, -40.294953);
         Container container = new Container("freezer1@office", batch);
-        container.getLocation().setValue(vix);
-        container.getTemperature().setValue(0.0);
+        Location containersLocation = container.getLocation();
+        Temperature containersTemperature = container.getTemperature();
+        containersLocation.setContextValue(containersLocation.createContextValue(vix));
+        containersTemperature.setContextValue(containersTemperature.createContextValue(0.0));
 
         Person john = new Person("john");
-        john.getLocation().setValue(vv);
+        Location johnsLocation = john.getLocation();
+        johnsLocation.setContextValue(johnsLocation.createContextValue(vv));
         session.insert(batch);
         batch.getIntrinsicContexts().forEach(session::insert);
         session.insert(john);

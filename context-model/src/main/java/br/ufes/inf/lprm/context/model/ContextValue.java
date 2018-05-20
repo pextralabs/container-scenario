@@ -36,4 +36,9 @@ public class ContextValue<T> implements Serializable {
     public T getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return String.format("ContextValue(%s)", value.toString());
+    }
 }

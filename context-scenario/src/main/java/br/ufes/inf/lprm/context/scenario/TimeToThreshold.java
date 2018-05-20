@@ -15,11 +15,10 @@ public class TimeToThreshold extends IntrinsicContext<Long> {
     static public long MAX_VALUE = Long.MAX_VALUE;
     public TimeToThreshold(String id, Entity bearer) {
         super(id, bearer);
-        setValue(MAX_VALUE);
     }
     @Override
     public String toString() {
-        return bearer + " TTT: " + getValue();
+        return bearer + " TTT: " + getContextValue();
     }
     static public long computeTTT (List<ContextValue<Double>> readings, ProductType productType) {
         return computeTTT(readings, productType, LocalDateTime.now());

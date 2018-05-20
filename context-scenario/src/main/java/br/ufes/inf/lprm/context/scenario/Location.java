@@ -10,17 +10,13 @@ public class Location extends IntrinsicContext<LatLng> {
     }
     static public double earthRadius = (6.37814) * Math.pow(10, 6);
 
-    public Location(String id, Entity bearer, LatLng value) {
-        super(id, bearer, value);
-    }
-
     public Location(String id, Entity bearer) {
         super(id, bearer);
     }
 
     @Override
     public String toString() {
-        return "Bearer( " + bearer + " ) Location: " +  getValue();
+        return "Bearer( " + bearer + " ) Location: " +  getContextValue();
     }
 
     static public double distance (LatLng l1, LatLng l2) {

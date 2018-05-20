@@ -22,9 +22,8 @@ public class BatchTest extends SessionTest{
     public void instantiation () {
         ProductType productType = new ProductType("Marijuana", 15.0, 5.0);
         Batch batch = new Batch("batch", productType);
-
         Assert.assertEquals(batch.getProductType(), productType);
-        Assert.assertTrue(batch.getTtt().getValue() == Long.MAX_VALUE);
+//        Assert.assertTrue(batch.getTtt().getValue() == Long.MAX_VALUE);
     }
 
     @Test

@@ -18,12 +18,16 @@ public class ContainerTest extends  SessionTest {
     public void instantiation () {
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
         Container container = new Container("container");
-        container.getLocation().setValue(vix);
-        container.getTemperature().setValue(0.0);
+        Location containerLocation = container.getLocation();
+        Temperature containerTemperature = container.getTemperature();
+        ContextValue<LatLng> containerLocationInitialValue = containerLocation.createContextValue(vix);
+        ContextValue<Double> containerTemperatureInitialValue = containerTemperature.createContextValue(0.0);
+        containerLocation.setContextValue(containerLocationInitialValue);
+        containerTemperature.setContextValue(containerTemperatureInitialValue);
 
         Assert.assertEquals(container.getBatches().size(), 0);
-        Assert.assertEquals(container.getLocation().getValue(), vix);
-        Assert.assertEquals(container.getTemperature().getValue(), new Double(0.0));
+        Assert.assertEquals(container.getLocation().getContextValue(), containerLocationInitialValue);
+        Assert.assertEquals(container.getTemperature().getContextValue(), containerTemperatureInitialValue);
     }
 
     @Test
@@ -35,8 +39,12 @@ public class ContainerTest extends  SessionTest {
         LOG.info("Now running data");
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
         Container container = new Container("container");
-        container.getLocation().setValue(vix);
-        container.getTemperature().setValue(0.0);
+        Location containerLocation = container.getLocation();
+        Temperature containerTemperature = container.getTemperature();
+        ContextValue<LatLng> containerLocationInitialValue = containerLocation.createContextValue(vix);
+        ContextValue<Double> containerTemperatureInitialValue = containerTemperature.createContextValue(0.0);
+        containerLocation.setContextValue(containerLocationInitialValue);
+        containerTemperature.setContextValue(containerTemperatureInitialValue);
 
         session.insert(container);
         container.getIntrinsicContexts().forEach(session::insert);

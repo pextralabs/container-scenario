@@ -10,19 +10,13 @@ import java.util.List;
 public class Speed extends IntrinsicContext<Double> {
     static public double MIN_SPEED = 6.0;
     static public double MAX_SPEED = Double.MAX_VALUE;
-    public Speed(String id, Entity bearer) {
+    public Speed (String id, Entity bearer) {
         super(id, bearer);
-        this.setValue(MIN_SPEED);
-    }
-    public Speed (String id, double initialValue, Entity bearer) {
-        super(id, bearer, initialValue);
-        if (this.getValue() > MAX_SPEED) this.setValue(MAX_SPEED);
-        if (this.getValue() < MIN_SPEED) this.setValue(MIN_SPEED);
     }
 
     @Override
     public String toString() {
-        return "Bearer( " + bearer + " )" + " Speed: " + getValue() + " m/s";
+        return "Bearer( " + bearer + " )" + " Speed: " + getContextValue() + " m/s";
     }
 
     static public Double computeSpeed(List<ContextValue<LatLng>> readings){

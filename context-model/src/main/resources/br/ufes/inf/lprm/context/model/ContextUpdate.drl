@@ -4,20 +4,20 @@ import java.util.List;
 import java.util.Set;
 import java.util.HashSet;
 
-rule ContextValue
+rule IntrinsicContextUpdate
 when
     $update: ContextValue()
     $context: IntrinsicContext(UID == $update.contextUID)
 then
-    $context.setValue($update.getValue());
+    $context.setContextValue($update);
     update($context);
 end
 
-rule RelationalContextUpdate
+rule FormalRelationalContextUpdate
 when
     $update: ContextValue()
-    $context: RelationalContext(UID == $update.contextUID)
+    $context: FormalRelationalContext(UID == $update.contextUID)
 then
-    $context.setValue($update.getValue());
+    $context.setContextValue($update);
     update($context);
 end
