@@ -13,7 +13,8 @@ public abstract class FormalRelationalContext<T> extends  RelationalContext {
     }
 
     public T getValue() {
-        return  contextValue.getValue();
+        if (contextValue != null) return  contextValue.getValue();
+        return null;
     }
 
     public void setContextValue(ContextValue<T> latestContextValue) {

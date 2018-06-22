@@ -40,11 +40,4 @@ public abstract class RelationalContext {
     public int hashCode() {
         return getUID().hashCode();
     }
-
-    public static RelationalContextInsert makeInsert(Class<? extends  RelationalContext> contextClass, String contextUID, List<String> entitiesID, long time) {
-        return  new RelationalContextInsert(contextClass, contextUID, entitiesID, time);
-    }
-    public static RelationalContextInsert makeInsert(Class<? extends  RelationalContext> contextClass, String contextUID, List<String> entitiesID, Object value, long time) {
-        return  new RelationalContextInsert(contextClass, contextUID, entitiesID, value, time);
-    }
 }

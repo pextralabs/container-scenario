@@ -41,8 +41,8 @@ rule ETABiggerThanTTT
   when
     person: Person()
     batch: Batch(container: container)
-    ttt: TimeToThreshold(bearer == batch)
-    eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities, contextValue > ttt.contextValue)
+    ttt: TimeToThreshold(bearer == batch, contextValue != null)
+    eta: EstimateTimeOfArrival(person memberOf entities, container memberOf entities, contextValue != null, value > ttt.value)
   then
     SituationHelper.situationDetected(drools);
 end

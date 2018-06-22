@@ -1,0 +1,47 @@
+15:29:42,263  INFO Reflections:229 - Reflections took 146 ms to scan 51 urls, producing 324 keys and 1578 values 
+15:29:42,264 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/
+15:29:42,264 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/ContextUpdate.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/ with scanner SubTypesScanner
+15:29:42,264 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/ContextUpdate.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/ with scanner TypeAnnotationsScanner
+15:29:42,265  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 4 keys and 4 values 
+15:29:42,265 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:29:42,267 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
+15:29:42,267 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
+15:29:42,268  INFO Reflections:229 - Reflections took 3 ms to scan 1 urls, producing 28 keys and 28 values 
+15:29:42,269 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:29:42,270  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 3 keys and 4 values 
+15:29:42,272 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/test-classes/
+file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/
+15:29:42,274 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner SubTypesScanner
+15:29:42,274 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:29:42,274 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner SubTypesScanner
+15:29:42,275 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+15:29:42,275  INFO Reflections:229 - Reflections took 3 ms to scan 2 urls, producing 6 keys and 14 values 
+15:29:42,275 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:29:42,276  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 5 keys and 5 values 
+15:29:42,277 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+15:29:42,278  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 8 keys and 9 values 
+15:29:42,278 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+15:29:42,278  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 0 keys and 0 values 
+15:29:42,279  INFO PersonTest:34 - Now running data
+15:29:42,279 DEBUG SCENELogger:24 - INSERT - Person: john
+15:29:42,280 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Location: null
+15:29:42,280 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Speed: null m/s
+15:29:42,280 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:29:42,282 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
+15:29:42,284 DEBUG SCENELogger:32 - UPDATE (IntrinsicContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
+15:29:42,284 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:29:42,284 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+15:29:42,284 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2957768)
+15:29:42,284 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+15:29:42,294 DEBUG SCENELogger:32 - UPDATE (IntrinsicContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2957768)
+15:29:42,294 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
+15:29:42,295 DEBUG SCENELogger:32 - UPDATE (IntrinsicContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
+15:29:42,295 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+15:29:42,295 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE

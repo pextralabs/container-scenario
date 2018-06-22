@@ -1,12 +1,11 @@
 package br.ufes.inf.lprm.context.scenario;
 
 import br.ufes.inf.lprm.context.model.ContextValue;
-import br.ufes.inf.lprm.context.model.RelationalContextDelete;
-import br.ufes.inf.lprm.context.model.RelationalContextInsert;
 import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
 import org.drools.core.time.SessionPseudoClock;
 import org.junit.Test;
 import org.kie.api.runtime.KieSession;
+import org.kie.api.runtime.rule.FactHandle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,7 +46,8 @@ public class ETATest extends SessionTest {
 
         session.fireAllRules();
         clock.advanceTime(1, TimeUnit.HOURS);
-        session.insert(new RelationalContextInsert(Watch.class, "watch-john-batch", Arrays.asList("john", "batch"), clock.getCurrentTime()));
+        FactHandle watchFact = session.insert(new Watch("watch-john-batch", john, batch));
+//        session.insert(new RelationalContextInsert(Watch.class, "watch-john-batch", Arrays.asList("john", "batch"), clock.getCurrentTime()));
         session.fireAllRules();
         clock.advanceTime(1, TimeUnit.HOURS);
         for (int i = 0; i < 10; i++) {
@@ -56,7 +56,8 @@ public class ETATest extends SessionTest {
             session.fireAllRules();
         }
         clock.advanceTime(1, TimeUnit.HOURS);
-        session.insert(new RelationalContextDelete("watch-john-batch", clock.getCurrentTime()));
+        session.delete(watchFact);
+//        session.insert(new RelationalContextDelete("watch-john-batch", clock.getCurrentTime()));
         session.fireAllRules();
     }
 
@@ -87,7 +88,7 @@ public class ETATest extends SessionTest {
         john.getIntrinsicContexts().forEach(session::insert);
         session.insert(container);
         container.getIntrinsicContexts().forEach(session::insert);
-        session.insert(new RelationalContextInsert(Watch.class, "john-batch", Arrays.asList("john", "batch"), clock.getCurrentTime()));
+        FactHandle watchFact = session.insert(new Watch("watch-john-batch", john, batch));
         session.fireAllRules();
         double initialTime = clock.getCurrentTime();
         double value = 0;
@@ -104,5 +105,6 @@ public class ETATest extends SessionTest {
             session.insert(new ContextValue<>(value, container.getTemperature().getUID(), clock.getCurrentTime()));
             session.fireAllRules();
         }
+        session.delete(watchFact);
     }
 }
