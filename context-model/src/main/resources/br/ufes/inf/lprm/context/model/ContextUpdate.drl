@@ -1,22 +1,9 @@
 package br.ufes.inf.lprm.context.model;
 
-import java.util.List;
-import java.util.Set;
-import java.util.HashSet;
-
-rule IntrinsicContextUpdate
+rule ContextUpdate
 when
     $update: ContextValue()
-    $context: IntrinsicContext(UID == $update.contextUID)
-then
-    $context.setContextValue($update);
-    update($context);
-end
-
-rule FormalRelationalContextUpdate
-when
-    $update: ContextValue()
-    $context: FormalRelationalContext(UID == $update.contextUID)
+    $context: Context(cid == $update.cid)
 then
     $context.setContextValue($update);
     update($context);

@@ -13,6 +13,7 @@ import java.time.LocalDateTime
 import java.time.Instant
 import java.util.TimeZone
 import br.ufes.inf.lprm.context.model.ContextValue
+import java.net.URI
 
 global SessionClock clock;
 
@@ -22,11 +23,11 @@ rule SpeedUpdate
         location: Location(bearer: bearer)
         Person(this == bearer, speed: speed)
         readings: List() from accumulate(
-                r: ContextValue(contextUID == location.UID) over window:time( 2m ),
+                r: ContextValue(cid == location.cid) over window:time( 2m ),
                 collectList(r)
         )
     then
-        ContextValue $update = new ContextValue<>(Speed.computeSpeed(readings), speed.getUID(), clock.getCurrentTime());
+        ContextValue $update = new ContextValue<>(Speed.computeSpeed(readings), speed.getCid(), clock.getCurrentTime());
         insert($update);
     end
 
@@ -37,13 +38,13 @@ rule TimeToThresholdUpdate
         temperature: Temperature(bearer: bearer)
         batch: Batch(container == bearer, ttt: ttt)
         readings: List(size > 0) from accumulate(
-            r: ContextValue(contextUID == temperature.UID),
+            r: ContextValue(cid == temperature.cid),
             collectList(r)
         )
     then
         LocalDateTime now = LocalDateTime.ofInstant(Instant.ofEpochMilli(clock.getCurrentTime()), TimeZone.getDefault().toZoneId());
         ContextValue $update = new ContextValue<>(
-                TimeToThreshold.computeTTT(readings, batch.getProductType(), now), ttt.getUID(), clock.getCurrentTime()
+                TimeToThreshold.computeTTT(readings, batch.getProductType(), now), ttt.getCid(), clock.getCurrentTime()
         );
         insert($update);
     end
@@ -56,7 +57,10 @@ rule EstimateTimeOfArrivalInsert
         container: Container() from batch.container
         Watch(watcher == person, target == batch)
     then
-        EstimateTimeOfArrival $eta = new EstimateTimeOfArrival("eta-" + person.getUID() + "-" + batch.getUID(), new HashSet<>(Arrays.asList(person, container)));
+        EstimateTimeOfArrival $eta = new EstimateTimeOfArrival(
+                "eta-" + person.getEid() + "-" + batch.getEid(),
+                new HashSet<>(Arrays.asList(person, container))
+                );
         insertLogical($eta);
     end
 
@@ -70,6 +74,6 @@ rule EstimateTimeOfArrivalUpdate
         Location(this == person.location)
         Location(this == container.location)
     then
-        ContextValue $update = new ContextValue<>(EstimateTimeOfArrival.computeETA(person, container), eta.getUID(), clock.getCurrentTime());
+        ContextValue $update = new ContextValue<>(EstimateTimeOfArrival.computeETA(person, container), eta.getCid(), clock.getCurrentTime());
         insert($update);
     end

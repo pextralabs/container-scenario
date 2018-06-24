@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Watch extends RelationalContext {
+public class Watch extends RelationalContext<Void> {
     private Person watcher;
     private Batch target;
 

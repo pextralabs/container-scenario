@@ -28,7 +28,7 @@ public class Person extends Entity {
 
     @Override
     public String toString() {
-        return "Person: " + UID;
+        return "Person: " + eid;
     }
 
     static public LatLng walk(Person person, double x, double y) {

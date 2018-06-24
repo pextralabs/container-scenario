@@ -9,6 +9,7 @@ import org.kie.api.runtime.KieSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.net.URI;
 import java.util.concurrent.TimeUnit;
 
 public class ContainerTest extends  SessionTest {
@@ -17,7 +18,7 @@ public class ContainerTest extends  SessionTest {
     @Test
     public void instantiation () {
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
-        Container container = new Container("container");
+        Container container = new Container(("container"));
         Location containerLocation = container.getLocation();
         Temperature containerTemperature = container.getTemperature();
         ContextValue<LatLng> containerLocationInitialValue = containerLocation.createContextValue(vix);
@@ -38,7 +39,7 @@ public class ContainerTest extends  SessionTest {
 
         LOG.info("Now running data");
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
-        Container container = new Container("container");
+        Container container = new Container(("container"));
         Location containerLocation = container.getLocation();
         Temperature containerTemperature = container.getTemperature();
         ContextValue<LatLng> containerLocationInitialValue = containerLocation.createContextValue(vix);
@@ -47,14 +48,14 @@ public class ContainerTest extends  SessionTest {
         containerTemperature.setContextValue(containerTemperatureInitialValue);
 
         session.insert(container);
-        container.getIntrinsicContexts().forEach(session::insert);
+        container.getContexts().forEach(session::insert);
         session.fireAllRules();
 
         long initialTime = clock.getCurrentTime();
         int aux = 0;
         while (clock.getCurrentTime() < initialTime + TimeUnit.HOURS.toMillis(2)) {
             clock.advanceTime(30, TimeUnit.MINUTES);
-            session.insert(new ContextValue<>(0.05 * ++aux, "container-temperature", clock.getCurrentTime()));
+            session.insert(new ContextValue<>(0.05 * ++aux, ("container-temperature"), clock.getCurrentTime()));
             session.fireAllRules();
         }
         Assert.assertTrue(container.getTemperature().getValue() == 0.05 * aux);

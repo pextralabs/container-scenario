@@ -1,47 +1,773 @@
-15:29:42,263  INFO Reflections:229 - Reflections took 146 ms to scan 51 urls, producing 324 keys and 1578 values 
-15:29:42,264 DEBUG Reflections:186 - going to scan these urls:
+16:21:11,159 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,160 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.6300000000000003) degrees
+16:21:11,160 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1889)
+16:21:11,160 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1889)
+16:21:11,161 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,161 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,161 DEBUG SCENELogger:24 - INSERT - ContextValue(0.6200000000000003)
+16:21:11,161 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,161 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.6200000000000003) degrees
+16:21:11,162 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1859)
+16:21:11,162 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1859)
+16:21:11,163 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,163 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,163 DEBUG SCENELogger:24 - INSERT - ContextValue(0.6100000000000003)
+16:21:11,163 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,164 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.6100000000000003) degrees
+16:21:11,164 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1829)
+16:21:11,166 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1829)
+16:21:11,166 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,167 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,170 DEBUG SCENELogger:24 - INSERT - ContextValue(0.6000000000000003)
+16:21:11,171 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,172 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.6000000000000003) degrees
+16:21:11,174 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1799)
+16:21:11,175 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1799)
+16:21:11,176 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,176 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,176 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5900000000000003)
+16:21:11,177 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,178 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5900000000000003) degrees
+16:21:11,178 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1769)
+16:21:11,179 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1769)
+16:21:11,179 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,179 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,179 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5800000000000003)
+16:21:11,179 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,179 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5800000000000003) degrees
+16:21:11,180 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1739)
+16:21:11,180 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1739)
+16:21:11,180 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,180 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,180 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5700000000000003)
+16:21:11,180 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,181 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5700000000000003) degrees
+16:21:11,181 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1709)
+16:21:11,181 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1709)
+16:21:11,181 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,181 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,181 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5600000000000003)
+16:21:11,181 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,182 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5600000000000003) degrees
+16:21:11,182 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1679)
+16:21:11,182 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1679)
+16:21:11,182 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,182 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,183 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5500000000000003)
+16:21:11,183 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,183 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5500000000000003) degrees
+16:21:11,183 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1649)
+16:21:11,183 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1649)
+16:21:11,184 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,184 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,184 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5400000000000003)
+16:21:11,184 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,184 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5400000000000003) degrees
+16:21:11,184 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1619)
+16:21:11,184 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1619)
+16:21:11,185 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,185 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,185 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5300000000000002)
+16:21:11,185 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,185 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5300000000000002) degrees
+16:21:11,185 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1589)
+16:21:11,186 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1589)
+16:21:11,186 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,186 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,186 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5200000000000002)
+16:21:11,186 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,187 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5200000000000002) degrees
+16:21:11,188 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1559)
+16:21:11,188 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1559)
+16:21:11,188 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,188 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,188 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5100000000000002)
+16:21:11,188 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,189 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5100000000000002) degrees
+16:21:11,189 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1529)
+16:21:11,189 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1529)
+16:21:11,189 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,189 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,190 DEBUG SCENELogger:24 - INSERT - ContextValue(0.5000000000000002)
+16:21:11,190 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,190 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.5000000000000002) degrees
+16:21:11,190 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1499)
+16:21:11,190 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1499)
+16:21:11,191 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,191 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,191 DEBUG SCENELogger:24 - INSERT - ContextValue(0.4900000000000002)
+16:21:11,191 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,191 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.4900000000000002) degrees
+16:21:11,192 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1469)
+16:21:11,192 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1469)
+16:21:11,192 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,192 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,192 DEBUG SCENELogger:24 - INSERT - ContextValue(0.4800000000000002)
+16:21:11,192 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,193 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.4800000000000002) degrees
+16:21:11,193 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1439)
+16:21:11,193 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1439)
+16:21:11,193 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,193 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,194 DEBUG SCENELogger:24 - INSERT - ContextValue(0.4700000000000002)
+16:21:11,194 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,194 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.4700000000000002) degrees
+16:21:11,194 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1409)
+16:21:11,194 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1409)
+16:21:11,194 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,195 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,195 DEBUG SCENELogger:24 - INSERT - ContextValue(0.4600000000000002)
+16:21:11,195 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,195 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.4600000000000002) degrees
+16:21:11,195 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1379)
+16:21:11,196 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1379)
+16:21:11,196 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,196 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,196 DEBUG SCENELogger:24 - INSERT - ContextValue(0.4500000000000002)
+16:21:11,196 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,197 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.4500000000000002) degrees
+16:21:11,197 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1349)
+16:21:11,197 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1349)
+16:21:11,197 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,197 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,197 DEBUG SCENELogger:24 - INSERT - ContextValue(0.44000000000000017)
+16:21:11,198 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,198 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.44000000000000017) degrees
+16:21:11,198 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1319)
+16:21:11,198 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1319)
+16:21:11,198 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,198 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,199 DEBUG SCENELogger:24 - INSERT - ContextValue(0.43000000000000016)
+16:21:11,199 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,199 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.43000000000000016) degrees
+16:21:11,199 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1289)
+16:21:11,199 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1289)
+16:21:11,199 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,199 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,200 DEBUG SCENELogger:24 - INSERT - ContextValue(0.42000000000000015)
+16:21:11,200 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,200 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.42000000000000015) degrees
+16:21:11,200 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1259)
+16:21:11,200 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1259)
+16:21:11,200 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,200 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,200 DEBUG SCENELogger:24 - INSERT - ContextValue(0.41000000000000014)
+16:21:11,201 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,201 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.41000000000000014) degrees
+16:21:11,201 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1229)
+16:21:11,201 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1229)
+16:21:11,201 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,201 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,201 DEBUG SCENELogger:24 - INSERT - ContextValue(0.40000000000000013)
+16:21:11,201 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,202 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.40000000000000013) degrees
+16:21:11,202 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1199)
+16:21:11,202 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1199)
+16:21:11,202 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,202 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,202 DEBUG SCENELogger:24 - INSERT - ContextValue(0.3900000000000001)
+16:21:11,203 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,203 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.3900000000000001) degrees
+16:21:11,203 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1169)
+16:21:11,203 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1169)
+16:21:11,203 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,203 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,203 DEBUG SCENELogger:24 - INSERT - ContextValue(0.3800000000000001)
+16:21:11,204 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,204 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.3800000000000001) degrees
+16:21:11,204 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1139)
+16:21:11,204 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1139)
+16:21:11,204 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,204 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,204 DEBUG SCENELogger:24 - INSERT - ContextValue(0.3700000000000001)
+16:21:11,205 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,205 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.3700000000000001) degrees
+16:21:11,205 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1109)
+16:21:11,205 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1109)
+16:21:11,205 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,205 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,205 DEBUG SCENELogger:24 - INSERT - ContextValue(0.3600000000000001)
+16:21:11,205 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,206 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.3600000000000001) degrees
+16:21:11,206 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1079)
+16:21:11,206 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1079)
+16:21:11,206 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,206 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,206 DEBUG SCENELogger:24 - INSERT - ContextValue(0.3500000000000001)
+16:21:11,207 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,207 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.3500000000000001) degrees
+16:21:11,207 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1049)
+16:21:11,207 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1049)
+16:21:11,207 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,208 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,208 DEBUG SCENELogger:24 - INSERT - ContextValue(0.3400000000000001)
+16:21:11,208 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,208 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.3400000000000001) degrees
+16:21:11,208 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(1019)
+16:21:11,208 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(1019)
+16:21:11,209 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,209 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,209 DEBUG SCENELogger:24 - INSERT - ContextValue(0.33000000000000007)
+16:21:11,209 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,209 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.33000000000000007) degrees
+16:21:11,209 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(989)
+16:21:11,210 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(989)
+16:21:11,210 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,210 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,210 DEBUG SCENELogger:24 - INSERT - ContextValue(0.32000000000000006)
+16:21:11,210 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,210 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.32000000000000006) degrees
+16:21:11,211 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(959)
+16:21:11,211 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(959)
+16:21:11,211 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,211 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,211 DEBUG SCENELogger:24 - INSERT - ContextValue(0.31000000000000005)
+16:21:11,211 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,211 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.31000000000000005) degrees
+16:21:11,212 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(929)
+16:21:11,212 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(929)
+16:21:11,214 DEBUG SCENELogger:17 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.ETABiggerThanTTT	ID: 1535133785	CAST: {container=Container 'freezer1@office', eta=ETA: 930s, ttt=Batch of marijuana 'batch' TTT: ContextValue(929), person=Person: john}
+16:21:11,214 DEBUG SCENELogger:19 - 	Activation timestamp: 1969 12 31 22:44:30.
+16:21:11,215 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.model.Participation@43a0a32d
+16:21:11,215 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.model.Participation@396ef8b2
+16:21:11,215 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.model.Participation@72825400
+16:21:11,215 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.model.Participation@19ee1ae6
+16:21:11,215 DEBUG SCENELogger:24 - INSERT - ETABiggerThanTTT( deactivation=null, person=Person: john, container=Container 'freezer1@office', eta=ETA: 930s, ttt=Batch of marijuana 'batch' TTT: ContextValue(929) )
+16:21:11,216 DEBUG SCENELogger:32 - UPDATE (SituationActivation) - TYPE: br.ufes.inf.lprm.context.scenario.ETABiggerThanTTT	ID: 1535133785	CAST: {container=Container 'freezer1@office', eta=ETA: 930s, ttt=Batch of marijuana 'batch' TTT: ContextValue(929), person=Person: john}
+16:21:11,224 DEBUG SCENELogger:17 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.context.scenario.AllETABiggerThanTTT	ID: -1836726052	CAST: {batch=Batch of marijuana 'batch'}
+16:21:11,225 DEBUG SCENELogger:19 - 	Activation timestamp: 1969 12 31 22:44:30.
+16:21:11,225 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.model.Participation@3f685162
+16:21:11,225 DEBUG SCENELogger:24 - INSERT - AllETABiggerThanTTT( deactivation=null, batch=Batch of marijuana 'batch' )
+16:21:11,225 DEBUG SCENELogger:32 - UPDATE (SituationActivation) - TYPE: br.ufes.inf.lprm.context.scenario.AllETABiggerThanTTT	ID: -1836726052	CAST: {batch=Batch of marijuana 'batch'}
+16:21:11,225 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,225 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,226 DEBUG SCENELogger:24 - INSERT - ContextValue(0.30000000000000004)
+16:21:11,226 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,226 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.30000000000000004) degrees
+16:21:11,226 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(899)
+16:21:11,226 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(899)
+16:21:11,227 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,227 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,227 DEBUG SCENELogger:24 - INSERT - ContextValue(0.29000000000000004)
+16:21:11,227 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,228 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.29000000000000004) degrees
+16:21:11,228 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(869)
+16:21:11,229 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(869)
+16:21:11,229 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,229 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,230 DEBUG SCENELogger:24 - INSERT - ContextValue(0.28)
+16:21:11,230 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,230 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.28) degrees
+16:21:11,230 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(839)
+16:21:11,230 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(839)
+16:21:11,231 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,231 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,231 DEBUG SCENELogger:24 - INSERT - ContextValue(0.27)
+16:21:11,231 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,232 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.27) degrees
+16:21:11,232 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(809)
+16:21:11,232 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(809)
+16:21:11,232 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,232 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,233 DEBUG SCENELogger:24 - INSERT - ContextValue(0.26)
+16:21:11,233 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,233 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.26) degrees
+16:21:11,234 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(779)
+16:21:11,234 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(779)
+16:21:11,235 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,235 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,235 DEBUG SCENELogger:24 - INSERT - ContextValue(0.25)
+16:21:11,235 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,235 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.25) degrees
+16:21:11,236 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(749)
+16:21:11,236 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(749)
+16:21:11,236 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,237 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,237 DEBUG SCENELogger:24 - INSERT - ContextValue(0.24)
+16:21:11,237 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,237 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.24) degrees
+16:21:11,237 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(719)
+16:21:11,238 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(719)
+16:21:11,238 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,238 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,238 DEBUG SCENELogger:24 - INSERT - ContextValue(0.22999999999999998)
+16:21:11,238 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,239 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.22999999999999998) degrees
+16:21:11,239 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(689)
+16:21:11,239 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(689)
+16:21:11,240 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,240 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,240 DEBUG SCENELogger:24 - INSERT - ContextValue(0.21999999999999997)
+16:21:11,240 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,240 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.21999999999999997) degrees
+16:21:11,241 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(659)
+16:21:11,241 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(659)
+16:21:11,241 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,241 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,242 DEBUG SCENELogger:24 - INSERT - ContextValue(0.20999999999999996)
+16:21:11,242 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,242 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.20999999999999996) degrees
+16:21:11,242 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(629)
+16:21:11,243 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(629)
+16:21:11,243 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,243 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,243 DEBUG SCENELogger:24 - INSERT - ContextValue(0.19999999999999996)
+16:21:11,243 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,244 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.19999999999999996) degrees
+16:21:11,244 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(599)
+16:21:11,244 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(599)
+16:21:11,245 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,245 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,245 DEBUG SCENELogger:24 - INSERT - ContextValue(0.18999999999999995)
+16:21:11,245 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,246 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.18999999999999995) degrees
+16:21:11,246 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(569)
+16:21:11,246 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(569)
+16:21:11,247 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,247 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,247 DEBUG SCENELogger:24 - INSERT - ContextValue(0.17999999999999994)
+16:21:11,248 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,248 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.17999999999999994) degrees
+16:21:11,248 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(539)
+16:21:11,248 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(539)
+16:21:11,249 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,249 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,249 DEBUG SCENELogger:24 - INSERT - ContextValue(0.16999999999999993)
+16:21:11,249 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,249 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.16999999999999993) degrees
+16:21:11,249 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(509)
+16:21:11,249 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(509)
+16:21:11,250 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,250 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,250 DEBUG SCENELogger:24 - INSERT - ContextValue(0.15999999999999992)
+16:21:11,250 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,250 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.15999999999999992) degrees
+16:21:11,251 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(479)
+16:21:11,251 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(479)
+16:21:11,251 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,251 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,251 DEBUG SCENELogger:24 - INSERT - ContextValue(0.1499999999999999)
+16:21:11,252 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,252 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.1499999999999999) degrees
+16:21:11,252 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(449)
+16:21:11,252 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(449)
+16:21:11,253 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,253 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,253 DEBUG SCENELogger:24 - INSERT - ContextValue(0.1399999999999999)
+16:21:11,253 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,253 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.1399999999999999) degrees
+16:21:11,253 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(419)
+16:21:11,254 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(419)
+16:21:11,254 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,254 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,254 DEBUG SCENELogger:24 - INSERT - ContextValue(0.1299999999999999)
+16:21:11,254 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,255 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.1299999999999999) degrees
+16:21:11,257 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(389)
+16:21:11,257 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(389)
+16:21:11,258 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,258 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,258 DEBUG SCENELogger:24 - INSERT - ContextValue(0.1199999999999999)
+16:21:11,259 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,259 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.1199999999999999) degrees
+16:21:11,259 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(360)
+16:21:11,260 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(360)
+16:21:11,260 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,260 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,260 DEBUG SCENELogger:24 - INSERT - ContextValue(0.1099999999999999)
+16:21:11,260 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,261 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.1099999999999999) degrees
+16:21:11,261 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(330)
+16:21:11,262 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(330)
+16:21:11,262 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,262 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,262 DEBUG SCENELogger:24 - INSERT - ContextValue(0.09999999999999991)
+16:21:11,262 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,263 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.09999999999999991) degrees
+16:21:11,263 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(300)
+16:21:11,263 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(300)
+16:21:11,263 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,263 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,264 DEBUG SCENELogger:24 - INSERT - ContextValue(0.08999999999999991)
+16:21:11,264 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,264 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.08999999999999991) degrees
+16:21:11,264 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(270)
+16:21:11,264 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(270)
+16:21:11,265 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,265 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,265 DEBUG SCENELogger:24 - INSERT - ContextValue(0.07999999999999992)
+16:21:11,265 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,265 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.07999999999999992) degrees
+16:21:11,265 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(240)
+16:21:11,266 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(240)
+16:21:11,266 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,266 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,266 DEBUG SCENELogger:24 - INSERT - ContextValue(0.06999999999999992)
+16:21:11,266 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,267 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.06999999999999992) degrees
+16:21:11,267 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(210)
+16:21:11,268 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(210)
+16:21:11,269 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,270 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,270 DEBUG SCENELogger:24 - INSERT - ContextValue(0.05999999999999992)
+16:21:11,270 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,270 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.05999999999999992) degrees
+16:21:11,271 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(180)
+16:21:11,271 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(180)
+16:21:11,272 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,272 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,272 DEBUG SCENELogger:24 - INSERT - ContextValue(0.04999999999999992)
+16:21:11,272 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,273 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.04999999999999992) degrees
+16:21:11,273 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(150)
+16:21:11,273 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(150)
+16:21:11,273 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,273 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,274 DEBUG SCENELogger:24 - INSERT - ContextValue(0.03999999999999992)
+16:21:11,274 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,274 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.03999999999999992) degrees
+16:21:11,274 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(120)
+16:21:11,274 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(120)
+16:21:11,275 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,275 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,275 DEBUG SCENELogger:24 - INSERT - ContextValue(0.029999999999999916)
+16:21:11,275 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,275 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.029999999999999916) degrees
+16:21:11,275 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(90)
+16:21:11,275 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(90)
+16:21:11,276 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,276 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,276 DEBUG SCENELogger:24 - INSERT - ContextValue(0.019999999999999914)
+16:21:11,276 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,276 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.019999999999999914) degrees
+16:21:11,276 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(60)
+16:21:11,277 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(60)
+16:21:11,277 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,277 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,277 DEBUG SCENELogger:24 - INSERT - ContextValue(0.009999999999999913)
+16:21:11,277 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,278 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(0.009999999999999913) degrees
+16:21:11,278 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(30)
+16:21:11,278 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(30)
+16:21:11,279 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,279 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,279 DEBUG SCENELogger:24 - INSERT - ContextValue(-8.673617379884035E-17)
+16:21:11,280 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:11,281 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Container 'freezer1@office' Temperature: ContextValue(-8.673617379884035E-17) degrees
+16:21:11,282 DEBUG SCENELogger:22 - INSERT (TimeToThresholdUpdate) - ContextValue(0)
+16:21:11,282 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Batch of marijuana 'batch' TTT: ContextValue(0)
+16:21:11,282 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:11,283 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:11,283 DEBUG SCENELogger:43 - RETRACT - Watcher: Person: john Target: Batch of marijuana 'batch'
+16:21:47,054  INFO ClasspathKieProject:131 - Found kmodule: file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/META-INF/kmodule.xml
+16:21:47,056 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes
+16:21:47,338  WARN ClasspathKieProject:289 - Unable to find pom.properties in /Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes
+16:21:47,357  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /Users/sunderhus/Documents/Scene.Context/context-scenario/pom.xml
+16:21:47,362 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-scenario:1.0
+16:21:47,369  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-scenario:1.0,file=/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes]
+16:21:47,371  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+16:21:47,372 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+16:21:47,379  WARN ClasspathKieProject:261 - Unable to find pom.properties in /Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+16:21:47,380  WARN ClasspathKieProject:231 - Unable to load pom.properties from/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+16:21:47,381  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+16:21:47,397 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+16:21:47,400  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
+16:21:47,400  INFO ClasspathKieProject:131 - Found kmodule: file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/META-INF/kmodule.xml
+16:21:47,401 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/Users/sunderhus/Documents/Scene.Context/context-model/target/classes
+16:21:47,405  WARN ClasspathKieProject:289 - Unable to find pom.properties in /Users/sunderhus/Documents/Scene.Context/context-model/target/classes
+16:21:47,408  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /Users/sunderhus/Documents/Scene.Context/context-model/pom.xml
+16:21:47,409 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:context-model:1.0
+16:21:47,409  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:context-model:1.0,file=/Users/sunderhus/Documents/Scene.Context/context-model/target/classes]
+16:21:49,538  INFO SessionTest:33 - Creating kieBase
+16:21:49,671  INFO SessionTest:37 - There should be rules: 
+16:21:49,672  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.model] rule ContextUpdate
+16:21:49,672  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule OnGoingSituation
+16:21:49,672  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationType
+16:21:49,672  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationDeactivation
+16:21:49,672  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationActivation
+16:21:49,672  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule SpeedUpdate
+16:21:49,672  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule TimeToThresholdUpdate
+16:21:49,673  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalInsert
+16:21:49,673  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalUpdate
+16:21:49,673  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule NoRecentTemperatureReading
+16:21:49,673  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule ETABiggerThanTTT
+16:21:49,673  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule AllETABiggerThanTTT
+16:21:49,673  INFO SessionTest:41 - Creating kieSession
+16:21:49,808 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/jce.jar
+file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/test-classes/
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/sunec.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/nashorn.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/localedata.jar
+file:/Users/sunderhus/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+file:/Users/sunderhus/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
+file:/Users/sunderhus/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
+file:/Users/sunderhus/.m2/repository/junit/junit/4.12/junit-4.12.jar
+file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+file:/Users/sunderhus/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+file:/Applications/IntelliJ%20IDEA.app/Contents/lib/idea_rt.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/cldrdata.jar
+file:/Applications/IntelliJ%20IDEA.app/Contents/plugins/junit/lib/junit-rt.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/lib/jconsole.jar
+file:/Applications/IntelliJ%20IDEA.app/Contents/plugins/junit/lib/junit5-rt.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/jaccess.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/rt.jar
+file:/Users/sunderhus/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar
+file:/Users/sunderhus/.m2/repository/org/drools/drools-core/7.0.0.Final/drools-core-7.0.0.Final.jar
+file:/Users/sunderhus/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/lib/dt.jar
+file:/Users/sunderhus/.m2/repository/org/mvel/mvel2/2.3.0.Final/mvel2-2.3.0.Final.jar
+file:/Users/sunderhus/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
 file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/
-15:29:42,264 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/ContextUpdate.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/ with scanner SubTypesScanner
-15:29:42,264 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/ContextUpdate.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/ with scanner TypeAnnotationsScanner
-15:29:42,265  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 4 keys and 4 values 
-15:29:42,265 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/zipfs.jar
+file:/Users/sunderhus/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/sunpkcs11.jar
+file:/Users/sunderhus/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/resources.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/lib/tools.jar
+file:/Users/sunderhus/.m2/repository/org/kie/kie-api/7.0.0.Final/kie-api-7.0.0.Final.jar
+file:/Users/sunderhus/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/management-agent.jar
+file:/Users/sunderhus/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/charsets.jar
+file:/Users/sunderhus/.m2/repository/com/google/guava/guava/15.0/guava-15.0.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/dnsns.jar
+file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/
+file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar
+file:/Users/sunderhus/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
+file:/Users/sunderhus/.m2/repository/org/drools/drools-compiler/7.0.0.Final/drools-compiler-7.0.0.Final.jar
+file:/Users/sunderhus/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
+file:/Users/sunderhus/.m2/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
+file:/Users/sunderhus/.m2/repository/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar
+file:/Users/sunderhus/.m2/repository/org/kie/kie-internal/7.0.0.Final/kie-internal-7.0.0.Final.jar
+file:/Users/sunderhus/.m2/repository/org/antlr/antlr-runtime/3.5/antlr-runtime-3.5.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/sunjce_provider.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/lib/sa-jdi.jar
+file:/System/Library/Java/Extensions/MRJToolkit.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/jsse.jar
+16:21:50,040  INFO Reflections:229 - Reflections took 231 ms to scan 51 urls, producing 324 keys and 1578 values 
+16:21:50,054 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/
+16:21:50,056 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/ContextUpdate.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/ with scanner TypeAnnotationsScanner
+16:21:50,056 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/ContextUpdate.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/ with scanner SubTypesScanner
+16:21:50,058  INFO Reflections:229 - Reflections took 4 ms to scan 1 urls, producing 4 keys and 5 values 
+16:21:50,059 DEBUG Reflections:186 - going to scan these urls:
 jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
-15:29:42,267 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
-15:29:42,267 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
-15:29:42,268  INFO Reflections:229 - Reflections took 3 ms to scan 1 urls, producing 28 keys and 28 values 
-15:29:42,269 DEBUG Reflections:186 - going to scan these urls:
+16:21:50,061 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
+16:21:50,061 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
+16:21:50,062  INFO Reflections:229 - Reflections took 3 ms to scan 1 urls, producing 28 keys and 28 values 
+16:21:50,063 DEBUG Reflections:186 - going to scan these urls:
 jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
-15:29:42,270  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 3 keys and 4 values 
-15:29:42,272 DEBUG Reflections:186 - going to scan these urls:
+16:21:50,064  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 3 keys and 4 values 
+16:21:50,066 DEBUG Reflections:186 - going to scan these urls:
 file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/test-classes/
 file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/
-15:29:42,274 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner SubTypesScanner
-15:29:42,274 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
-15:29:42,274 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner SubTypesScanner
-15:29:42,275 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
-15:29:42,275  INFO Reflections:229 - Reflections took 3 ms to scan 2 urls, producing 6 keys and 14 values 
-15:29:42,275 DEBUG Reflections:186 - going to scan these urls:
+16:21:50,074 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+16:21:50,075 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner SubTypesScanner
+16:21:50,075 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+16:21:50,075 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner SubTypesScanner
+16:21:50,076  INFO Reflections:229 - Reflections took 9 ms to scan 2 urls, producing 5 keys and 14 values 
+16:21:50,077 DEBUG Reflections:186 - going to scan these urls:
 jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
-15:29:42,276  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 5 keys and 5 values 
-15:29:42,277 DEBUG Reflections:186 - going to scan these urls:
+16:21:50,078  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 5 keys and 5 values 
+16:21:50,079 DEBUG Reflections:186 - going to scan these urls:
 jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
-15:29:42,278  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 8 keys and 9 values 
-15:29:42,278 DEBUG Reflections:186 - going to scan these urls:
+16:21:50,080  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 8 keys and 9 values 
+16:21:50,080 DEBUG Reflections:186 - going to scan these urls:
 jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
-15:29:42,278  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 0 keys and 0 values 
-15:29:42,279  INFO PersonTest:34 - Now running data
-15:29:42,279 DEBUG SCENELogger:24 - INSERT - Person: john
-15:29:42,280 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Location: null
-15:29:42,280 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Speed: null m/s
-15:29:42,280 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-15:29:42,282 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
-15:29:42,284 DEBUG SCENELogger:32 - UPDATE (IntrinsicContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
-15:29:42,284 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-15:29:42,284 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
-15:29:42,284 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2957768)
-15:29:42,284 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
-15:29:42,294 DEBUG SCENELogger:32 - UPDATE (IntrinsicContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2957768)
-15:29:42,294 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
-15:29:42,295 DEBUG SCENELogger:32 - UPDATE (IntrinsicContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
-15:29:42,295 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
-15:29:42,295 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,081  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 0 keys and 0 values 
+16:21:50,088  INFO PersonTest:63 - Now running data
+16:21:50,098 DEBUG SCENELogger:24 - INSERT - Person: john
+16:21:50,099 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Location: null
+16:21:50,100 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Speed: null m/s
+16:21:50,101 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2957768)
+16:21:50,101 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,146 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
+16:21:50,149 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2957768)
+16:21:50,154 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
+16:21:50,155 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,155 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,158 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2957768)
+16:21:50,158 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,177 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
+16:21:50,178 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2957768)
+16:21:50,178 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
+16:21:50,178 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,178 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,179 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.29580074476077)
+16:21:50,179 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,179 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.29580074476077)
+16:21:50,181 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
+16:21:50,181 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
+16:21:50,182 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,182 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,182 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2958486342823)
+16:21:50,182 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,183 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2958486342823)
+16:21:50,183 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
+16:21:50,184 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
+16:21:50,184 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,185 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,185 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2959204685646)
+16:21:50,185 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,186 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2959204685646)
+16:21:50,187 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
+16:21:50,187 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
+16:21:50,188 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,188 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,188 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.29601624760767)
+16:21:50,188 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,189 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.29601624760767)
+16:21:50,190 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.25)
+16:21:50,190 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.25) m/s
+16:21:50,190 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,191 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,191 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2961359714115)
+16:21:50,191 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,192 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2961359714115)
+16:21:50,193 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(7.5)
+16:21:50,203 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(7.5) m/s
+16:21:50,203 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,203 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,203 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2962796399761)
+16:21:50,203 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,205 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2962796399761)
+16:21:50,206 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(8.75)
+16:21:50,207 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(8.75) m/s
+16:21:50,207 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,207 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,208 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.296447253301466)
+16:21:50,208 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,209 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.296447253301466)
+16:21:50,209 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(10.0)
+16:21:50,210 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(10.0) m/s
+16:21:50,210 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,210 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,210 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2966388113876)
+16:21:50,211 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,211 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2966388113876)
+16:21:50,212 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(11.25)
+16:21:50,212 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(11.25) m/s
+16:21:50,212 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,212 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:50,213 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2968543142345)
+16:21:50,213 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:50,213 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2968543142345)
+16:21:50,214 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(12.5)
+16:21:50,214 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(12.5) m/s
+16:21:50,214 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:50,215 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:51,063  INFO SessionTest:33 - Creating kieBase
+16:21:51,097  INFO SessionTest:37 - There should be rules: 
+16:21:51,097  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.model] rule ContextUpdate
+16:21:51,097  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule OnGoingSituation
+16:21:51,097  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationType
+16:21:51,097  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationDeactivation
+16:21:51,097  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.scene.base] rule SituationActivation
+16:21:51,097  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule SpeedUpdate
+16:21:51,097  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule TimeToThresholdUpdate
+16:21:51,097  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalInsert
+16:21:51,097  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule EstimateTimeOfArrivalUpdate
+16:21:51,098  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule NoRecentTemperatureReading
+16:21:51,098  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule ETABiggerThanTTT
+16:21:51,098  INFO SessionTest:39 - kp [Package name=br.ufes.inf.lprm.context.scenario] rule AllETABiggerThanTTT
+16:21:51,098  INFO SessionTest:41 - Creating kieSession
+16:21:51,098 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/jce.jar
+file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/test-classes/
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/sunec.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/nashorn.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/localedata.jar
+file:/Users/sunderhus/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+file:/Users/sunderhus/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
+file:/Users/sunderhus/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
+file:/Users/sunderhus/.m2/repository/junit/junit/4.12/junit-4.12.jar
+file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+file:/Users/sunderhus/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+file:/Applications/IntelliJ%20IDEA.app/Contents/lib/idea_rt.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/cldrdata.jar
+file:/Applications/IntelliJ%20IDEA.app/Contents/plugins/junit/lib/junit-rt.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/lib/jconsole.jar
+file:/Applications/IntelliJ%20IDEA.app/Contents/plugins/junit/lib/junit5-rt.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/jaccess.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/rt.jar
+file:/Users/sunderhus/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar
+file:/Users/sunderhus/.m2/repository/org/drools/drools-core/7.0.0.Final/drools-core-7.0.0.Final.jar
+file:/Users/sunderhus/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/lib/dt.jar
+file:/Users/sunderhus/.m2/repository/org/mvel/mvel2/2.3.0.Final/mvel2-2.3.0.Final.jar
+file:/Users/sunderhus/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/zipfs.jar
+file:/Users/sunderhus/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/sunpkcs11.jar
+file:/Users/sunderhus/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/resources.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/lib/tools.jar
+file:/Users/sunderhus/.m2/repository/org/kie/kie-api/7.0.0.Final/kie-api-7.0.0.Final.jar
+file:/Users/sunderhus/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/management-agent.jar
+file:/Users/sunderhus/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/charsets.jar
+file:/Users/sunderhus/.m2/repository/com/google/guava/guava/15.0/guava-15.0.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/dnsns.jar
+file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/
+file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar
+file:/Users/sunderhus/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
+file:/Users/sunderhus/.m2/repository/org/drools/drools-compiler/7.0.0.Final/drools-compiler-7.0.0.Final.jar
+file:/Users/sunderhus/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
+file:/Users/sunderhus/.m2/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar
+file:/Users/sunderhus/.m2/repository/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar
+file:/Users/sunderhus/.m2/repository/org/kie/kie-internal/7.0.0.Final/kie-internal-7.0.0.Final.jar
+file:/Users/sunderhus/.m2/repository/org/antlr/antlr-runtime/3.5/antlr-runtime-3.5.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/ext/sunjce_provider.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/lib/sa-jdi.jar
+file:/System/Library/Java/Extensions/MRJToolkit.jar
+file:/Users/sunderhus/.sdkman/candidates/java/8.0.163-zulu/jre/lib/jsse.jar
+16:21:51,206  INFO Reflections:229 - Reflections took 107 ms to scan 51 urls, producing 324 keys and 1578 values 
+16:21:51,207 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/
+16:21:51,208 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/ContextUpdate.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/ with scanner TypeAnnotationsScanner
+16:21:51,208 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/model/ContextUpdate.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-model/target/classes/ with scanner SubTypesScanner
+16:21:51,209  INFO Reflections:229 - Reflections took 2 ms to scan 1 urls, producing 4 keys and 5 values 
+16:21:51,210 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+16:21:51,211 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner TypeAnnotationsScanner
+16:21:51,211 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/scene/base/SituationBaseRules.drl in url jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/ with scanner SubTypesScanner
+16:21:51,212  INFO Reflections:229 - Reflections took 2 ms to scan 1 urls, producing 28 keys and 28 values 
+16:21:51,213 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+16:21:51,214  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 3 keys and 4 values 
+16:21:51,214 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/test-classes/
+file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/
+16:21:51,216 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+16:21:51,216 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioSituations.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner SubTypesScanner
+16:21:51,217 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner TypeAnnotationsScanner
+16:21:51,217 DEBUG Reflections:254 - could not scan file br/ufes/inf/lprm/context/scenario/ScenarioRules.drl in url file:/Users/sunderhus/Documents/Scene.Context/context-scenario/target/classes/ with scanner SubTypesScanner
+16:21:51,218  INFO Reflections:229 - Reflections took 3 ms to scan 2 urls, producing 5 keys and 14 values 
+16:21:51,218 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+16:21:51,219  INFO Reflections:229 - Reflections took 1 ms to scan 1 urls, producing 5 keys and 5 values 
+16:21:51,220 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/
+16:21:51,221  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 8 keys and 9 values 
+16:21:51,221 DEBUG Reflections:186 - going to scan these urls:
+jar:file:/Users/sunderhus/.m2/repository/br/ufes/inf/lprm/situation-model/0.10.2/situation-model-0.10.2.jar!/
+16:21:51,221  INFO Reflections:229 - Reflections took 0 ms to scan 1 urls, producing 0 keys and 0 values 
+16:21:51,222  INFO PersonTest:35 - Now running data
+16:21:51,222 DEBUG SCENELogger:24 - INSERT - Person: john
+16:21:51,223 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Location: null
+16:21:51,223 DEBUG SCENELogger:24 - INSERT - Bearer( Person: john ) Speed: null m/s
+16:21:51,223 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:51,226 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
+16:21:51,228 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
+16:21:51,228 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:51,228 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE
+16:21:51,228 DEBUG SCENELogger:24 - INSERT - ContextValue(Lat: -20.2976178 Lng: 40.2957768)
+16:21:51,228 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_ALL_RULES
+16:21:51,234 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Location: ContextValue(Lat: -20.2976178 Lng: 40.2957768)
+16:21:51,235 DEBUG SCENELogger:22 - INSERT (SpeedUpdate) - ContextValue(6.0)
+16:21:51,235 DEBUG SCENELogger:32 - UPDATE (ContextUpdate) - Bearer( Person: john ) Speed: ContextValue(6.0) m/s
+16:21:51,235 DEBUG DefaultAgenda:1397 - State was FIRING_ALL_RULES is now HALTING
+16:21:51,235 DEBUG DefaultAgenda:1397 - State was HALTING is now INACTIVE

@@ -27,7 +27,7 @@ public class Speed extends IntrinsicContext<Double> {
                 ContextValue<LatLng> curr = readings.get(i);
                 ContextValue<LatLng> next = readings.get(i + 1);
                 double ds = Location.distance(next.getValue(), curr.getValue());
-                long dt = (next.getUpdateTime() - curr.getUpdateTime()) / 1000;
+                long dt = (next.getTimestamp() - curr.getTimestamp()) / 1000;
                 speeds.add(ds/dt);
             }
             Double avg = speeds.stream().reduce(0.0, (a, b) -> a + b) / speeds.size();

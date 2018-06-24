@@ -28,11 +28,11 @@ public class TimeToThreshold extends IntrinsicContext<Long> {
         else {
             ContextValue<Double> temp1 = (readings.get(readings.size() - 2));
             ContextValue<Double> temp2 = (readings.get(readings.size() - 1));
-            double m = (temp2.getValue() - temp1.getValue()) / (temp2.getUpdateTime() - temp1.getUpdateTime());
+            double m = (temp2.getValue() - temp1.getValue()) / (temp2.getTimestamp() - temp1.getTimestamp());
             double maxTemperature = productType.getMaxThreshold();
-            double maxTime = ((maxTemperature - temp2.getValue()) / m) + temp2.getUpdateTime();
+            double maxTime = ((maxTemperature - temp2.getValue()) / m) + temp2.getTimestamp();
             double minTemperature = productType.getMinThreshold();
-            double minTime = ((minTemperature - temp2.getValue()) / m) + temp2.getUpdateTime();
+            double minTime = ((minTemperature - temp2.getValue()) / m) + temp2.getTimestamp();
             long time = (long) (m >= 0 ? maxTime : minTime);
             long ttt = Duration
                     .between(

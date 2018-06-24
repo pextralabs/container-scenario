@@ -11,6 +11,8 @@ import org.kie.api.runtime.ClassObjectFilter;
 import org.kie.api.runtime.KieSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +23,7 @@ public class BatchTest extends SessionTest{
     @Test
     public void instantiation () {
         ProductType productType = new ProductType("Marijuana", 15.0, 5.0);
-        Batch batch = new Batch("batch", productType);
+        Batch batch = new Batch(("batch"), productType);
         Assert.assertEquals(batch.getProductType(), productType);
 //        Assert.assertTrue(batch.getTtt().getValue() == Long.MAX_VALUE);
     }
@@ -36,16 +38,16 @@ public class BatchTest extends SessionTest{
         LOG.info("Now running data");
 
         ProductType productType = new ProductType("Marijuana", 15.0, 5.0);
-        Batch batch = new Batch("batch1", productType);
+        Batch batch = new Batch(("batch1"), productType);
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
-        Container container = new Container("container", batch);
+        Container container = new Container(("container"), batch);
         session.submit(s -> {
             s.insert(productType);
             s.insert(batch);
-            batch.getIntrinsicContexts().forEach(s::insert);
+            batch.getContexts().forEach(s::insert);
             s.insert(container);
-            container.getIntrinsicContexts().forEach(s::insert);
-            s.insert(new ContextValue<>(vix, container.getLocation().getUID(), clock.getCurrentTime()));
+            container.getContexts().forEach(s::insert);
+            s.insert(new ContextValue<>(vix, container.getLocation().getCid(), clock.getCurrentTime()));
         });
         session.fireAllRules();
 
@@ -53,7 +55,7 @@ public class BatchTest extends SessionTest{
         long initialTime = clock.getCurrentTime();
         int aux = 0;
         while (clock.getCurrentTime() < initialTime + TimeUnit.MINUTES.toMillis(30)) {
-            session.insert(new ContextValue<>(10.0 + 0.5 * ++aux, container.getTemperature().getUID(), clock.getCurrentTime()));
+            session.insert(new ContextValue<>(10.0 + 0.5 * ++aux, container.getTemperature().getCid(), clock.getCurrentTime()));
             clock.advanceTime(5, TimeUnit.MINUTES);
             session.fireAllRules();
         }
@@ -72,15 +74,15 @@ public class BatchTest extends SessionTest{
         LOG.info("Now running data");
 
         ProductType productType = new ProductType("Marijuana", 15.0, 5.0);
-        Batch batch = new Batch("batch", productType);
+        Batch batch = new Batch(("batch"), productType);
         LatLng vix = new LatLng(-20.2976178, 40.2957768);
-        Container container = new Container("container", batch);
+        Container container = new Container(("container"), batch);
         session.insert(productType);
         session.insert(batch);
-        batch.getIntrinsicContexts().forEach(session::insert);
+        batch.getContexts().forEach(session::insert);
         session.insert(container);
-        container.getIntrinsicContexts().forEach(session::insert);
-        session.insert(new ContextValue<>(vix, container.getLocation().getUID(), clock.getCurrentTime()));
+        container.getContexts().forEach(session::insert);
+        session.insert(new ContextValue<>(vix, container.getLocation().getCid(), clock.getCurrentTime()));
         session.fireAllRules();
 
         {
@@ -88,7 +90,7 @@ public class BatchTest extends SessionTest{
             Assert.assertEquals(situations.size(), 0);
         }
 
-        session.insert(new ContextValue<>(10.0 + 0.5, container.getTemperature().getUID(), clock.getCurrentTime()));
+        session.insert(new ContextValue<>(10.0 + 0.5, container.getTemperature().getCid(), clock.getCurrentTime()));
         clock.advanceTime(1, TimeUnit.MINUTES);
         clock.advanceTime(29, TimeUnit.SECONDS);
         session.fireAllRules();
@@ -113,7 +115,7 @@ public class BatchTest extends SessionTest{
             ArrayList<Object> situations = new ArrayList<>(session.getObjects(new ClassObjectFilter(situationType.getFactClass())));
             Assert.assertEquals(situations.size(), 1);
         }
-        session.insert(new ContextValue<>(10.0 + 0.5, container.getTemperature().getUID(), clock.getCurrentTime()));
+        session.insert(new ContextValue<>(10.0 + 0.5, container.getTemperature().getCid(), clock.getCurrentTime()));
         session.fireAllRules();
         {
             ArrayList<Object> situations = new ArrayList<>(session.getObjects(new ClassObjectFilter(situationType.getFactClass())));
